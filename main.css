@@ -1,0 +1,114 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Footer*/
+.footer{
+    margin-top: 30px;
+}
+
+
+.footer-body{
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    gap: 0;
+}
+
+
+.footer-list{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-list li{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.footer-item{
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    grid-column: span 3;
+    padding: 8px 12px;
+}
+
+.footer-item:not(:last-child){
+    border-right: 1px solid black;
+}
+
+.footer-item > h3 {
+  color: rgb(49, 92, 210);
+  font-size: 16px;
+  width: 100%;
+  text-align: center;
+  user-select: none;
+}
+
+.footer-item > p {
+  font-size: 1rem;
+  margin-bottom: 12px;
+}
+
+.footer-item_logo{
+    max-width: 100%;
+    max-height: 100%;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-item_list {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.footer-item_list-img{
+    width: 50px;
+    height: 50px;
+    margin: 4px 6px;
+}
+
+.footer-form{
+    width: 100%;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.footer-form input[type="text"]{
+    width: 100%;
+    max-width: 185px;
+    padding: 8px 12px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+    border: 1px solid ;
+    border-radius: 4px;
+}
+
+.footer-form label{
+    display: inline-block;
+    width: 120px;
+    margin-bottom: 5px;
+}
+
+.submit-container{
+    display: flex;
+    width: 200px;
+    height: 40px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+
+    margin: 15px auto;
+    border: 1px solid;
+    border-radius: 4px;
+    
+    
+}

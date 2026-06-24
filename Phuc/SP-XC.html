@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Trang tìm kiếm xe ô tô cũ và xe máy đã qua sử dụng giá tốt" />
+  <title>Sản Phẩm Xe Cũ</title>
+  <link rel="stylesheet" href="SanPham.css" />
+</head>
+
+<body>
+
+  <div class="page-wrapper">
+    <header class="search-header">
+      <h1 class="search-header__title">TÌM KIẾM XE CŨ</h1>
+
+      <div class="search-bar" role="search">
+        <div class="search-bar__input-wrap">
+          <span class="search-bar__icon" aria-hidden="true">🔍</span>
+          <input type="search" class="search-bar__input" placeholder="Nhập đời xe, khoảng giá, số km..." aria-label="Tìm kiếm xe cũ"/>
+        </div>
+        <button type="button" class="btn-search" aria-label="Tìm kiếm">🔍 TÌM KIẾM</button>
+        <button type="button" class="btn-filter" aria-label="Lọc nâng cao">⚙ Lọc nâng cao</button>
+      </div>
+
+      <nav class="suggestions" aria-label="Gợi ý tìm kiếm">
+        <span class="suggestions__label">Gợi ý:</span>
+        <button type="button" class="suggestions__pill">🔥 Camry 2020 cũ</button>
+        <button type="button" class="suggestions__pill">Xe cũ dưới 400tr</button>
+        <button type="button" class="suggestions__pill">Vios lướt</button>
+        <button type="button" class="suggestions__pill">Ranger 2021</button>
+        <button type="button" class="suggestions__pill">SH 160i</button>
+      </nav>
+    </header>
+
+    <nav class="tabs" role="tablist" aria-label="Danh mục xe">
+        <a href="SanPham.html" class="tabs__item" role="tab" aria-selected="false">🚗 Ô tô mới</a>
+        <a href="SP-XM.html" class="tabs__item" role="tab" aria-selected="false">🛵 Xe máy</a>
+        <a href="SP-XC.html" class="tabs__item tabs__item--active" role="tab" aria-selected="true">🕐 Xe đã qua sử dụng</a>
+    </nav>
+
+    <div class="body-layout">
+      <aside class="sidebar" aria-label="Bộ lọc">
+        <div class="sidebar__header">
+          <span class="sidebar__title">BỘ LỌC</span>
+          <button type="button" class="sidebar__reset">Đặt lại</button>
+        </div>
+
+        <section class="filter-section" aria-labelledby="filter-year-label">
+          <span class="filter-section__label" id="filter-year-label">Năm sản xuất</span>
+          <div class="type-pills" role="group" aria-label="Chọn đời xe">
+            <button type="button" class="type-pill">Trên 2022</button>
+            <button type="button" class="type-pill">2020 - 2022</button>
+            <button type="button" class="type-pill">2017 - 2019</button>
+            <button type="button" class="type-pill">Dưới 2017</button>
+          </div>
+        </section>
+
+        <section class="filter-section" aria-labelledby="filter-odo-label">
+          <span class="filter-section__label" id="filter-odo-label">Số Km đã đi (ODO)</span>
+          <div class="type-pills" role="group" aria-label="Chọn số km">
+            <button type="button" class="type-pill">Dưới 20k km</button>
+            <button type="button" class="type-pill">20k - 50k km</button>
+            <button type="button" class="type-pill">50k - 100k km</button>
+            <button type="button" class="type-pill">Trên 100k km</button>
+          </div>
+        </section>
+
+        <section class="filter-section" aria-labelledby="filter-brand-label">
+          <div class="filter-section__header">
+            <span class="filter-section__label" id="filter-brand-label">Hãng xe</span>
+            <button type="button" class="filter-section__see-more">Xem thêm</button>
+          </div>
+
+          <div class="brand-row">
+            <input type="checkbox" id="brand-toyota" class="brand-row__checkbox" checked />
+            <label for="brand-toyota" class="brand-row__label brand-row__label--checked">Toyota</label>
+          </div>
+
+          <div class="brand-row">
+            <input type="checkbox" id="brand-honda" class="brand-row__checkbox" checked />
+            <label for="brand-honda" class="brand-row__label brand-row__label--checked">Honda</label>
+          </div>
+
+          <div class="brand-row">
+            <input type="checkbox" id="brand-hyundai" class="brand-row__checkbox" />
+            <label for="brand-hyundai" class="brand-row__label">Hyundai</label>
+          </div>
+
+          <div class="brand-row">
+            <input type="checkbox" id="brand-kia" class="brand-row__checkbox" />
+            <label for="brand-kia" class="brand-row__label">Kia</label>
+          </div>
+        </section>
+        <section class="price-filter">
+          <span class="price-filter__label">Chọn mức giá:</span>
+          <div class="price-options">
+            <button class="price-pill">Dưới 50tr</button>
+            <button class="price-pill">50tr - 150tr</button>
+            <button class="price-pill">350tr - 750tr</button>
+            <button class="price-pill">Trên 1 tỷ</button>
+          </div>
+          </section>
+
+      </aside>
+
+      <main class="main-content">
+        <section class="featured" aria-labelledby="featured-title">
+          <h2 class="featured__title" id="featured-title">XE CŨ GIÁ TỐT</h2>
+
+          <div class="featured__cards">
+
+            <article class="featured-card">
+              <span class="fc-badge fc-badge--hot">XEM NHIỀU</span>
+              <div class="fc-icon" aria-hidden="true">
+                <img src="images/bmw-320.jpg" alt="BMW 3 Series 2022">
+              </div>
+              <p class="fc-name">BMW 3 Series 2022</p>
+              <p class="fc-price">1.35 tỷ</p>
+            </article>
+
+            <article class="featured-card">
+              <span class="fc-badge fc-badge--new">LƯỚT</span>
+              <div class="fc-icon" aria-hidden="true">
+                <img src="images/cbr.jpg" alt="Honda CBR">
+              </div>
+              <p class="fc-name">Honda CBR 1000rr</p>
+              <p class="fc-price">760 triệu</p>
+            </article>
+
+            <article class="featured-card">
+              <span class="fc-badge fc-badge--new">LƯỚT</span>
+              <div class="fc-icon" aria-hidden="true">
+                <img src="images/wave.jpg" alt="Wave Alpha">
+              </div>
+              <p class="fc-name">Honda Wave Alpha</p>
+              <p class="fc-price">18 triệu</p>
+            </article>
+
+            <article class="featured-card">
+              <div class="fc-icon" aria-hidden="true">
+                <img src="images/toyota-camry.jpg" alt="Toyota Camry 2023">
+              </div>
+              <p class="fc-name">Toyota Camry 2023</p>
+              <p class="fc-price">920 triệu</p>
+            </article>
+
+            <article class="featured-card">
+              <div class="fc-icon" aria-hidden="true">
+                <img src="images/accent.jpg" alt="Hyundai Accent 2023">
+              </div>
+              <p class="fc-name">Hyundai Accent 2023</p>
+              <p class="fc-price">305 triệu</p>
+            </article>
+
+          </div>
+        </section>
+
+        <div class="results-header">
+          <p class="results-count">
+            Tìm thấy <strong>4 xe đã qua sử dụng</strong> phù hợp
+          </p>
+          <div class="sort-wrap">
+            <label for="sort-select" class="visually-hidden">Sắp xếp</label>
+            <select id="sort-select" class="sort-select">
+              <option value="best-match">Sắp xếp: Phù hợp nhất ▾</option>
+              <option value="price-asc">Giá tăng dần</option>
+              <option value="price-desc">Giá giảm dần</option>
+              <option value="newest">Đời xe mới nhất</option>
+            </select>
+            <div class="view-btns" role="group" aria-label="Chế độ xem">
+              <button type="button" class="view-btn view-btn--active" aria-label="Xem dạng lưới" aria-pressed="true">▦</button>
+              <button type="button" class="view-btn" aria-label="Xem dạng danh sách" aria-pressed="false">☰</button>
+            </div>
+          </div>
+        </div>
+
+        <section class="car-grid" aria-label="Danh sách xe cũ">
+
+          <article class="car-card car-card--old">
+            <span class="cc-badge cc-badge--old">CŨ · 2023</span>
+            <div class="cc-icon" aria-hidden="true">
+              <img src="images/vios.jpg" alt="Toyota Vios 2023">
+            </div>
+            <h3 class="cc-name">Toyota Vios 2023</h3>
+            <p class="cc-meta">🚘 Số sàn · ODO: 45,000 km</p>
+          </article>
+
+          <article class="car-card car-card--old">
+            <span class="cc-badge cc-badge--old">CŨ · 2023</span>
+            <div class="cc-icon" aria-hidden="true">
+              <img src="images/accent.jpg" alt="Hyundai Accent 2023">
+            </div>
+            <h3 class="cc-name">Hyundai Accent 2023</h3>
+            <p class="cc-meta">🚘 Tự động · ODO: 11,000 km</p>
+          </article>
+
+          <article class="car-card car-card--old">
+            <span class="cc-badge cc-badge--old">GIẢM GIÁ</span>
+            <div class="cc-icon" aria-hidden="true">
+              <img src="images/toyoya-fortuner.jpg" alt="Toyota Fortuner 2023">
+            </div>
+            <h3 class="cc-name">Toyota Fortuner 2023</h3>
+            <p class="cc-meta">🚘 Tự động · ODO: 32,000 km</p>
+          </article>
+
+          <article class="car-card car-card--old">
+            <span class="cc-badge cc-badge--old">CŨ · 2020</span>
+            <div class="cc-icon" aria-hidden="true">
+              <img src="images/Hd-city.jpg" alt="Honda City 2018">
+            </div>
+            <h3 class="cc-name">Honda City 2020</h3>
+            <p class="cc-meta">🚘 Tự động · ODO: 60,000 km</p>
+          </article>
+
+        </section>
+
+      </main>
+
+    </div>
+
+  </div>
+
+</body>
+</html>

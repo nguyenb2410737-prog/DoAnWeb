@@ -19,17 +19,13 @@ footer{
     border-bottom: 1px solid white;
 }
 .container{
-    display: flex;
-    /* grid-template-columns: 270px 1fr; */
+    display: grid;
+    grid-template-columns: 270px 1fr;
     width: 100%;
     min-height: calc(100vh - 120px);
     box-shadow: 0 0 10px black;
 }
 .aside{
-    flex-basis: 300px;
-    flex-shrink: 1;  /* cho phép thu nhỏ */
-    min-width: 50px; /* giới hạn nhỏ nhất */
-    max-width: 300px;/* giới hạn lớn nhất */
     background-color:  rgb(244, 252, 255);
     border-right: 2px solid white;
     padding: 20px;
@@ -71,9 +67,7 @@ footer{
     border-left-color: rgb(0, 0, 255);
 }
 main{
-    flex: 1;
     padding: 40px;
-    min-width: 0;
 }
 .main--section h1{
     font-size: 35px;
@@ -97,7 +91,6 @@ main{
     float: none;
     margin: 0;
     width: 400px;
-    max-width: 100%;
     object-fit: cover;
     border-radius: 8px;
     height: 310px;
@@ -112,67 +105,4 @@ main{
 .img--box__one {
     margin-top: 5px;
     margin-bottom: 10px;
-}
-.main--section::after{
-    content: '';
-    display: table;
-    clear: both;
-}
-.main--section__head{
-    font-size: 18px;
-    color: black;
-    line-height: 1.7;
-    margin-bottom: 25px;
-}
-.main--section__head b{
-    color: blue;
-}
-.list{
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-.list__item {
-    font-size: 18px;
-    color: black;
-    line-height: 1.4;
-    padding-left:30px;
-    position: relative;
-}
-.list__item::before {
-    position: absolute;
-    left: 0;
-    top: 0;
-    color: blue;
-    font-weight: bold;
-}
-.list__item b {
-    color: black;
-}
-
-/* Thêm responsive khi co dãn trên màn hình nhỏ để bố cục linh hoạt hơn */
-@media screen and (max-width: 768px) {
-    .container {
-        flex-direction: column;
-    }
-    .aside {
-        max-width: 100%;
-        border-right: none;
-        border-bottom: 2px solid #ccc;
-    }
-    .img--box {
-        float: none;
-        margin-left: 0;
-        margin-top: 20px;
-        align-items: center;
-    }
-    .img--box__one, .img--box__two {
-        width: 100%;
-        height: auto;
-    }
-    main {
-        padding: 20px;
-    }
 }

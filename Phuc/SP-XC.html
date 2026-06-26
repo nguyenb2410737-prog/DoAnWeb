@@ -7,31 +7,37 @@
   <meta name="description" content="Trang tìm kiếm xe ô tô cũ và xe máy đã qua sử dụng giá tốt" />
   <title>Sản Phẩm Xe Cũ</title>
   <link rel="stylesheet" href="SanPham.css" />
+  <link rel="stylesheet" href="/Nguyen/main.css">
 </head>
 
 <body>
 
   <div class="page-wrapper">
-    <header class="search-header">
-      <h1 class="search-header__title">TÌM KIẾM XE CŨ</h1>
-
-      <div class="search-bar" role="search">
-        <div class="search-bar__input-wrap">
-          <span class="search-bar__icon" aria-hidden="true">🔍</span>
-          <input type="search" class="search-bar__input" placeholder="Nhập đời xe, khoảng giá, số km..." aria-label="Tìm kiếm xe cũ"/>
+    <header class="header">
+        <div class="header_logo">
+                <img src="/images/logo-ngang.png" alt="Logo">
         </div>
-        <button type="button" class="btn-search" aria-label="Tìm kiếm">🔍 TÌM KIẾM</button>
-        <button type="button" class="btn-filter" aria-label="Lọc nâng cao">⚙ Lọc nâng cao</button>
-      </div>
+        <ul id="nav">
+            <li><a href="/Nguyen/trangchu.html" class="header_a">Trang chủ</a></li>
+            <li><a href="/Phuc/SanPham.html" class="header_a--active">Kho xe</a></li>
+            <li><a href="/tai/suachuachung.html" class="header_a">Dịch vụ</a></li>
+            <li><a href="/" class="header_a">Giới thiệu</a></li>
+            <li><a href="/Nguyen/Lienhe.html" class="header_a">Liên hệ</a></li>
+        </ul>
 
-      <nav class="suggestions" aria-label="Gợi ý tìm kiếm">
-        <span class="suggestions__label">Gợi ý:</span>
-        <button type="button" class="suggestions__pill">🔥 Camry 2020 cũ</button>
-        <button type="button" class="suggestions__pill">Xe cũ dưới 400tr</button>
-        <button type="button" class="suggestions__pill">Vios lướt</button>
-        <button type="button" class="suggestions__pill">Ranger 2021</button>
-        <button type="button" class="suggestions__pill">SH 160i</button>
-      </nav>
+        <div class="header_icon">
+            <div class="icon_group">
+                <div class="chuong">
+                    <a href="/Nguyen/thongbao.html"><img src="/images/chuong.png"></a>
+                </div>
+
+                <div class="basket">
+                    <a href="/Nguyen/giohang.html"><img src="/images/giohang.png"></a>
+                </div>
+            </div>
+
+            <a href="/Nguyen/Dangnhap.html"><button class="header_button">Đăng nhập</button></a>
+        </div>
     </header>
 
     <nav class="tabs" role="tablist" aria-label="Danh mục xe">

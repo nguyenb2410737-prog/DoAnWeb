@@ -1,0 +1,396 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #ffffff;
+    color: #262626;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    background-color: #ffffff;
+    border-bottom: 1px solid #e5e5e5;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header_logo img {
+    height: 40px;
+    object-fit: contain;
+}
+
+#nav {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+#nav a {
+    text-decoration: none;
+    color: #666666;
+    font-size: 15px;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+#nav a:hover, .header_a--active {
+    color: #1c69d4 !important;
+}
+
+.header_icon {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.icon_group {
+    display: flex;
+    gap: 20px;
+}
+
+.chuong img, .basket img {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+}
+
+.header_button {
+    background-color: #1c69d4;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.header_button:hover {
+    background-color: #134e9e;
+}
+
+.hero {
+    position: relative;
+    height: 80vh;
+    background: url('images/BG_bmw.jpg') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    color: #ffffff;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.2) 100%);
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+}
+
+.hero-text {
+    max-width: 600px;
+}
+
+.tag {
+    font-size: 14px;
+    letter-spacing: 4px;
+    color: #e5e5e5;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.hero-text h1 {
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 5px;
+}
+
+.hero-text h3 {
+    font-size: 24px;
+    font-weight: 300;
+    letter-spacing: 2px;
+    margin-bottom: 30px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 40px;
+}
+
+.btn {
+    padding: 12px 30px;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: all 0.3s;
+    display: inline-block;
+}
+
+.btn-primary {
+    background-color: #1c69d4;
+    color: #ffffff;
+}
+
+.btn-primary:hover {
+    background-color: #134e9e;
+}
+
+.btn-outline {
+    border: 2px solid #ffffff;
+    color: #ffffff;
+}
+
+.btn-outline:hover {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.hero-info {
+    display: flex;
+    gap: 50px;
+    border-top: 1px solid rgba(255,255,255,0.3);
+    padding-top: 20px;
+}
+
+.hero-info h4 {
+    font-size: 12px;
+    color: #a6a6a6;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+
+.hero-info p {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.quick-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: #f6f6f6;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.quick-menu-left {
+    display: flex;
+    gap: 40px;
+}
+
+.quick-menu-left a {
+    text-decoration: none;
+    color: #4a4a4a;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.spec-btn {
+    background-color: #ffffff;
+    color: #000000;
+    border: 1px solid #4a4a4a;
+    padding: 8px 20px;
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.intro {
+    padding: 60px 0;
+    text-align: center;
+    background-color: #ffffff;
+}
+
+.intro p {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 16px;
+    color: #4a4a4a;
+}
+
+.driving-technology, .exterior-design, .specifications {
+    padding: 80px 0;
+    background-color: #ffffff;
+}
+
+.driving-technology h2, .exterior-design h2, .specifications h2 {
+    font-size: 32px;
+    font-weight: 300;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.sub-heading {
+    text-align: center;
+    color: #666666;
+    margin-bottom: 40px;
+}
+
+.main-tech-image {
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+.main-tech-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.tech-bullet-points {
+    max-width: 900px;
+    margin: 0 auto 60px auto;
+    list-style-type: square;
+    padding-left: 20px;
+}
+
+.tech-bullet-points li {
+    font-size: 15px;
+    color: #262626;
+    margin-bottom: 12px;
+}
+
+.tech-grid, .design-grid {
+    display: flex;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.tech-col, .design-col {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.tech-col img, .design-col img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.tech-col h3, .design-col h3 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.app-features {
+    list-style: none;
+}
+
+.app-features li {
+    font-size: 14px;
+    color: #4a4a4a;
+    margin-bottom: 8px;
+}
+
+.slider-dots {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.dot {
+    width: 8px;
+    height: 8px;
+    background-color: #d1d1d1;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.dot.active {
+    background-color: #1c69d4;
+    width: 24px;
+    border-radius: 4px;
+}
+
+.spec-model {
+    font-size: 22px;
+    font-weight: 600;
+    text-align: center;
+    color: #1c69d4;
+    margin-bottom: 40px;
+}
+
+.spec-content-wrapper {
+    display: flex;
+    gap: 50px;
+    align-items: center;
+}
+
+.spec-image-blueprint {
+    flex: 1;
+}
+
+.spec-image-blueprint img {
+    width: 100%;
+    height: auto;
+}
+
+.spec-data-list {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.spec-row {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #e5e5e5;
+    font-size: 15px;
+}
+
+.spec-row .label {
+    color: #4a4a4a;
+}
+
+.spec-row .value {
+    color: #000000;
+    text-align: right;
+}
+
+.spec-action {
+    margin-top: 20px;
+    display: flex;
+    justify-content: flex-end;
+}
+.btn-discover-spec {
+    background-color: #1c69d4;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 12px 25px;
+    font-size: 14px;
+    font-weight: 600;
+    transition: background-color 0.3s;
+}
+.btn-discover-spec:hover {
+    background-color: #134e9e;
+}

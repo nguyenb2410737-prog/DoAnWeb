@@ -1,0 +1,367 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #ffffff;
+}
+
+.wrapper {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* Thiết kế Header (Sử dụng Flexbox)  */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+    background-color: #ffffff;
+    border-bottom: 1px solid #eeeeee;
+}
+
+.header .logo img {
+    height: 45px; 
+    display: block;
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+}
+
+.navbar ul li {
+    margin-left: 25px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: #333333;
+    font-weight: 600;
+    font-size: 15px;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+}
+
+.navbar ul li a:hover, 
+.navbar ul li a.active {
+    color: #b89454; /* Màu vàng đồng thương hiệu */
+    border-bottom: 2px solid #b89454;
+    padding-bottom: 5px;
+}
+
+/* Nút ẩn/hiện menu hamburger trên PC */
+.menu-toggle {
+    display: none;
+    font-size: 26px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #333;
+}
+
+/* Thiết kế Hero Banner  */
+.about-hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url('../images/anh1.png') no-repeat center center/cover;
+    height: 450px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #ffffff;
+    padding: 0 20px;
+}
+
+.hero-text h1 {
+    font-size: 38px;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.hero-text p {
+    font-size: 18px;
+    margin-bottom: 25px;
+    color: #f1f1f1;
+}
+
+.btn-hero {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: #b89454;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 4px;
+    text-transform: uppercase;
+    transition: background 0.3s ease;
+}
+
+.btn-hero:hover {
+    background-color: #9c7b41;
+}
+
+/* Thiết kế Khu vực Giới thiệu  */
+.about-us-section {
+    padding: 60px 8%;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.section-title h2 {
+    font-size: 28px;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.section-title h2::after {
+    content: '';
+    position: absolute;
+    width: 60px;
+    height: 3px;
+    background-color: #b89454;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.about-container {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.about-img-box {
+    flex: 1;
+    text-align: center;
+}
+
+.circle-img {
+    width: 320px;
+    height: 320px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 6px solid #f5f5f5;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+}
+
+.about-info-text {
+    flex: 1.2;
+}
+
+.about-info-text h3 {
+    font-size: 22px;
+    margin-bottom: 15px;
+    color: #111;
+}
+
+.about-info-text p {
+    margin-bottom: 15px;
+    color: #555;
+    text-align: justify;
+}
+
+/* --- Thiết kế Khối Phân khúc Xe mới --- */
+.our-fleet-section {
+    background-color: #fcfcfc;
+    padding: 60px 8%;
+}
+
+.fleet-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.fleet-item {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 6px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.02);
+    border: 1px solid #f0f0f0;
+    transition: transform 0.3s ease;
+}
+
+.fleet-item:hover {
+    transform: translateY(-5px);
+}
+
+.fleet-icon {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.fleet-item h4 {
+    font-size: 18px;
+    color: #111;
+    margin-bottom: 10px;
+}
+
+.fleet-item p {
+    font-size: 14px;
+    color: #666;
+    text-align: justify;
+}
+
+/* --- Thiết kế Lưới Giá trị --- */
+.about-values {
+    background-color: #fcfcfc;
+    padding: 60px 8%;
+}
+
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.value-item {
+    background-color: #ffffff;
+    padding: 35px 25px;
+    text-align: center;
+    border-radius: 6px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+    border: 1px solid #f0f0f0;
+}
+
+.value-item .icon {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.value-item h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #111;
+}
+
+.value-item p {
+    font-size: 14px;
+    color: #666;
+}
+
+/* --- Chân trang --- */
+.footer {
+    background-color: #111111;
+    padding: 25px 20px;
+}
+
+/* --- Nút Cuộn Về Đầu Trang --- */
+.back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: -60px;
+    width: 45px;
+    height: 45px;
+    background-color: #b89454;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    font-size: 20px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    transition: all 0.4s ease;
+    z-index: 999;
+}
+
+.back-to-top.show {
+    right: 30px;
+}
+
+.back-to-top:hover {
+    background-color: #9c7b41;
+    transform: scale(1.1);
+}
+
+/* 1. Trên thiết bị màn hình vừa (Tablets) */
+@media (max-width: 992px) {
+    .about-container {
+        gap: 30px;
+    }
+    .circle-img {
+        width: 260px;
+        height: 260px;
+    }
+    .hero-text h1 {
+        font-size: 30px;
+    }
+    .fleet-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .values-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* 2. Trên thiết bị di động (Mobile - Dưới 768px) */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .header {
+        flex-direction: column;
+        padding: 15px;
+    }
+    
+    .navbar {
+        display: none;
+        margin-top: 15px;
+        width: 100%;
+    }
+
+    .navbar.active {
+        display: block;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .navbar ul li {
+        margin: 8px 0;
+        margin-left: 0;
+    }
+
+    .about-hero {
+        height: 300px;
+    }
+
+    .hero-text h1 {
+        font-size: 24px;
+    }
+
+    .hero-text p {
+        font-size: 15px;
+    }
+
+    .about-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .fleet-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .values-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+}

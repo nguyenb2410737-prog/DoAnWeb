@@ -7,22 +7,19 @@
   <meta name="description" content="Trang tìm kiếm xe ô tô mới và xe đã qua sử dụng" />
   <title>Sản Phẩm</title>
   <link rel="stylesheet" href="SanPham.css" />
-  <link rel="stylesheet" href="/Nguyen/main.css">
 </head>
 
 <body>
-
-  <div class="page-wrapper">
-    <header class="header">
+<header class="header">
         <div class="header_logo">
-                <img src="/images/logo-ngang.png" alt="Logo">
+                <img src="/DoAnWeb/images/logo.png" alt="Logo">
         </div>
         <ul id="nav">
-            <li><a href="/Nguyen/trangchu.html" class="header_a">Trang chủ</a></li>
-            <li><a href="/Phuc/SanPham.html" class="header_a--active">Kho xe</a></li>
-            <li><a href="/tai/suachuachung.html" class="header_a">Dịch vụ</a></li>
-            <li><a href="/" class="header_a">Giới thiệu</a></li>
-            <li><a href="/Nguyen/Lienhe.html" class="header_a">Liên hệ</a></li>
+            <li><a href="" class="header_a--active" href="/Nguyen/trangchu.html">Trang chủ</a></li>
+            <li><a href="" class="header_a">Sản phẩm</a></li>
+            <li><a href="" class="header_a">Dịch vụ</a></li>
+            <li><a href="" class="header_a">Giới thiệu</a></li>
+            <li><a href="" class="header_a">Liên hệ</a></li>
         </ul>
 
         <div class="header_icon">
@@ -36,193 +33,256 @@
                 </div>
             </div>
 
-            <a href="/Nguyen/Dangnhap.html"><button class="header_button">Đăng nhập</button></a>
-        </div>
-    </header>
-
-    <nav class="tabs" role="tablist" aria-label="Danh mục xe">
-      <a href="SanPham.html" class="tabs__item tabs__item--active" role="tab" aria-selected="true">🚗 Ô tô</a>
-      <a href="SP-XM.html" class="tabs__item" role="tab" aria-selected="false">🛵 Xe máy</a>
-      <a href="SP-XC.html" class="tabs__item" role="tab" aria-selected="false">🕐 Xe đã qua sử dụng</a>
-    </nav>
-
-    <div class="body-layout">
-      <aside class="sidebar" aria-label="Bộ lọc">
-        <div class="sidebar__header">
-          <span class="sidebar__title">BỘ LỌC</span>
-          <button type="button" class="sidebar__reset">Đặt lại</button>
+            <button class="header_button">Đăng nhập</button>
         </div>
 
-        <section class="filter-section" aria-labelledby="filter-type-label">
-          <span class="filter-section__label" id="filter-type-label">Loại xe</span>
-          <div class="type-pills" role="group" aria-label="Chọn loại xe">
-            <button type="button" class="type-pill">Sedan</button>
-            <button type="button" class="type-pill">Coupe</button>
-            <button type="button" class="type-pill">Pickup</button>
-            <button type="button" class="type-pill">MPV</button>
-            <button type="button" class="type-pill">Hatchback</button>
-          </div>
-        </section>
+    
+</header>
+<!-- Main -->
+<main>
 
-        <section class="filter-section" aria-labelledby="filter-brand-label">
-          <div class="filter-section__header">
-            <span class="filter-section__label" id="filter-brand-label">Hãng xe</span>
-            <button type="button" class="filter-section__see-more">Xem thêm</button>
-          </div>
 
-          <div class="brand-row">
-            <input
-              type="checkbox"
-              id="brand-toyota"
-              class="brand-row__checkbox"
-              checked
-            />
-            <label for="brand-toyota" class="brand-row__label brand-row__label--checked">Toyota</label>
-          </div>
+    <!-- HERO -->
+    <section class="hero">
 
-          <div class="brand-row">
-            <input
-              type="checkbox"
-              id="brand-honda"
-              class="brand-row__checkbox"
-              checked
-            />
-            <label for="brand-honda" class="brand-row__label brand-row__label--checked">Honda</label>
-          </div>
+        <img src="images/back-ground.jpg" alt="Banner">
 
-          <div class="brand-row">
-            <input type="checkbox" id="brand-hyundai" class="brand-row__checkbox" />
-            <label for="brand-hyundai" class="brand-row__label">Hyundai</label>
-          </div>
+        <div class="hero-overlay"></div>
 
-          <div class="brand-row">
-            <input type="checkbox" id="brand-kia" class="brand-row__checkbox" />
-            <label for="brand-kia" class="brand-row__label">Kia</label>
-          </div>
+        <div class="hero-content">
 
-          <div class="brand-row">
-            <input type="checkbox" id="brand-bmw" class="brand-row__checkbox" />
-            <label for="brand-bmw" class="brand-row__label">BMW</label>
-          </div>
+            <h4>WE HAVE EVERYTHING</h4>
 
-          <div class="brand-row">
-            <input type="checkbox" id="brand-bmw" class="brand-row__checkbox" />
-            <label for="brand-bmw" class="brand-row__label">Mercedes</label>
-          </div>
-        </section>
+            <h1>YOUR CAR NEEDS!</h1>
 
-        <section class="price-filter">
-          <span class="price-filter__label">Chọn mức giá:</span>
-          <div class="price-options">
-            <button class="price-pill">Dưới 500tr</button>
-            <button class="price-pill">500tr - 1 tỷ</button>
-            <button class="price-pill">1 tỷ - 2 tỷ</button>
-            <button class="price-pill">Trên 2 tỷ</button>
-          </div>
-          </section>
+            <p>Find your dream car with the best price</p>
 
-      </aside>
+            <a href="#" class="hero-btn">Learn More</a>
 
-        <section class="featured" aria-labelledby="featured-title">
-          <h2 class="featured__title" id="featured-title">XE NỔI BẬT</h2>
-          <div class="featured__cards">
-            <article class="featured-card">
-              <span class="fc-badge fc-badge--hot">HOT</span>
-              <div class="fc-icon" aria-hidden="true"><img src="/images/2025_BMW_3-series_3_1600.jpg" alt="BWM series"></div>
-              <p class="fc-name">BMW 3 Series 2025</p>
-              <p class="fc-price">1.85 tỷ</p>
-            </article>
+        </div>
 
-            <article class="featured-card">
-              <span class="fc-badge fc-badge--new">MỚI</span>
-              <div class="fc-icon fc-icon--green" aria-hidden="true"><img src="images/Honda-crv.jpg" alt="Honda-CRV"></div>
-              <p class="fc-name">Honda CR-V 2025</p>
-              <p class="fc-price">980 triệu</p>
-            </article>
+    </section>
 
-            <article class="featured-card">
-              <span class="fc-badge fc-badge--sale">GIẢM GIÁ</span>
-              <div class="fc-icon fc-icon--orange" aria-hidden="true"><img src="images/kia-sorento.jpg" alt="Kia-Sorento"></div>
-              <p class="fc-name">Kia Sorento 2024</p>
-              <p class="fc-price">850 triệu</p>
-            </article>
+    <!-- SEARCH -->
+    <section class="search-box">
 
-            <article class="featured-card">
-              <span class="fc-badge fc-badge--old">CŨ</span>
-              <div class="fc-icon fc-icon--no-badge" aria-hidden="true"><img src="images/toyoya-fortuner.jpg" alt="Fortuner"></div>
-              <p class="fc-name">Toyota Fortuner</p>
-              <p class="fc-price">1.1 tỷ</p>
-            </article>
+        <form class="car-search">
 
-            <article class="featured-card">
-              <span class="fc-badge fc-badge--old">CŨ</span>
-              <div class="fc-icon fc-icon--blue fc-icon--no-badge" aria-hidden="true"><img src="images/hd-tucson.jpg" alt="tucson"></div>
-              <p class="fc-name">Hyundai Tucson</p>
-              <p class="fc-price">750 triệu</p>
-            </article>
-
-          </div>
-            <div class="results-header">
-            <p class="results-count">
-            Tìm thấy <strong>4 xe</strong> phù hợp</p>
-            <div class="sort-wrap">
-            <label for="sort-select" class="visually-hidden">Sắp xếp</label>
-            <select id="sort-select" class="sort-select">
-              <option value="best-match">Sắp xếp: Phù hợp nhất ▾</option>
-              <option value="price-asc">Giá tăng dần</option>
-              <option value="price-desc">Giá giảm dần</option>
-              <option value="newest">Mới nhất</option>
-            </select>
-            <div class="view-btns" role="group" aria-label="Chế độ xem">
-              <button type="button" class="view-btn view-btn--active" aria-label="Xem dạng lưới" aria-pressed="true">▦</button>
-              <button type="button" class="view-btn" aria-label="Xem dạng danh sách" aria-pressed="false">☰</button>
+            <div class="form-group">
+                <label>Hãng xe</label>
+                <select>
+                    <option>-- Chọn hãng --</option>
+                    <option>BMW</option>
+                    <option>Mercedes</option>
+                    <option>Toyota</option>
+                    <option>Honda</option>
+                    <option>Audi</option>
+                </select>
             </div>
-          </div>
+
+            <div class="form-group">
+                <label>Dòng xe</label>
+                <select>
+                    <option>-- Chọn dòng --</option>
+                    <option>Sedan</option>
+                    <option>SUV</option>
+                    <option>Coupe</option>
+                    <option>Pickup</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Năm sản xuất</label>
+                <select>
+                    <option>2025</option>
+                    <option>2024</option>
+                    <option>2023</option>
+                    <option>2022</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Khoảng giá</label>
+                <select>
+                    <option>Dưới 500 triệu</option>
+                    <option>500 triệu - 1 tỷ</option>
+                    <option>1 - 2 tỷ</option>
+                    <option>Trên 2 tỷ</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Hộp số</label>
+                <select>
+                    <option>Tự động</option>
+                    <option>Số sàn</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Nhiên liệu</label>
+                <select>
+                    <option>Xăng</option>
+                    <option>Diesel</option>
+                    <option>Hybrid</option>
+                    <option>Điện</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Tình trạng</label>
+                <select>
+                    <option>Xe mới</option>
+                    <option>Xe đã qua sử dụng</option>
+                </select>
+            </div>
+
+            <button type="submit" class="search-btn">
+                TÌM KIẾM XE
+            </button>
+
+        </form>
+
+    </section>
+
+    <!-- CONTENT -->
+    <section class="content">
+
+        <div class="section-heading">
+
+            <h2>FEATURED CAR</h2>
+
+            <p>
+                Khám phá những mẫu xe nổi bật với thiết kế hiện đại,
+                vận hành mạnh mẽ và mức giá hấp dẫn.
+            </p>
+
         </div>
 
-        <section class="car-grid" aria-label="Danh sách xe">
+        <div class="featured__cards">
 
-          <article class="car-card">
-            <span class="cc-badge cc-badge--new">MỚI</span>
-            <div class="fc-icon fc-icon--blue fc-icon--no-badge" aria-hidden="true"><img src="images/Mercedes-E300.jpg" alt="e300"></div>
-            <h3 class="cc-name">Mercedes E300</h3>
-            <p class="cc-meta">🚘 Sedan · Tự động · 2,6 tỷ</p>
-       
-          </article>
+            <!-- Card 1 -->
+            <a href="muahang.html" class="car-link">
 
-          <article class="car-card">
-            <span class="cc-badge cc-badge--new">MỚI</span>
-            <div class="fc-icon fc-icon--blue fc-icon--no-badge" aria-hidden="true"><img src="images/Kia-K5.jpg" alt="k5"></div>
-            <h3 class="cc-name">Honda K5 2025</h3>
-            <p class="cc-meta">🚘 Sedan · Tự động · 920 Triệu</p>
+    <article class="featured-card">
 
-          </article>\
+        <span class="badge-left">New</span>
 
-          <article class="car-card car-card--sale">
-            <span class="cc-badge cc-badge--sale">GIẢM GIÁ</span>
-            <div class="fc-icon fc-icon--blue fc-icon--no-badge" aria-hidden="true"><img src="images/kia-sportage.jpg" alt="sportage"></div>
-            <h3 class="cc-name">Kia Sportage 2024</h3>
-            <p class="cc-meta">🚘 SUV · Tự động · 420 Triệu</p>
-          </article>
+        <img src="images/2025_BMW_3-series_3_1600.jpg" alt="BMW">
 
-          <article class="car-card car-card--old">
-            <span class="cc-badge cc-badge--old">CŨ · 2022</span>
-            <div class="fc-icon fc-icon--blue fc-icon--no-badge" aria-hidden="true"><img src="images/mec-c300.jpg" alt="c300"></div>
-            <h3 class="cc-name">Mercedes-C300</h3>
-            <p class="cc-meta">🚘 Sedan · Tự động · 1,6 tỷ</p>
-          </article>
-        </section>
+        <div class="card-body">
 
+            <h3>BMW 3 SERIES 2025</h3>
 
+            <span class="car-type">
+                NEW CAR | AUTOMATIC | SPORT
+            </span>
 
-        </section>
+            <div class="price">
+                <del>$45,000</del>
+                <strong>$1.850.000.000</strong>
+            </div>
 
-      </main>
+            <p>
+                BMW 3 Series sở hữu thiết kế sang trọng,
+                động cơ mạnh mẽ cùng nhiều công nghệ an toàn.
+            </p>
 
-    </div>
+            <div class="specs">
+                <span>⛽ Xăng</span>
+                <span>⚙ Tự động</span>
+                <span>👥 4 chỗ</span>
+                <span>📅 2025</span>
+            </div>
 
-  </div>
+        </div>
 
+    </article>
+</a>
+
+            <!-- Card 2 -->
+<a href="muahang.html" class="car-link">
+
+    <article class="featured-card">
+
+        <span class="badge-left">New</span>
+
+        <img src="images/mec-c300.jpg" alt="C300">
+
+        <div class="card-body">
+
+            <h3>Mecerdes C300</h3>
+
+            <span class="car-type">
+                NEW CAR | AUTOMATIC | SPORT
+            </span>
+
+            <div class="price">
+                <del>$55,000</del>
+                <strong>$2.600.000.000</strong>
+            </div>
+
+            <p>
+                Mercedes E300 mang phong cách doanh
+                nhân, nội thất cao cấp và vận hành êm ái.
+            </p>
+
+            <div class="specs">
+                <span>⛽ Xăng</span>
+                <span>⚙ Tự động</span>
+                <span>👥 4 chỗ</span>
+                <span>📅 2025</span>
+            </div>
+
+        </div>
+
+    </article>
+</a>
+            <!-- Card 3 -->
+            <a href="muahang.html" class="car-link">
+
+    <article class="featured-card">
+
+        <span class="badge-left">New</span>
+
+        <img src="images/AudiA6.jpg" alt="AudiA6">
+
+        <div class="card-body">
+
+            <h3>Audi A6</h3>
+
+            <span class="car-type">
+                NEW CAR | AUTOMATIC | SPORT
+            </span>
+
+            <div class="price">
+                <del>$52,000</del>
+                <strong>$2.400.000.000</strong>
+            </div>
+
+            <p>
+                Audi A6 sở hữu ngoại hình thể thao,
+                        khoang lái hiện đại và công nghệ tiên tiến.
+            </p>
+
+            <div class="specs">
+                <span>⛽ Xăng</span>
+                <span>⚙ Tự động</span>
+                <span>👥 4 chỗ</span>
+                <span>📅 2025</span>
+            </div>
+
+        </div>
+
+    </article>
+</a>
+        </div>
+    </section>
+ </main>
+
+<footer>
+
+</footer>
   <script src="SanPham.js"></script>
 </body>
 </html>

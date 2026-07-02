@@ -7,7 +7,6 @@
   <meta name="description" content="Trang tìm kiếm xe ô tô cũ và xe máy đã qua sử dụng giá tốt" />
   <title>Sản Phẩm Xe Cũ</title>
   <link rel="stylesheet" href="SanPham.css" />
-  <link rel="stylesheet" href="/Nguyen/main.css">
 </head>
 
 <body>
@@ -18,11 +17,11 @@
                 <img src="/images/logo-ngang.png" alt="Logo">
         </div>
         <ul id="nav">
-            <li><a href="/Nguyen/trangchu.html" class="header_a">Trang chủ</a></li>
-            <li><a href="/Phuc/SanPham.html" class="header_a--active">Kho xe</a></li>
-            <li><a href="/tai/suachuachung.html" class="header_a">Dịch vụ</a></li>
-            <li><a href="/" class="header_a">Giới thiệu</a></li>
-            <li><a href="/Nguyen/Lienhe.html" class="header_a">Liên hệ</a></li>
+            <li><a href="" class="header_a--active">Trang chủ</a></li>
+            <li><a href="" class="header_a">Sản phẩm</a></li>
+            <li><a href="" class="header_a">Dịch vụ</a></li>
+            <li><a href="" class="header_a">Giới thiệu</a></li>
+            <li><a href="" class="header_a">Liên hệ</a></li>
         </ul>
 
         <div class="header_icon">
@@ -36,8 +35,29 @@
                 </div>
             </div>
 
-            <a href="/Nguyen/Dangnhap.html"><button class="header_button">Đăng nhập</button></a>
+            <button class="header_button">Đăng nhập</button>
         </div>
+
+    
+</header>
+    <header class="search-header">
+      <div class="search-bar" role="search">
+        <div class="search-bar__input-wrap">
+          <span class="search-bar__icon" aria-hidden="true">🔍</span>
+          <input type="search" class="search-bar__input" placeholder="Nhập đời xe, khoảng giá, số km..." aria-label="Tìm kiếm xe cũ"/>
+        </div>
+        <button type="button" class="btn-search" aria-label="Tìm kiếm">🔍 TÌM KIẾM</button>
+        <button type="button" class="btn-filter" aria-label="Lọc nâng cao">⚙ Lọc nâng cao</button>
+      </div>
+
+      <nav class="suggestions" aria-label="Gợi ý tìm kiếm">
+        <span class="suggestions__label">Gợi ý:</span>
+        <button type="button" class="suggestions__pill">🔥 Camry 2020 cũ</button>
+        <button type="button" class="suggestions__pill">Xe cũ dưới 400tr</button>
+        <button type="button" class="suggestions__pill">Vios lướt</button>
+        <button type="button" class="suggestions__pill">Ranger 2021</button>
+        <button type="button" class="suggestions__pill">SH 160i</button>
+      </nav>
     </header>
 
     <nav class="tabs" role="tablist" aria-label="Danh mục xe">
@@ -136,28 +156,11 @@
             </article>
 
             <article class="featured-card">
-              <span class="fc-badge fc-badge--new">LƯỚT</span>
-              <div class="fc-icon" aria-hidden="true">
-                <img src="images/wave.jpg" alt="Wave Alpha">
-              </div>
-              <p class="fc-name">Honda Wave Alpha</p>
-              <p class="fc-price">18 triệu</p>
-            </article>
-
-            <article class="featured-card">
               <div class="fc-icon" aria-hidden="true">
                 <img src="images/toyota-camry.jpg" alt="Toyota Camry 2023">
               </div>
               <p class="fc-name">Toyota Camry 2023</p>
               <p class="fc-price">920 triệu</p>
-            </article>
-
-            <article class="featured-card">
-              <div class="fc-icon" aria-hidden="true">
-                <img src="images/accent.jpg" alt="Hyundai Accent 2023">
-              </div>
-              <p class="fc-name">Hyundai Accent 2023</p>
-              <p class="fc-price">305 triệu</p>
             </article>
 
           </div>
@@ -167,7 +170,7 @@
           <p class="results-count">
             Tìm thấy <strong>4 xe đã qua sử dụng</strong> phù hợp
           </p>
-          <div class="sort-wrap">
+          <!-- <div class="sort-wrap">
             <label for="sort-select" class="visually-hidden">Sắp xếp</label>
             <select id="sort-select" class="sort-select">
               <option value="best-match">Sắp xếp: Phù hợp nhất ▾</option>
@@ -179,20 +182,10 @@
               <button type="button" class="view-btn view-btn--active" aria-label="Xem dạng lưới" aria-pressed="true">▦</button>
               <button type="button" class="view-btn" aria-label="Xem dạng danh sách" aria-pressed="false">☰</button>
             </div>
-          </div>
+          </div> -->
         </div>
 
         <section class="car-grid" aria-label="Danh sách xe cũ">
-
-          <article class="car-card car-card--old">
-            <span class="cc-badge cc-badge--old">CŨ · 2023</span>
-            <div class="cc-icon" aria-hidden="true">
-              <img src="images/vios.jpg" alt="Toyota Vios 2023">
-            </div>
-            <h3 class="cc-name">Toyota Vios 2023</h3>
-            <p class="cc-meta">🚘 Số sàn · ODO: 45,000 km</p>
-          </article>
-
           <article class="car-card car-card--old">
             <span class="cc-badge cc-badge--old">CŨ · 2023</span>
             <div class="cc-icon" aria-hidden="true">
@@ -209,15 +202,6 @@
             </div>
             <h3 class="cc-name">Toyota Fortuner 2023</h3>
             <p class="cc-meta">🚘 Tự động · ODO: 32,000 km</p>
-          </article>
-
-          <article class="car-card car-card--old">
-            <span class="cc-badge cc-badge--old">CŨ · 2020</span>
-            <div class="cc-icon" aria-hidden="true">
-              <img src="images/Hd-city.jpg" alt="Honda City 2018">
-            </div>
-            <h3 class="cc-name">Honda City 2020</h3>
-            <p class="cc-meta">🚘 Tự động · ODO: 60,000 km</p>
           </article>
 
         </section>

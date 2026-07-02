@@ -7,7 +7,6 @@
   <meta name="description" content="Trang tìm kiếm xe máy mới và xe máy đã qua sử dụng" />
   <title>Sản Phẩm Xe Máy</title>
   <link rel="stylesheet" href="SanPham.css" />
-  <link rel="stylesheet" href="/Nguyen/main.css">
 </head>
 
 <body>
@@ -18,11 +17,11 @@
                 <img src="/images/logo-ngang.png" alt="Logo">
         </div>
         <ul id="nav">
-            <li><a href="/Nguyen/trangchu.html" class="header_a">Trang chủ</a></li>
-            <li><a href="/Phuc/SanPham.html" class="header_a--active">Kho xe</a></li>
-            <li><a href="/tai/suachuachung.html" class="header_a">Dịch vụ</a></li>
-            <li><a href="/" class="header_a">Giới thiệu</a></li>
-            <li><a href="/Nguyen/Lienhe.html" class="header_a">Liên hệ</a></li>
+            <li><a href="" class="header_a--active">Trang chủ</a></li>
+            <li><a href="" class="header_a">Sản phẩm</a></li>
+            <li><a href="" class="header_a">Dịch vụ</a></li>
+            <li><a href="" class="header_a">Giới thiệu</a></li>
+            <li><a href="" class="header_a">Liên hệ</a></li>
         </ul>
 
         <div class="header_icon">
@@ -36,8 +35,29 @@
                 </div>
             </div>
 
-            <a href="/Nguyen/Dangnhap.html"><button class="header_button">Đăng nhập</button></a>
+            <button class="header_button">Đăng nhập</button>
         </div>
+
+    
+</header>
+    <header class="search-header">
+      <div class="search-bar" role="search">
+        <div class="search-bar__input-wrap">
+          <span class="search-bar__icon" aria-hidden="true">🔍</span>
+          <input type="search" class="search-bar__input" placeholder="Nhập tên xe, hãng, phân khối..." aria-label="Tìm kiếm xe máy"/>
+        </div>
+        <button type="button" class="btn-search" aria-label="Tìm kiếm">🔍 TÌM KIẾM</button>
+        <button type="button" class="btn-filter" aria-label="Lọc nâng cao">⚙ Lọc nâng cao</button>
+      </div>
+
+      <nav class="suggestions" aria-label="Gợi ý tìm kiếm">
+        <span class="suggestions__label">Gợi ý:</span>
+        <button type="button" class="suggestions__pill">🔥 SH 160i 2025</button>
+        <button type="button" class="suggestions__pill">Exciter 155</button>
+        <button type="button" class="suggestions__pill">Vespa GTS</button>
+        <button type="button" class="suggestions__pill">Xe số dưới 30tr</button>
+        <button type="button" class="suggestions__pill">Honda Vision</button>
+      </nav>
     </header>
 
     <nav class="tabs" role="tablist" aria-label="Danh mục xe">
@@ -122,32 +142,6 @@
             </article>
 
             <article class="featured-card">
-              <span class="fc-badge fc-badge--new">MỚI</span>
-              <div class="fc-icon" aria-hidden="true">
-                <img src="images/exciter-155.jpg" alt="Yamaha Exciter 155">
-              </div>
-              <p class="fc-name">Yamaha Exciter 155</p>
-              <p class="fc-price">48 triệu</p>
-            </article>
-
-            <article class="featured-card">
-              <span class="fc-badge fc-badge--sale">GIẢM GIÁ</span>
-              <div class="fc-icon" aria-hidden="true">
-              <img src="images/vespa.jpg" alt="Vespa Sprint ABS">
-              </div>
-              <p class="fc-name">Vespa Sprint ABS</p>
-              <p class="fc-price">82 triệu</p>
-            </article>
-
-            <article class="featured-card">
-              <div class="fc-icon" aria-hidden="true">
-                <img src="images/winner-x.jpg" alt="Honda Winner X">
-              </div>
-              <p class="fc-name">Honda Winner X 2024</p>
-              <p class="fc-price">40 triệu</p>
-            </article>
-
-            <article class="featured-card">
               <div class="fc-icon" aria-hidden="true">
                 <img src="images/ducati-937.jpg" alt="Ducati Monster 937">
               </div>
@@ -162,7 +156,7 @@
           <p class="results-count">
             Tìm thấy <strong>4</strong> phù hợp
           </p>
-          <div class="sort-wrap">
+          <!-- <div class="sort-wrap">
             <label for="sort-select" class="visually-hidden">Sắp xếp</label>
             <select id="sort-select" class="sort-select">
               <option value="best-match">Sắp xếp: Phù hợp nhất ▾</option>
@@ -174,7 +168,7 @@
               <button type="button" class="view-btn view-btn--active" aria-label="Xem dạng lưới" aria-pressed="true">▦</button>
               <button type="button" class="view-btn" aria-label="Xem dạng danh sách" aria-pressed="false">☰</button>
             </div>
-          </div>
+          </div> -->
         </div>
 
         <section class="car-grid" aria-label="Danh sách xe máy">
@@ -186,24 +180,6 @@
             </div>
             <h3 class="cc-name">Honda Vision 2025</h3>
             <p class="cc-meta">🛵 Tay ga · 110cc</p>
-          </article>
-
-          <article class="car-card">
-            <span class="cc-badge cc-badge--new">MỚI</span>
-            <div class="cc-icon" aria-hidden="true">
-            <img src="images/janus.jpg" alt="Yamaha Janus">
-            </div>
-            <h3 class="cc-name">Yamaha Janus 2025</h3>
-            <p class="cc-meta">🛵 Tay ga · 125cc</p>
-          </article>
-
-          <article class="car-card car-card--sale">
-            <span class="cc-badge cc-badge--sale">GIẢM GIÁ</span>
-            <div class="cc-icon" aria-hidden="true">
-              <img src="images/future.jpg" alt="Honda Future 125i">
-            </div>
-            <h3 class="cc-name">Honda Future 125i</h3>
-            <p class="cc-meta">🛵 Xe số · 125cc</p>
           </article>
 
           <article class="car-card car-card--new">

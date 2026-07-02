@@ -1,0 +1,303 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    font-family: "Times New Roman", Times, serif;
+    background: white;
+    color: black;
+    margin:0;
+    /* padding:40px 20px; */
+}
+main{
+     padding:40px 20px; 
+     font-size: 18px;
+     color: black;
+}
+.form-wrap{
+    max-width: 1120px;
+    margin: 0 auto;
+}
+.form--grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 60px;
+}
+ .section{
+    margin-bottom: 32px;
+ }
+ .section--title{
+    display:flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+.section--title .num{
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background-color: rgb(237, 237, 255);
+    font-size: 18px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+.section--title h2{
+    /* font-size: 18px; */
+    font-weight: 600;
+}
+.field{
+    margin-bottom: 18px;
+}
+.field label{
+    display: block;
+    margin-bottom: 6px;
+}
+.field label .req{
+    color: red;
+}
+.field-with-count {
+  position: relative;
+}
+.field input[type="text"],
+.field input[type="tel"],
+.field input[type="email"],
+.field input[type="date"],
+.field input[type="time"],
+.field select,
+.field textarea{
+    width: 100%;
+    padding: 10px 15px;
+    border: 1px solid blue;
+    border-radius: 6px;
+    background-color: white;
+    outline: none;
+    transition: border-color 0.15s ease;
+    /* font-family: inherit; */
+}
+.field input::placeholder,
+.field textarea::placeholder{
+    color: gray;
+}
+.field input:focus,
+.field select:focus,
+.field textarea:focus {
+  border-color: red;
+}
+.field input.invalid,
+.field select.invalid{
+    border-color: rgb(255, 0, 208);
+}
+textarea{
+    resize: vertical;
+    min-height: 90px;
+}
+.service--list{
+    display: flex;
+    align-items: center;
+    padding: 13px 16px ;
+    gap: 16px;
+    border-bottom: 1px solid white;
+}
+.service--row:last-child{
+    border-bottom: none;
+}
+.service--row:nth-child(odd) {
+  /* background: white; */
+}
+.service--row input[type="checkbox"] {
+    width: 16px;
+    height: 18px;
+    accent-color: blue;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+.service--name{
+    flex: 1;
+    /* font-size: px; */
+}
+.icon--input{
+    position: relative;
+}
+.icon--input input {
+  padding-right: 40px;
+}
+.radio--group{
+    display: flex;
+    gap: 28px;
+    margin-bottom: 18px;
+}
+.radio--option{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+.radio--option input[type="radio"]{
+    width: 16px;
+    height: 16px;
+    accent-color: blue;
+    cursor: pointer;
+}
+.consent{
+    display: flex;
+    align-self: flex-start;
+    gap: 10px;
+    max-width: 760px;
+    margin: 24px auto 28px;
+}
+.consent input[type="checkbox"]{
+    width: 16px;
+    height: 16px;
+    margin-top: 5px;
+    flex-shrink: 0;
+    cursor: pointer;
+}
+.consent a{
+    color: #2563eb;
+    text-decoration: none;
+}
+.consent a:hover {
+  text-decoration: underline;
+}
+.section--submit{
+    grid-column: 1 / -1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 760px;
+    margin: 8px auto 0;
+}
+.consent{
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    width: 100%;
+    margin-bottom: 16px;
+}
+.consent input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  margin-top: 5px;
+  flex-shrink: 0;
+  cursor: pointer;
+}
+.submit-btn {
+  background: gray;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 14px 0;
+  width: 30%;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s ease, opacity 0.15s ease;
+}
+.submit-btn:hover {
+  background: #1f7cff;
+}
+.submit-btn:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+/* ==================== RESPONSIVE ==================== */
+@media screen and (max-width: 767px) {
+  main{
+    padding: 24px 12px;
+    font-size: 16px;
+  }
+
+  /* Chuyển grid 2 cột thành 1 cột */
+  .form--grid {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .section{
+    margin-bottom: 24px;
+  }
+
+  .section--title h2{
+    font-size: 16px;
+  }
+
+  .section--title .num{
+    width: 22px;
+    height: 22px;
+    font-size: 15px;
+  }
+
+  /* Tỉnh/thành + Phường xã, Ngày + Giờ xếp dọc thay vì ngang */
+  .row--2col{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .radio--group{
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .service--list{
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 12px;
+  }
+
+  .field input[type="text"],
+  .field input[type="tel"],
+  .field input[type="email"],
+  .field input[type="date"],
+  .field input[type="time"],
+  .field select,
+  .field textarea{
+    padding: 9px 12px;
+    font-size: 15px;
+  }
+
+  .section--submit{
+    max-width: 100%;
+  }
+
+  .consent{
+    font-size: 14px;
+  }
+
+  .submit-btn{
+    padding: 13px 0;
+    font-size: 15px;
+  }
+
+ 
+}
+/* ----- Tablet: 577px - 1024px ----- */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .form-wrap{
+    padding: 0 10px;
+  }
+  main{
+    padding: 32px 16px;
+    font-size: 17px;
+  }
+  .form--grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 0 32px;
+  }
+  .section--submit{
+    max-width: 100%;
+  }
+  .field input[type="text"],
+  .field input[type="tel"],
+  .field input[type="email"],
+  .field input[type="date"],
+  .field input[type="time"],
+  .field select,
+  .field textarea{
+    padding: 9px 14px;
+  }
+}
+
+/* ----- Mobile: ≤ 576px ----- */

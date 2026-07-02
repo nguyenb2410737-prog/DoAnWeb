@@ -103,9 +103,6 @@ textarea{
 .service--row:last-child{
     border-bottom: none;
 }
-.service--row:nth-child(odd) {
-  /* background: white; */
-}
 .service--row input[type="checkbox"] {
     width: 16px;
     height: 18px;
@@ -201,14 +198,12 @@ textarea{
   opacity: 0.55;
   cursor: not-allowed;
 }
-/* ==================== RESPONSIVE ==================== */
 @media screen and (max-width: 767px) {
   main{
     padding: 24px 12px;
     font-size: 16px;
   }
 
-  /* Chuyển grid 2 cột thành 1 cột */
   .form--grid {
     grid-template-columns: 1fr;
     gap: 0;
@@ -227,8 +222,6 @@ textarea{
     height: 22px;
     font-size: 15px;
   }
-
-  /* Tỉnh/thành + Phường xã, Ngày + Giờ xếp dọc thay vì ngang */
   .row--2col{
     display: flex;
     flex-direction: column;
@@ -273,7 +266,7 @@ textarea{
 
  
 }
-/* ----- Tablet: 577px - 1024px ----- */
+
 @media screen and (min-width: 768px) and (max-width: 1024px) {
   .form-wrap{
     padding: 0 10px;
@@ -300,4 +293,3 @@ textarea{
   }
 }
 
-/* ----- Mobile: ≤ 576px ----- */

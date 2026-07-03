@@ -6,17 +6,17 @@
 }
 
 body {
-    font-family: 'Segoe UI', Arial, sans-serif;
+    font-family: 'Times New Roman','Segoe UI', Arial, sans-serif;
     line-height: 1.6;
     color: #333;
     background-color: #ffffff;
 }
-
-.wrapper {
+// Tinh chinh lai wrapper hoac la bo luon
+/* .wrapper {
     width: 100%;
     max-width: 1400px;
     margin: 0 auto;
-}
+} */
 
 /* Thiết kế Header (Sử dụng Flexbox)  */
 .header {

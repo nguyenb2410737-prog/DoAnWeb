@@ -1,0 +1,180 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Đặt lịch</title>
+  <link rel="stylesheet" href="/Nguyen/main.css">
+  <link rel="stylesheet" href="/tai/datlich.css">
+</head>
+
+<body>
+  <header class="header">
+    <div class="header_logo">
+      <img src="/images/logo-ngang.png" alt="Logo">
+    </div>
+    <ul id="nav">
+      <li><a href="/Nguyen/trangchu.html" class="header_a">Trang chủ</a></li>
+      <li><a href="/Phuc/SanPham.html" class="header_a">Kho xe</a></li>
+      <li><a href="/tai/suachuachung.html" class="header_a--active">Dịch vụ</a></li>
+      <li><a href="/" class="header_a">Giới thiệu</a></li>
+      <li><a href="/Nguyen/Lienhe.html" class="header_a">Liên hệ</a></li>
+    </ul>
+
+    <div class="header_icon">
+      <div class="icon_group">
+        <div class="chuong">
+          <a href="/Nguyen/thongbao.html"><img src="/images/chuong.png"></a>
+        </div>
+
+        <div class="basket">
+          <a href="/Nguyen/giohang.html"><img src="/images/giohang.png"></a>
+        </div>
+      </div>
+
+      <a href="/Nguyen/Dangnhap.html"><button class="header_button">Đăng nhập</button></a>
+    </div>
+  </header>
+  <main class="form-wrap">
+    <form id="bookingForm">
+      <div class="form--grid">
+        <section class="section">
+          <div class="section--title">
+            <span class="num">1</span>
+            <h2>Thông tin khách hàng</h2>
+          </div>
+          <div class="field">
+            <label for="fullname">Họ tên <span class="req">*</span></label>
+              <input type="text" id="fullname" placeholder="Nhập họ và tên">
+          </div>
+          <div class="field">
+            <label for="phone">Số điện thoại <span class="req">*</span></label>
+            <input type="tel" id="phone" placeholder="Tối thiểu 10 chữ số">
+          </div>
+          <div class="field">
+            <label for="email">Email <span class="req">*</span></label>
+            <input type="email" id="email" placeholder="vidu@gmail.com">
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section--title">
+            <span class="num">2</span>
+            <h2>Dịch vụ</h2>
+          </div>
+          <div class="field">
+            <label>Dịch vụ <span class="req">*</span></label>
+            <div class="service--list">
+              <div class="service--row">
+                <input type="checkbox" id="svc1" name="service">
+                <label for="svc1" class="service--name">Bảo dưỡng</label>
+              </div>
+              <div class="service--row">
+                <input type="checkbox" id="svc2" name="service">
+                <label for="svc2" class="service--name">Đồng sơn</label>
+              </div>
+              <div class="service--row">
+                <input type="checkbox" id="svc3" name="service">
+                <label for="svc3" class="service--name">Căn chỉnh bánh</label>
+              </div>
+              <div class="service--row">
+                <input type="checkbox" id="svc4" name="service">
+                <label for="svc4" class="service--name">Hỗ trợ khẩn cấp</label>
+              </div>
+            </div>
+          </div>
+          <div class="field">
+            <label for="note">Ghi chú</label>
+            <textarea id="note" placeholder="Cụ thể yêu cầu AutoPrim hỗ trợ"></textarea>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section--title">
+            <span class="num">3</span>
+            <h2>Thông tin xe</h2>
+          </div>
+          <div class="field">
+            <label for="carModel">Mẫu xe <span class="req">*</span></label>
+            <select id="carModel">
+              <option value="">Lựa chọn</option>
+              <option value="lc1">Sedan</option>
+              <option value="lc2">Coupe</option>
+              <option value="lc3">Pickup</option>
+              <option value="lc4">MPV</option>
+              <option value="lc5">Hatchback</option>
+              <option value="lc6">Xe máy</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="km">Số km</label>
+            <input type="text" id="km" placeholder="Nhập số km">
+          </div>
+          <div class="field">
+            <label for="plate">Biển số xe <span class="req">*</span></label>
+            <input type="text" id="plate" placeholder="Nhập biển số xe">
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section--title">
+            <span class="num">4</span>
+            <h2>Địa điểm và thời gian</h2>
+          </div>
+          <div class="field">
+            <label>Tại <span class="req">*</span></label>
+            <div class="row--2col">
+              <select id="province">
+                <option value="">Tỉnh thành</option>
+                <option value="hn">Hà Nội</option>
+                <option value="hcm">TP. Hồ Chí Minh</option>
+                <option value="ct">Cần Thơ</option>
+                <option value="dn">Đà Nẵng</option>
+              </select>
+              <select id="ward">
+                <option value="">Phường/Xã</option>
+              </select>
+            </div>
+          </div>
+          <div class="radio--group">
+            <label class="radio--option">
+              <input type="radio" name="serviceType" value="workshop" checked>
+              Xưởng dịch vụ
+            </label>
+            <label class="radio--option">
+              <input type="radio" name="serviceType" value="mobile">
+              Dịch vụ sửa chữa lưu động
+            </label>
+          </div>
+          <div class="field">
+            <label>Thời gian <span class="req">*</span></label>
+            <div class="row--2col">
+              <div class="icon--input">
+                <input type="date">
+              </div>
+              <div class="icon--input">
+                <input type="time">
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section section--submit">
+          <label class="consent">
+            <input type="checkbox">
+            <span>
+              Tôi đồng ý cho phép Công ty TNHH Kinh doanh Thương mại và Dịch vụ AutoPrim xử lý
+              dữ liệu cá nhân của tôi và các thông tin khác do tôi cung cấp cho mục đích và theo
+              phương thức được mô tả chi tiết tại
+              <a href="#">Chính sách Bảo vệ Dữ liệu cá nhân</a>.
+            </span>
+          </label>
+          <button type="submit" class="submit-btn">Gửi yêu cầu</button>
+        </section>
+      </div>
+    </form>
+  </main>
+</body>
+
+</html>

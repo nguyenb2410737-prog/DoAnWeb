@@ -7,12 +7,32 @@
     <title>Chính sách cam kết thời gian sửa chữa – AutoPrime</title>
     <link rel="stylesheet" href="camket.css">
     <link rel="stylesheet" href="/Nguyen/main.css">
+     <style>
+       .btn{
+        /* display: flex; */
+        margin-top: 100px;
+        padding: 20px;
+        background-color: violet;
+        border-radius: 8px;
+        font-size: 20px;
+        border: none;
+        transition: background 0.15s, transform 0.1s;
+        align-items: center;
+        cursor: pointer;
+       }
+       .btn:hover { background:red;
+        box-shadow: 0 6px 20px blue;
+        transform: scale(1.05);
+        color: white;
+    }
+        .btn:active { transform: scale(0.97); }
+    </style>
 </head>
 
 <body>
     <header class="header">
         <div class="header_logo">
-                <img src="/images/logo-ngang.png" alt="Logo">
+            <img src="/images/logo-ngang.png" alt="Logo">
         </div>
         <ul id="nav">
             <li><a href="/Nguyen/trangchu.html" class="header_a">Trang chủ</a></li>
@@ -45,7 +65,9 @@
                     <li><a href="dongson.html">Dịch vụ sửa chữa đồng sơn</a></li>
                     <li><a href="canbangbanh.html">Cân chỉnh góc đặt bánh xe / Cân bằng động</a></li>
                     <li><a href="ecall.html">Hỗ trợ khẩn cấp (eCall) / Cứu hộ 24/7</a></li>
-                    <li><a href="camketthoigian.html"  class="active">Chính sách cam kết thời gian sửa chữa</a></li>
+                    <li><a href="camketthoigian.html" class="active">Chính sách cam kết thời gian sửa chữa</a></li>
+
+                    <a href="/tai/datlich.html" class="btn">📅 Đặt lịch</a>
                 </ul>
             </nav>
         </aside>
@@ -53,25 +75,28 @@
             <section class="main--section">
                 <h1>Chính sách cam kết thời gian sửa chữa</h1>
                 <div class="img--box">
-                    <img class="img--box__one" src="/images/camket2.png"alt="Kỹ thuật viên AutoPrime đang thực hiện sơn xe">
-                    <img class="img--box__two" src="/images/camket.png"alt="Kỹ thuật viên AutoPrime đang thực hiện sơn xe">
+                    <img class="img--box__one" src="/images/camket2.png" alt="Kỹ thuật viên AutoPrime đang thực hiện sơn xe">
+                    <img class="img--box__two" src="/images/camket.png" alt="Kỹ thuật viên AutoPrime đang thực hiện sơn xe">
                 </div>
                 <p class="main--section__head">
-                    <b>AutoPrime</b> cam kết minh bạch và đúng hẹn trong thời gian sửa chữa, nhằm nâng cao trải nghiệm và sự hài lòng của Khách hàng.</p>
+                    <b>AutoPrime</b> cam kết minh bạch và đúng hẹn trong toàn bộ quá trình sửa chữa và bảo dưỡng xe. Chúng tôi hiểu rằng thời gian của Khách hàng là quý giá — vì vậy, mọi công việc tại xưởng dịch vụ đều được lên kế hoạch rõ ràng, thực hiện đúng tiến độ và thông báo kịp thời.<br>
+                Trong trường hợp phát sinh tình huống ngoài dự kiến, AutoPrime luôn chủ động liên hệ để thông báo và thống nhất lại với Khách hàng — không để Khách hàng phải chờ đợi mà không có thông tin. Đây là cam kết cốt lõi mà AutoPrime đặt ra nhằm xây dựng niềm tin và nâng cao trải nghiệm dịch vụ lâu dài.</p>
                 <ul class="main--section__body">
-                                <li class="list--item">Hỗ trợ 500.000 VNĐ/ngày (đã gồm VAT) nếu thời gian sửa chữa vượt quá cam kết.</li>
-                                <li class="list--item">Với lỗi liên quan đến pin hoặc động cơ, Khách hàng sẽ được hỗ trợ mượn pin hoặc xe trong thời gian chờ sửa chữa.</li>
-                                <li class="list--item">Khách hàng sẽ được thông báo tiến độ sửa chữa định kỳ, đảm bảo minh bạch trong suốt quá trình xử lý.</li>
-                                <li class="list--item">Trong trường hợp cần gia hạn thời gian sửa chữa, AutoPrime sẽ chủ động liên hệ và xác nhận lại với Khách hàng trước khi hết hạn cam kết.</li>
-                            <p class="list--body"><b>Áp dụng cho:</b> Tất cả Khách hàng sở hữu ô tô điện và ô tô xăng VinFast.</p>
-                            <p class="list--body"><b>Không áp dụng:</b> Vào các ngày nghỉ lễ, Tết theo quy định Nhà nước.</p>
+                    <li class="list--item">Hỗ trợ 500.000 VNĐ/ngày (đã gồm VAT) nếu thời gian sửa chữa vượt quá cam kết.</li>
+                    <li class="list--item">Với lỗi liên quan đến pin hoặc động cơ, Khách hàng sẽ được hỗ trợ mượn pin hoặc xe trong thời gian chờ sửa chữa.</li>
+                    <li class="list--item">Khách hàng sẽ được thông báo tiến độ sửa chữa định kỳ, đảm bảo minh bạch trong suốt quá trình xử lý.</li>
+                    <li class="list--item">Trong trường hợp cần gia hạn thời gian sửa chữa, AutoPrime sẽ chủ động liên hệ và xác nhận lại với Khách hàng trước khi hết hạn cam kết.</li>
+                    <p class="list--body"><b>Áp dụng cho:</b> Tất cả Khách hàng sở hữu ô tô điện và ô tô xăng AutoPrime.</p>
+                    <p class="list--bodyy"><b>Không áp dụng:</b> Vào các ngày nghỉ lễ, Tết theo quy định Nhà nước.</p>
 
-                            <p class="list__last">Lưu ý: Nếu được cung cấp xe mượn, Khách hàng tự chi trả chi phí cầu đường, phạt vi phạm... (nếu có).</p>
+                    <p class="list__last"><i>Lưu ý: Nếu được cung cấp xe mượn, Khách hàng tự chi trả chi phí cầu đường, phạt vi phạm... (nếu có).</i></p>
                 </ul>
             </section>
         </main>
     </div>
-    <footer></footer>
+    <footer>
+
+    </footer>
 </body>
 
 </html>

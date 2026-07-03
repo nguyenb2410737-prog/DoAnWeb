@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Đăng Ký Lái Thử Xe BMW</title>
+  <meta name="description" content="Đăng ký trải nghiệm lái thử các dòng xe BMW ngay hôm nay.">
+  <link rel="stylesheet" href="tuvan.css">
+</head>
+<body>
+<header class="header">
+        <div class="header_logo">
+            <img src="/DoAnWeb/images/logo.png" alt="Logo">
+        </div>
+        <ul id="nav">
+            <li><a href="" class="header_a--active">Trang chủ</a></li>
+            <li><a href="" class="header_a">Kho xe</a></li>
+            <li><a href="" class="header_a">Dịch vụ</a></li>
+            <li><a href="" class="header_a">Giới thiệu</a></li>
+            <li><a href="" class="header_a">Liên hệ</a></li>
+        </ul>
+
+        <div class="header_icon">
+            <div class="icon_group">
+                <div class="chuong">
+                    <a href="/Nguyen/thongbao.html"><img src="/images/chuong.png"></a>
+                </div>
+                <div class="basket">
+                    <a href="/Nguyen/giohang.html"><img src="/images/giohang.png"></a>
+                </div>
+            </div>
+            <a href="/Nguyen/Dangnhap.html"><button class="header_button">Đăng nhập</button></a>
+        </div>
+    </header>
+  
+ 
+    <main class="form-panel">
+        <div class="page-background" aria-hidden="true"></div>
+  <div class="page-overlay" aria-hidden="true"></div>
+
+  <div class="page">
+    <div class="hero">
+      <p class="hero__eyebrow">THACO &middot; BMW Việt Nam</p>
+      <h1 class="hero__title">Đăng Ký<br>Lái Thử Xe BMW</h1>
+      <span class="hero__divider" aria-hidden="true"></span>
+      <p class="hero__subtitle">Trải nghiệm cảm giác lái đỉnh cao&nbsp;— đặt lịch lái thử ngay hôm nay.</p>
+    </div>
+      <form class="register-form" action="#" method="post">
+
+        <h2 class="register-form__title">Đăng Ký Lái Thử Xe BMW</h2>
+
+        <div class="form-group">
+          <label for="salutation" class="form-label">Danh xưng <span class="form-label__required">*</span></label>
+          <div class="select-wrapper">
+            <select id="salutation" name="salutation" class="form-select" required>
+              <option value="" selected disabled>Please select ...</option>
+              <option value="ong">Ông</option>
+              <option value="ba">Bà</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="first-name" class="form-label">Tên <span class="form-label__required">*</span></label>
+          <input type="text" id="first-name" name="first_name" class="form-input" placeholder="Nhập tên của quý khách" autocomplete="given-name" required>
+        </div>
+
+        <div class="form-group">
+          <label for="last-name" class="form-label">Họ <span class="form-label__required">*</span></label>
+          <input type="text" id="last-name" name="last_name" class="form-input" placeholder="Nhập họ của quý khách" autocomplete="family-name" required>
+        </div>
+
+        <div class="form-group">
+          <label for="phone" class="form-label">Số điện thoại <span class="form-label__required">*</span></label>
+          <input type="tel" id="phone" name="phone" class="form-input" placeholder="Nhập số điện thoại" autocomplete="tel" pattern="[0-9\s\+\-]{9,12}" required>
+        </div>
+
+        <div class="form-group">
+          <label for="email" class="form-label">Email <span class="form-label__required">*</span></label>
+          <input type="email" id="email" name="email" class="form-input" placeholder="Nhập địa chỉ email" autocomplete="email" required>
+        </div>
+
+        <div class="form-group">
+          <label for="city" class="form-label">Thành phố/ Tỉnh <span class="form-label__required">*</span></label>
+          <div class="select-wrapper">
+            <select id="city" name="city" class="form-select" required>
+              <option value="" selected disabled>Please select ...</option>
+              <option value="hanoi">Hà Nội</option>
+              <option value="hcm">TP. Hồ Chí Minh</option>
+              <option value="danang">Đà Nẵng</option>
+              <option value="haiphong">Hải Phòng</option>
+              <option value="cantho">Cần Thơ</option>
+              <option value="binhduong">Bình Dương</option>
+              <option value="dongnai">Đồng Nai</option>
+              <option value="khanhhoa">Khánh Hòa</option>
+              <option value="other">Tỉnh/ Thành khác</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Quận / Huyện -->
+        <div class="form-group">
+          <label for="district" class="form-label">Quận/ Huyện</label>
+          <input type="text" id="district" name="district" class="form-input" placeholder="Nhập quận/ huyện">
+        </div>
+
+        <!-- Mẫu xe muốn lái thử -->
+        <div class="form-group">
+          <label for="car-model" class="form-label">Mẫu xe Quý Khách muốn lái thử <span class="form-label__required">*</span></label>
+          <div class="select-wrapper">
+            <select id="car-model" name="car_model" class="form-select" required>
+              <option value="" selected disabled>Please select ...</option>
+              <optgroup label="Dòng BMW">
+                <option value="series-3">BMW Series 3</option>
+                <option value="series-5">BMW Series 5</option>
+                <option value="series-7">BMW Series 7</option>
+              </optgroup>
+              <optgroup label="Dòng Mercedes">
+                <option value="x1">BMW X1</option>
+                <option value="x3">BMW X3</option>
+                <option value="x5">BMW X5</option>
+                <option value="x7">BMW X7</option>
+              </optgroup>
+              <optgroup label="Dòng Honda">
+                <option value="i4">BMW i4</option>
+                <option value="ix">BMW iX</option>
+              </optgroup>
+              <optgroup label="Dòng Toyota">
+                <option value="m3">BMW M3</option>
+                <option value="m5">BMW M5</option>
+              </optgroup>
+            </select>
+          </div>
+        </div>
+
+        <!-- Showroom -->
+        <div class="form-group">
+          <label for="showroom" class="form-label">Showroom <span class="form-label__required">*</span></label>
+          <div class="select-wrapper">
+            <select id="showroom" name="showroom" class="form-select" required>
+              <option value="" selected disabled>Please select ...</option>
+              <option value="sr-long-bien">Cơ sở Long Biên — Hà Nội</option>
+              <option value="sr-my-dinh">Cở sở Mỹ Đình — Hà Nội</option>
+              <option value="sr-dbp">Cơ sở Điện Biên Phủ — TP. Hồ Chí Minh</option>
+              <option value="sr-pho-quang">Cơ sở Phổ Quang — TP. Hồ Chí Minh</option>
+              <option value="sr-danang">Cơ sở Cần Thơ</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Ghi chú -->
+        <div class="form-group">
+          <label for="note" class="form-label">Thông tin yêu cầu khác</label>
+          <textarea id="note" name="note" class="form-textarea" rows="3" placeholder="Nhập yêu cầu khác (nếu có)"></textarea>
+        </div>
+
+        <!-- Chính sách bảo mật -->
+        <div class="form-group form-group--policy">
+          <div class="policy__header">
+            <span class="form-label">Chính sách bảo mật thông tin</span>
+            <label class="policy__agree" for="agree-policy">
+              <input type="checkbox" id="agree-policy" name="agree_policy" class="policy__checkbox" required>
+              <span class="policy__agree-text">Tôi đồng ý</span>
+            </label>
+          </div>
+          <ol class="policy__list">
+            <li>Tôi xác nhận đã đủ 18 tuổi trở lên và đang sở hữu giấy phép lái xe hạng B2 còn hiệu lực.</li>
+            <li>Tôi đồng ý cho phép THACO cùng các đơn vị liên kết, đối tác thu thập, sử dụng, lưu trữ và chia sẻ thông tin cá nhân của tôi với các bên thứ ba có liên quan (bao gồm các công ty thuộc Tập đoàn BMW) nhằm phục vụ công tác chăm sóc khách hàng, mời tham dự sự kiện, hoạt động tiếp thị và nghiên cứu, phù hợp quy định pháp luật về bảo vệ dữ liệu cá nhân hiện hành.</li>
+            <li>Tôi đồng ý để THACO và các đối tác liên hệ với tôi qua số điện thoại, email hoặc phương thức liên lạc khác đã cung cấp nhằm mục đích quảng cáo, chăm sóc khách hàng, kể cả khi tôi đã đăng ký danh sách không nhận quảng cáo.</li>
+          </ol>
+        </div>
+
+        <!-- Submit -->
+        <button type="submit" class="btn-submit">Gửi Đăng Ký</button>
+
+      </form>
+    </main>
+    <footer>
+
+    </footer>
+  </div>
+
+</body>
+</html>

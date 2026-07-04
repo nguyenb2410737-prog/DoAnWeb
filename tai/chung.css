@@ -3,43 +3,27 @@
 *::after{
     box-sizing: border-box;
     margin: 0;
-    padding: 0; 
+    padding: 0;
 }
 body{
     font-family:  'Times New Roman', Times, serif;
-    font-size: 15px;
+    font-size:  18px;
     line-height: 1.3;
     color: black;
     background-color: white;
 }
-<<<<<<< HEAD
-
-=======
-header,
-footer{
-    height: 50px;
-    background-color: rgb(211, 240, 255);
-    border-bottom: 1px solid white;
-}
->>>>>>> 4c5928c8f9f332b3e292b993db955bb775c1484d
 .container{
-    display: grid;
-    grid-template-columns: 270px 1fr 300px;
+    display: flex;
+    /* grid-template-columns: 270px 1fr; */
     width: 100%;
-    /* margin: 0 auto; */
-    background-color: white;
     min-height: calc(100vh - 120px);
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 0 10px black;
 }
 .aside{
-<<<<<<< HEAD
     flex-basis: 300px;
     min-width: 50px; /* giới hạn nhỏ nhất */
     max-width: 300px;/* giới hạn lớn nhất */
     background-color:  rgb(244, 252, 255);
-=======
-    background: rgb(244, 252, 255);
->>>>>>> 4c5928c8f9f332b3e292b993db955bb775c1484d
     border-right: 2px solid white;
     padding: 20px;
 }
@@ -47,11 +31,10 @@ footer{
     font-size: 22px;
     font-weight: 700;
     text-transform: uppercase;
-    color: blue;
     margin-bottom: 20px;
     padding-bottom: 10px;
-    padding-left: 15px;
-    border-bottom: 2px solid #bfdbfe;
+    padding-left: 20px ;
+    border-bottom: 2px solid blue;
 }
 .aside nav ul{
     list-style: none;
@@ -59,12 +42,10 @@ footer{
     flex-direction: column;
     gap: 8px;
 }
-.aside nav ul li a{
+.aside nav ul a{
     display: block;
     padding: 12px 15px;
     border-radius: 10px;
-    font-size: 18px;
-    font-weight: 500;
     color: black;
     text-decoration: none;
     border-left: 4px solid transparent;
@@ -72,26 +53,26 @@ footer{
 }
 .aside nav ul li a:hover{
     color: blue;
-    background-color: rgb(242, 251, 255);
-    border-left-color: blue;
+    background-color: rgb(220, 246, 255);
+    border-left-color: rgb(0, 0, 255);
 }
 .aside nav ul li a.active{
     color:blue;
     font-weight: 600;
-    background-color: aliceblue;
-    border-left-color: blue;
+    background-color:rgb(220, 246, 255);
+    border-left-color: rgb(0, 0, 255);
 }
 main{
+    flex: 1;
     padding: 40px;
+    min-width: 0;
 }
-
 .main--section h1{
     font-size: 35px;
     font-weight: 700;
     color: black;
     margin-bottom: 20px;
 }
-<<<<<<< HEAD
 .img--box{
     float: right;
     display: flex;
@@ -102,29 +83,23 @@ main{
     border-radius: 10px;
     
 }
-=======
->>>>>>> 4c5928c8f9f332b3e292b993db955bb775c1484d
 .img--box__one,
 .img--box__two{
-    float: right;
-    clear: right;
-    width: 375px;
-    height: 250px;
+    float: none;
+    margin: 0;
+    width: 400px;
+    max-width: 100%;
     object-fit: cover;
-    margin-left: 30px;
-    margin-right: -300px;
-     /* Thay đổi viền xanh và bóng mờ màu xanh cũ thành bóng mờ hiện đại, nhẹ nhàng hơn */
-    box-shadow: 0 1px 10px greenyellow;
     border-radius: 8px;
-
-    transition: transform 0.3s ease;
+    height: 310px;
     border: 1px solid blue;
-   
+    box-shadow: 0 0 6px 1px greenyellow;
+    transition: transform 0.3s ease;
 }
+
 .img--box__one:hover,
 .img--box__two:hover {
     transform: scale(1.02);
-    /* Phóng to nhẹ khi di chuột */
 }
 .img--box__one {
     margin-top: 5px;
@@ -138,27 +113,18 @@ main{
 .main--section__head{
     font-size: 18px;
     color: black;
-    line-height: 1.4;
+    line-height: 1.3;
     margin-bottom: 25px;
 }
 .main--section__head b{
     color: blue;
 }
-.list{
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
+.list--li{
+    margin-left:70px;
 }
-
-.list__item {
-    font-size: 18px;
-    color: black;
-    line-height: 1.4;
-    position: relative;
+.list__p{
+    padding-left: 30px;
 }
-<<<<<<< HEAD
-/* ===== ĐIỆN THOẠI (max-width: 576px) ===== */
 @media screen and (max-width: 576px) {
     .container {
         flex-direction: column;
@@ -170,7 +136,7 @@ main{
         border-bottom: 2px solid #ccc;
         padding: 15px;
     }
-    .aside h2 {
+    .aside h2{
         font-size: 18px;
     }
     .aside nav ul a {
@@ -192,22 +158,26 @@ main{
     main {
         padding: 15px;
     }
-    .main--section h1 {
+     .main--section h1 {
         font-size: 24px;
     }
     .main--section__head {
         font-size: 15px;
     }
-    .list__item {
+    .list__item{
+        font-size: 15px;
+    }
+    .list__p{
+        font-size: 15px;
+    }
+    .main--section__sublist{
         font-size: 15px;
     }
 }
-
-/* ===== MÁY TÍNH BẢNG (577px - 1024px) ===== */
-@media screen and (min-width: 577px) and (max-width: 1024px) {
+@media screen and (min-width: 577px) and (max-width:1024px) {
     .aside {
-        flex-basis: 220px;
         max-width: 220px;
+        flex-basis: 220px;
         padding: 15px;
     }
     .aside h2 {
@@ -226,59 +196,19 @@ main{
     main {
         padding: 15px;
     }
-    .main--section h1 {
+     .main--section h1 {
         font-size: 26px;
     }
     .main--section__head {
         font-size: 16px;
     }
-    .list__item {
+    .list__item{
+        font-size: 16px;
+    }
+    .list__p{
+        font-size: 16px;
+    }
+    .main--section__sublist{
         font-size: 16px;
     }
 }
-
-/* ===== LAPTOP (1025px trở lên) ===== */
-/* @media screen and (min-width: 1025px) {
-    .aside {
-        flex-basis: 300px;
-        max-width: 300px;
-        padding: 20px;
-    }
-    .aside h2 {
-        font-size: 22px;
-        padding-left: 20px;
-    }
-    .aside nav ul a {
-        padding: 12px 15px;
-        font-size: 18px;
-    }
-    .img--box__one,
-    .img--box__two {
-        width: 400px;
-        height: 310px;
-    }
-    main {
-        padding: 40px;
-    }
-    .main--section h1 {
-        font-size: 28px;
-    }
-    .main--section__head {
-        font-size: 18px;
-    }
-    .list__item {
-        font-size: 18px;
-    }
-} */
-=======
-.list__item::before {
-    position: absolute;
-    left: 0;
-    top: 0;
-    color: blue;
-    font-weight: bold;
-}
-.list__item b {
-    color: black;
-}
->>>>>>> 4c5928c8f9f332b3e292b993db955bb775c1484d

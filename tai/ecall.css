@@ -93,7 +93,7 @@ main{
     border-radius: 8px;
     height: 310px;
     border: 1px solid blue;
-    box-shadow: 0 0 6px 1px greenyellow;
+    /* box-shadow: 0 0 6px 1px greenyellow; */
     transition: transform 0.3s ease;
 }
 

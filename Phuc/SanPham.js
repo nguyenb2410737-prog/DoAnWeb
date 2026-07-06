@@ -1,109 +1,427 @@
-// const cars = [
-//   {
-//     name: "Honda CR-V",
-//     brand: "Honda",
-//     version: "2024",
-//     price: "1.1 tỷ",
-//     image: "./images/Honda-crv.jpg"
-//   },
-//   {
-//     name: "Toyota Camry",
-//     brand: "Toyota",
-//     version: "Hybrid",
-//     price: "1.2 tỷ",
-//     image: "./images/toyota-camry.jpg"
-//   },
-//   {
-//     name: "Kia K5",
-//     brand: "Kia",
-//     version: "2025",
-//     price: "950 triệu",
-//     image: "./images/Kia-K5.jpg"
-//   },
-//   {
-//     name: "Kia Sorento",
-//     brand: "Kia",
-//     version: "2024",
-//     price: "1.3 tỷ",
-//     image: "./images/kia-sorento.jpg"
-//   },
-//   {
-//     name: "Mercedes C300",
-//     brand: "Mercedes",
-//     version: "2024",
-//     price: "2.1 tỷ",
-//     image: "./images/mec-c300.jpg"
-//   }
-// ];
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-// const input = document.querySelector(".search-bar__input");
-// const searchBtn = document.querySelector(".btn-search");
-// const suggestionBtns = document.querySelectorAll(".suggestions__pill");
-// const resultBox = document.getElementById("search-results");
+:root {
+    --primary: #0066B1;
+    --dark: #111;
+    --light: #f5f5f5;
+    --white: #fff;
+    --gray: #666;
+    --border: #ddd;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #fff;
+    color: var(--dark);
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.container {
+    width: 90%;
+    max-width: 1300px;
+    margin: auto;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    padding: 0 30px;
+    height: 100px;
+    background: linear-gradient(
+        135deg,
+        rgb(170, 166, 166) 0%,
+        rgb(172, 170, 170) 5%,
+        #ffffff 10%,
+        #ffffff 90%,
+        rgb(172, 170, 170) 95%,
+        rgb(170, 166, 166) 100%
+    );
+    flex-wrap: nowrap;
+}
+
+.header_logo {
+    height: 70%;
+}
+
+.header_logo img {
+    height: 100%;
+    width: 300px;
+    display: block;
+}
+
+#nav {
+    display: inline-flex;
+    flex: 1;
+    height: 80px;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    list-style: none;
+    margin: 30px 20px;
+}
+
+#nav li a {
+    color: black;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 26px;
+}
+
+#nav .header_a--active {
+    color: darkblue;
+}
+
+#nav .header_a:hover {
+    color: darkblue;
+}
+
+.header_icon {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.icon_group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.chuong img {
+    height: 28px;
+    width: auto;
+}
+
+.basket img {
+    height: 30px;
+    width: auto;
+}
+
+.header_button {
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: 600;
+    background: #fff;
+    color: #000;
+    border: 2px solid #a2a5aa;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.header_button:hover {
+    background: #0d6efd;
+    color: white;
+}
+
+.hero {
+    width: 100%;
+    height: 85vh;
+    background: linear-gradient(rgba(0, 0, 0, .45), rgba(0, 0, 0, .45)), url("images/2025_BMW_3-series_3_1600.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+}
+
+.hero-content {
+    width: 100%;
+}
+
+.hero-text {
+    max-width: 550px;
+    color: #fff;
+}
+
+.tag {
+    display: inline-block;
+    padding: 8px 18px;
+    border: 1px solid rgba(255, 255, 255, .4);
+    border-radius: 30px;
+    color: #ddd;
+    background: rgba(255, 255, 255, .1);
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: 90px;
+    font-weight: 800;
+    line-height: 1;
+    color: #fff;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, .6);
+}
+
+.hero h3 {
+    margin: 20px 0 40px;
+    font-size: 24px;
+    color: #cfcfcf;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, .6);
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 20px;
+}
+
+.btn {
+    padding: 16px 36px;
+    border-radius: 4px;
+    font-weight: 600;
+    transition: .3s;
+}
+
+.btn-primary {
+    background: var(--primary);
+    color: #fff;
+}
+
+.btn-primary:hover {
+    background: #004f87;
+}
+
+.btn-outline {
+    border: 2px solid #fff;
+    color: #fff;
+}
+
+.btn-outline:hover {
+    background: #fff;
+    color: #111;
+}
+
+.main .container {
+    margin-top: 70px;
+}
+
+.subtitle {
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 50px;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+.card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 25px;
+    text-align: center;
+    transition: .3s;
+    cursor: pointer;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, .15);
+}
+
+.card img {
+    height: 180px;
+    object-fit: contain;
+}
+
+.card h3 {
+    margin: 20px 0 10px;
+    font-size: 22px;
+}
+
+.card p {
+    color: #666;
+}
+
+footer {
+    height: 80px;
+    margin-top: 60px;
+    background: #111;
+}
+
+/* Tablet & Laptop */
+@media (max-width: 992px) {
+
+    .header {
+        flex-wrap: wrap;
+        height: auto;
+        padding: 20px;
+        justify-content: center;
+    }
+
+    .header_logo {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .header_logo img {
+        width: 220px;
+        margin: auto;
+    }
+
+    #nav {
+        width: 100%;
+        gap: 30px;
+        margin: 20px 0;
+        flex-wrap: wrap;
+    }
+
+    #nav li a {
+        font-size: 20px;
+    }
+
+    .header_icon {
+        width: 100%;
+        justify-content: center;
+        margin-top: 15px;
+    }
+
+    .hero {
+        height: 70vh;
+    }
+
+    .hero-content {
+        text-align: center;
+    }
+
+    .hero-text {
+        max-width: 100%;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .hero h1 {
+        font-size: 60px;
+    }
+
+    .hero h3 {
+        font-size: 22px;
+    }
+
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
 
 
-// resultBox.style.display = "none";
+/* Tablet */
+@media (max-width: 768px) {
 
-// function renderCars(carList) {
-//   if (carList.length === 0) {
-//     resultBox.innerHTML = "<p style='color:white;'>Không tìm thấy xe phù hợp.</p>";
-//     return;
-//   }
+    .header {
+        flex-direction: column;
+        padding: 20px 15px;
+    }
 
-//   resultBox.innerHTML = carList.map(car => `
-//     <div class="car-card">
-//       <img src="${car.image}" alt="${car.name}" class="car-img">
-//       <div class="car-info">
-//         <h3>${car.name}</h3>
-//         <p>Hãng: ${car.brand}</p>
-//         <p>Phiên bản: ${car.version}</p>
-//         <p>Giá: ${car.price}</p>
-//       </div>
-//     </div>
-//   `).join("");
-// }
+    .header_logo img {
+        width: 180px;
+    }
 
-// function searchCars(keyword) {
-//   keyword = keyword.toLowerCase().trim();
+    #nav {
+        flex-direction: column;
+        gap: 15px;
+        margin: 20px 0;
+    }
 
-//   if (keyword === "") {
-//     resultBox.style.display = "none";
-//     return;
-//   }
+    #nav li a {
+        font-size: 18px;
+    }
 
-//   const filtered = cars.filter(car =>
-//     car.name.toLowerCase().includes(keyword) ||
-//     car.brand.toLowerCase().includes(keyword) ||
-//     car.version.toLowerCase().includes(keyword)
-//   );
+    .header_icon {
+        flex-direction: column;
+        gap: 15px;
+    }
 
-//   resultBox.style.display = "block";
-//   renderCars(filtered);
-// }
+    .hero {
+        height: 60vh;
+    }
+
+    .hero h1 {
+        font-size: 42px;
+    }
+
+    .hero h3 {
+        font-size: 18px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .btn {
+        width: 100%;
+        max-width: 280px;
+        text-align: center;
+    }
+
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .subtitle {
+        font-size: 24px;
+    }
+}
 
 
-// searchBtn.addEventListener("click", () => {
-//   searchCars(input.value);
-// });
+/* Mobile nhỏ */
+@media (max-width: 480px) {
 
+    .hero {
+        height: 55vh;
+    }
 
-// input.addEventListener("keypress", (e) => {
-//   if (e.key === "Enter") {
-//     searchCars(input.value);
-//   }
-// });
+    .hero h1 {
+        font-size: 32px;
+        line-height: 1.2;
+    }
 
-// input.addEventListener("input", () => {
-//   if (input.value.trim() === "") {
-//     resultBox.style.display = "none";
-//   }
-// });
+    .hero h3 {
+        font-size: 16px;
+    }
 
+    .tag {
+        font-size: 12px;
+        padding: 6px 12px;
+    }
 
-// suggestionBtns.forEach(btn => {
-//   btn.addEventListener("click", () => {
-//     let keyword = btn.textContent.replace("🔥", "").trim();
-//     input.value = keyword;
-//     searchCars(keyword);
-//   });
-// });
+    .subtitle {
+        font-size: 20px;
+    }
+
+    .card {
+        padding: 15px;
+    }
+
+    .card h3 {
+        font-size: 18px;
+    }
+
+    .card img {
+        height: 150px;
+    }
+
+    .header_button {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+}

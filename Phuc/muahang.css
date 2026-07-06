@@ -6,7 +6,7 @@
 }
 
 body {
-    font-family: 'Inter', sans-serif;
+    font-family: "Times New Roman", sans-serif;
     background-color: #ffffff;
     color: #262626;
     line-height: 1.6;
@@ -506,3 +506,5 @@ body {
     padding:25px;
     color:#9fb3c8;
 }
+
+/* Responsive */

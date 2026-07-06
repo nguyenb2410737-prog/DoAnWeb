@@ -69,7 +69,7 @@
     display: flex;
     align-items: center;
     gap: 20px;
-    /* border: dotted blue; */
+    border: dotted blue;
 }
 
 .icon_group{
@@ -158,35 +158,6 @@
     object-fit: contain;
 }
 
-@media (max-width:768px) {
-    .header{
-        height: 70px;
-        padding: 0 10px;
-    }
-
-    .header_logo img{
-        width: 100px;
-        height: auto;
-    }
-
-    #nav li a{
-        font-size: 12px;
-    }
-
-    #nav{
-        gap: 8px;
-    }
-
-    .chuong img,
-    .basket img{
-        width: 10px;
-    }
-
-    .header_button{
-        padding: 4px 8px;
-        font-size: 12px;
-    }
-}
 
 
 /* XE NOI BAT */

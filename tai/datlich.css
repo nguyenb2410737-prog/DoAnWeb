@@ -83,11 +83,11 @@ main{
 .field input:focus,
 .field select:focus,
 .field textarea:focus {
-  border-color: red;
+  border-color: rgb(255, 52, 255);
 }
 .field input.invalid,
 .field select.invalid{
-    border-color: rgb(255, 0, 208);
+    border-color:red;
 }
 textarea{
     resize: vertical;
@@ -99,6 +99,10 @@ textarea{
     padding: 13px 16px ;
     gap: 16px;
     border-bottom: 1px solid white;
+}
+.service--list.invalid{
+  border: 1px solid red;
+  border-radius: 6px;
 }
 .service--row:last-child{
     border-bottom: none;
@@ -120,6 +124,9 @@ textarea{
 .icon--input input {
   padding-right: 40px;
 }
+/* .icon--input input.invalid{
+    border-color: red;
+} */
 .radio--group{
     display: flex;
     gap: 28px;
@@ -166,7 +173,7 @@ textarea{
     max-width: 760px;
     margin: 8px auto 0;
 }
-.consent{
+/* .consent{
     display: flex;
     align-items: flex-start;
     gap: 10px;
@@ -179,6 +186,9 @@ textarea{
   margin-top: 5px;
   flex-shrink: 0;
   cursor: pointer;
+} */
+.consent.invalid span{
+    color: red;
 }
 .submit-btn {
   background: gray;

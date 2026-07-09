@@ -19,96 +19,84 @@ img{
 
 
 /*HERO*/
-
 .hero{
-    min-height:700px;
-    height:80vh;
+    position:relative; 
+    min-height:800px;
+    height:90vh;
     max-height:900px;
-}
-
-.hero img{
-    width:100%;
-    height:100%;
-    object-fit:cover;
 }
 
 .hero-content{
     position:absolute;
-    top:50%;
-    left:50%;
-    transform:translate(-50%,-50%);
-    text-align:center;
+    left:70px;
+    bottom:150px;
     color:#fff;
-    z-index:2;
-}
-
-.hero-content h4{
-    font-size:28px;
-    letter-spacing:3px;
-    margin-bottom:20px;
+    z-index:10;
 }
 
 .hero-content h1{
     font-size:72px;
-    font-weight:800;
-    margin-bottom:20px;
+    font-weight:300;
+    line-height:1.1;
+    color:#fff;
+    letter-spacing:-2px;
 }
 
 .hero-content p{
-    font-size:22px;
-    margin-bottom:40px;
-}
-
-.hero-btn{
-    display:inline-block;
-    padding:16px 42px;
-    background:#d62828;
+    margin-top:10px;
+    font-size:24px;
+    font-weight:300;
     color:#fff;
-    text-decoration:none;
-    font-weight:700;
-    transition:.3s;
 }
 
-.hero-btn:hover{
-    background:#111;
-}
-
-/*CONTENT*/
-
-.content{
-    width:min(1200px,95%);
-    margin:80px auto;
-}
-.section-heading{
-    text-align:center;
-    margin-bottom:50px;
-}
-
-.section-heading h2{
-    font-size:36px;
-    margin-bottom:15px;
+.hero-content h4{
+    margin-bottom:20px;
+    font-size:18px;
+    letter-spacing:3px;
     text-transform:uppercase;
 }
 
-.section-heading p{
-    width:700px;
-    margin:auto;
-    color:#777;
-    line-height:1.8;
+.hero img{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transition:opacity .6s ease-in-out;
 }
+
+.hero-img-2{
+    opacity:0;
+    animation:heroFade 10s ease-in-out infinite;
+}
+
+@keyframes heroFade{
+    0%, 45%{
+        opacity:0;
+    }
+    55%, 95%{
+        opacity:1;
+    }
+    100%{
+        opacity:0;
+    }
+}
+
 
 /*SEARCH BOX*/
 
 .search-box{
     width:90%;
     max-width:1400px;
-    margin:-90px auto 80px;
+    margin:-60px auto 80px;
     background:#fff;
     padding:35px;
     border-radius:8px;
     box-shadow:0 20px 45px rgba(0,0,0,.18);
     position:relative;
     z-index:20;
+    
 }
 
 .car-search{
@@ -161,6 +149,32 @@ img{
 .search-btn:hover{
     background:#111;
 }
+
+/*CONTENT*/
+
+.content{
+    width:min(1200px,95%);
+    margin:80px auto;
+}
+.section-heading{
+    text-align:center;
+    margin-bottom:50px;
+}
+
+.section-heading h2{
+    font-size:36px;
+    margin-bottom:15px;
+    text-transform:uppercase;
+}
+
+.section-heading p{
+    width:700px;
+    margin:auto;
+    color:#777;
+    line-height:1.8;
+}
+
+
 /*FEATURED*/
 .featured__cards{
     display:grid;

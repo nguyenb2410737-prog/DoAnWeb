@@ -307,15 +307,12 @@ img{
     color:#555;
     font-size:14px;
 }
-
+/* RESPONSIVE */
 /*LAPTOP*/
 
 @media (min-width:1201px){
 
 }
-
-
-
 /*TABLET*/
 
 @media (max-width:1200px){
@@ -365,8 +362,6 @@ img{
 }
 
 }
-
-
 
 /*MOBILE*/
 

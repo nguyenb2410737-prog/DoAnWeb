@@ -8,16 +8,18 @@
     <link rel="icon" href="/images/logo.png">
     <link rel="stylesheet" href="main.css">
 </head>
-<header class="header">
+
+<main class="body">
+    <header class="header">
         <div class="header_logo">
                 <img src="/images/logo-ngang.png" alt="Logo">
         </div>
         <ul id="nav">
-            <li><a href="" class="header_a--active">Trang chủ</a></li>
-            <li><a href="" class="header_a">Kho xe</a></li>
-            <li><a href="" class="header_a">Dịch vụ</a></li>
-            <li><a href="" class="header_a">Giới thiệu</a></li>
-            <li><a href="" class="header_a">Liên hệ</a></li>
+            <li><a href="/Nguyen/trangchu.html" class="header_a--active">Trang chủ</a></li>
+            <li><a href="/Phuc/SanPham.html" class="header_a">Kho xe</a></li>
+            <li><a href="/tai/suachuachung.html" class="header_a">Dịch vụ</a></li>
+            <li><a href="/do/gioithieu.html" class="header_a">Giới thiệu</a></li>
+            <li><a href="/toan/lienhe.html" class="header_a">Liên hệ</a></li>
         </ul>
 
         <div class="header_icon">
@@ -27,187 +29,247 @@
                 </div>
 
                 <div class="basket">
-                    <a href="/Nguyen/giohang.html"><img src="/images/giohang.png"></a>
+                    <a href="/Nguyen/giohang.html">
+                        <img src="/images/giohang.png">
+                        <span id="cart-count">0</span>
+                    </a>
+                    
                 </div>
             </div>
 
             <a href="/Nguyen/Dangnhap.html"><button class="header_button">Đăng nhập</button></a>
         </div>
-</header>
+    </header>
 
-<body class="body">
-    <section class="banner">
-            <img src="/images/anh1.png" alt="Banner">
-    </section>
-    
-    <section class="brands">
+    <main>
+        <section class="banner">
+                <img src="/images/anh1.png" alt="Banner">
+        </section>
+        
+        <section class="brands">
 
-        <div class="section-title">
-            <h2>KHÁM PHÁ THEO HÃNG XE</h2>
-        </div>
-
-        <div class="brands-grid">
-
-            <div class="brand-card">
-                <img src="/images/logoxe/toyota.svg" alt="Toyota">
+            <div class="section-title">
+                <h2>KHÁM PHÁ THEO HÃNG XE</h2>
             </div>
 
-            <div class="brand-card">
-                <img src="/images/logoxe/huynhdai.svg" alt="Huynh Dai">
-            </div>
-
-            <div class="brand-card">
-                <img src="/images/logoxe/honda.svg" alt="Honda">
-            </div>
-
-            <div class="brand-card">
-                <img src="/images/logoxe/ford.svg" alt="Ford">
-            </div>
+            <div class="brands-grid">
 
 
-            <div class="brand-card">
-                <img src="/images/logoxe/mazda.svg" alt="Mazda">
-            </div>
+                <div class="brand-card">
+                    <a href="/Phuc/SP-Por.html"><img src="/images/logoxe/porche.svg" alt="Porsche"></a>
+                </div>
 
-            <div class="brand-card">
-                <img src="/images/logoxe/bmw.svg" alt="BMW">
-            </div>
+                <div class="brand-card">
+                    <a href="/Phuc/SP-bmw.html"><img src="/images/logoxe/bmw.svg" alt="BMW"></a> 
+                </div>
 
-            <div class="brand-card">
-                <img src="/images/logoxe/mercedes.svg" alt="Mercedes-Benz">
-            </div>
+                <div class="brand-card">
+                    <a href="/Phuc/SP-mec.html"><img src="/images/logoxe/mercedes.svg" alt="Mercedes"></a>
+                </div>
 
-            <div class="brand-card">
-                <img src="/images/logoxe/audi.svg" alt="Audi">
-            </div>
-
-            <div class="brand-card">
-                <img src="/images/logoxe/vinfast.svg" alt="VinFast">
-            </div>
-
-        </div>
-    </section>
-
-
-
-    <section class="featured-car">
-        <div class="featured-title">
-            <h2 style="color: darkblue;">XE NỔI BẬT</h2>
-            <p style="color: black;">Mẫu xe được quan tâm nhiều nhất tuần này</p>
-        </div>
-
-        <div class="featured-content">
-
-
-            <div class="car-gallery">
-
-                <div class="main-image">
-                    <img id="mainImage"
-                        src="/images/thumbnail/1.jpg"
-                        alt="Mercedes-AMG SL63">
-                    </div>
-
-                <div class="thumbnails">
-
-                    <div class="thumbnail active">
-                        <img src="/images/thumbnail/1.jpg" alt="">
-                    </div>
-
-                    <div class="thumbnail">
-                        <img src="/images/thumbnail/2.jpg" alt="">
-                    </div>
-
-                    <div class="thumbnail">
-                        <img src="/images/thumbnail/3.jpg" alt="">
-                    </div>
-
-                    <div class="thumbnail">
-                        <img src="/images/thumbnail/4.jpg" alt="">
-                    </div>
-
-                    <div class="thumbnail">
-                        <img src="/images/thumbnail/5.jpg" alt="">
-                    </div>
+                <div class="brand-card">
+                    <a href="/Phuc/SP-Audi.html"><img src="/images/logoxe/audi.svg" alt="Audi"></a>
                 </div>
 
             </div>
+        </section>
 
-            <!-- BÊN PHẢI -->
-            <div class="car-info">
 
-                <span class="car-brand">
-                   Mercedes-AMG
-                </span>
 
-                <h3>
-                    Mercedes-AMG SL63
-                </h3>
+        <section class="featured-car">
+            <div class="featured-title">
+                <h2>XE NỔI BẬT</h2> 
+                <p>Mẫu xe được quan tâm nhiều nhất tuần này</p> 
+            </div>
 
-                <p class="car-price">
-                    12.290.000.000 VNĐ
-                </p>
+            <div class="featured-content">
 
-                <div class="car-specs">
+                <div class="car-gallery">
+                    <div class="main-image">
+                        <img id="mainImage"
+                            src="/images/thumbnail/1.jpg"
+                            alt="Mercedes-AMG SL63">
+                        </div>
 
-                    <div class="spec-item">
-                        <strong>Loại xe:</strong>
-                        <span>Roadster</span>
-                    </div>
+                    <div class="thumbnails">
 
-                    <div class="spec-item">
-                        <strong>Năm SX:</strong>
-                        <span>2021</span>
-                    </div>
+                        <div class="thumbnail active">
+                            <img src="/images/thumbnail/1.jpg" alt="">
+                        </div>
 
-                    <div class="spec-item">
-                        <strong>Nhiên liệu:</strong>
-                        <span>Xăng kết hợp điện</span>
-                    </div>
+                        <div class="thumbnail">
+                            <img src="/images/thumbnail/2.jpg" alt="">
+                        </div>
 
-                    <div class="spec-item">
-                        <strong>Hộp số:</strong>
-                        <span>Tự động 9 cấp</span>
-                    </div>
+                        <div class="thumbnail">
+                            <img src="/images/thumbnail/3.jpg" alt="">
+                        </div>
 
-                    <div class="spec-item">
-                        <strong>Số km:</strong>
-                        <span> Chưa lăn bánh</span>
-                    </div>
+                        <div class="thumbnail">
+                            <img src="/images/thumbnail/4.jpg" alt="">
+                        </div>
 
-                    <div class="spec-item">
-                        <strong>Công suất:</strong>
-                        <span>816 HP</span>
+                        <div class="thumbnail">
+                            <img src="/images/thumbnail/5.jpg" alt="">
+                        </div>
                     </div>
 
                 </div>
 
-                <p class="car-description">
-                    Mercedes-AMG SL 63 là mẫu xe thể thao mui trần hạng sang hiệu suất cao, 
-                    kết hợp hoàn hảo giữa cấu hình 2 chỗ ngồi quyến rũ, 
-                    động cơ V8 mãnh liệt và đẳng cấp xe sang dẫn đầu.
-                </p>
+                <!-- BÊN PHẢI -->
+                <div class="car-info">
 
-                <div class="car-actions">
+                    <span class="car-brand">
+                    Mercedes-AMG
+                    </span>
 
-                    <a 
-                        href="https://mercedes-vietnamstar.com.vn/o-to/amg-sl63-e-perfomance/"
-                        target="_blank"
-                        class="btn-detail">
-                            Xem chi tiết
-                    </a>
+                    <h3>
+                        Mercedes-AMG SL63
+                    </h3>
 
-                    <a href="/Nguyen/Lienhe.html" target="_self" class="btn-detail">Liên hệ</a>
+                    <p class="car-price">
+                        12.290.000.000 VNĐ
+                    </p>
+
+                    <div class="car-specs">
+
+                        <div class="spec-item">
+                            <strong>Loại xe:</strong>
+                            <span>Roadster</span>
+                        </div>
+
+                        <div class="spec-item">
+                            <strong>Năm SX:</strong>
+                            <span>2021</span>
+                        </div>
+
+                        <div class="spec-item">
+                            <strong>Nhiên liệu:</strong>
+                            <span>Xăng kết hợp điện</span>
+                        </div>
+
+                        <div class="spec-item">
+                            <strong>Hộp số:</strong>
+                            <span>Tự động 9 cấp</span>
+                        </div>
+
+                        <div class="spec-item">
+                            <strong>Số km:</strong>
+                            <span> Chưa lăn bánh</span>
+                        </div>
+
+                        <div class="spec-item">
+                            <strong>Công suất:</strong>
+                            <span>816 HP</span>
+                        </div>
+
+                    </div>
+
+                    <p class="car-description">
+                        Mercedes-AMG SL 63 là mẫu xe thể thao mui trần hạng sang hiệu suất cao, 
+                        kết hợp hoàn hảo giữa cấu hình 2 chỗ ngồi quyến rũ, 
+                        động cơ V8 mãnh liệt và đẳng cấp xe sang dẫn đầu.
+                    </p>
+
+                    <div class="car-actions">
+
+                        <a 
+                            href="https://mercedes-vietnamstar.com.vn/o-to/amg-sl63-e-perfomance/"
+                            target="_blank"
+                            class="btn-detail">
+                                Xem chi tiết
+                        </a>
+
+                        <a href="/toan/lienhe.html" target="_self" class="btn-detail">Liên hệ</a>
+
+                    </div>
 
                 </div>
 
             </div>
 
-        </div>
+        </section>
+        <section class="section-container">
+            <div class="new-title">
+                    <h2>TIN TỨC NỔI BẬT TRONG TUẦN</h2>
+            </div>
 
-    </section>
+            <div class="section-new">
+                <div class="section-new-img">
+                    <img src="/images/newl.png" alt="FirstNew">
+                    <p class="description-new">
+                        Hyundai Alcazar - SUV ba hàng ghế giá từ 22.000 USD
+                        Một sự trải nghiệm thiết yếu dành cho gia đình trong kì nghỉ. <a href="https://vnexpress.net/hyundai-alcazar-suv-ba-hang-ghe-gia-tu-22-000-usd-4302039.html" target="_blank"><span style="font-size: 20px;">Xem chi tiết</span></a>
+                    </p>
+                </div>
 
+                <div class="section-new-img">
+                    <img src="/images/newr.png" alt="SecondNew">
+                    <p class="description-new">
+                        BMW iX xDrive50, sở hữu thiết kế tương lai, công nghệ thông minh và khả năng vận hành mạnh mẽ,
+                          mang đến trải nghiệm di chuyển đẳng cấp trong mọi hành trình. <a href="https://vnexpress.net/bmw-ix-xdrive-50-crossover-dien-gia-tu-83-200-usd-4287748.html" target="_blank"><span style="font-size: 20px;">Xem chi tiết</span></a>
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
     <footer class="footer">
-       
+        <div class="footer_top">
+            <h2>Tìm chiếc xe phù hợp với bạn</h2>
+
+            <p>
+                Hàng nghìn mẫu xe chất lượng đang chờ bạn khám phá.
+            </p>
+
+            <a href="/Phuc/SanPham.html" class="footer_btn">
+                Khám phá ngay
+            </a>
+
+        </div>
+
+
+        <div class="footer_content">
+            <div class="footer_logo">
+                <img src="/images/logo.png">
+                <p>
+                    Chi nhánh 1: 123A 3/2, Ninh Kiều, Cần Thơ.
+                </p>
+                <p>
+                    Chi nhánh 2: 78 CMT8, Tân An, Cần Thơ
+                </p>
+            </div>
+
+            <div class="footer_menu">
+                <h3>AutoPrime</h3>
+                <a href="/Nguyen/trangchu.html">Trang chủ</a>
+                <a href="/Phuc/SanPham.html">Kho xe</a>
+                <a href="/tai/suachuachung.html">Dịch vụ</a>
+                <a href="">Giới thiệu</a>
+            </div>
+
+
+            <div class="footer_menu">
+                <h3>Hỗ trợ</h3>
+                <a href="">FAQ</a>
+                <a href="/toan/lienhe.html">Liên hệ</a>
+                <a href="">Điều khoản</a>
+                <a href="">Bảo mật</a>
+            </div>
+
+
+            <div class="footer_menu">
+                <h3>Theo dõi</h3>
+                <a href="https://www.facebook.com/groups/649228858868758?locale=vi_VN" target="_blank"><i class="fa-brands fa-facebook"></i> Facebook</a>
+                <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i> Instagram</a>
+                <a href="https://www.youtube.com/" target="_blank"><i class="fa-brands fa-youtube"></i> Youtube</a>
+            </div>
+        </div>
+
+        <div class="footer_bottom">
+            <p>
+                © 2026 AutoPrime. All Rights Reserved.
+            </p>
+        </div>
     </footer>
 </body>
 <script src="/Nguyen/main.js"></script>

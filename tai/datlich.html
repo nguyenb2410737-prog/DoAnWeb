@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
+
   <title>Đặt lịch</title>
   <link rel="stylesheet" href="/Nguyen/main.css">
   <link rel="stylesheet" href="/tai/datlich.css">
@@ -18,8 +18,8 @@
       <li><a href="/Nguyen/trangchu.html" class="header_a">Trang chủ</a></li>
       <li><a href="/Phuc/SanPham.html" class="header_a">Kho xe</a></li>
       <li><a href="/tai/suachuachung.html" class="header_a--active">Dịch vụ</a></li>
-      <li><a href="/" class="header_a">Giới thiệu</a></li>
-      <li><a href="/Nguyen/Lienhe.html" class="header_a">Liên hệ</a></li>
+      <li><a href="/do/gioithieu.html" class="header_a">Giới thiệu</a></li>
+      <li><a href="/toan/lienhe.html" class="header_a">Liên hệ</a></li>
     </ul>
 
     <div class="header_icon">
@@ -46,7 +46,7 @@
           </div>
           <div class="field">
             <label for="fullname">Họ tên <span class="req">*</span></label>
-              <input type="text" id="fullname" placeholder="Nhập họ và tên">
+            <input type="text" id="fullname" placeholder="Nhập họ và tên">
           </div>
           <div class="field">
             <label for="phone">Số điện thoại <span class="req">*</span></label>
@@ -108,7 +108,7 @@
             </select>
           </div>
           <div class="field">
-            <label for="km">Số km</label>
+            <label for="km">Số km <span class="req">*</span></label>
             <input type="text" id="km" placeholder="Nhập số km">
           </div>
           <div class="field">
@@ -161,13 +161,13 @@
         </section>
 
         <section class="section section--submit">
-          <label class="consent">
+          <label class="consent" id="consent">
             <input type="checkbox">
             <span>
               Tôi đồng ý cho phép Công ty TNHH Kinh doanh Thương mại và Dịch vụ AutoPrim xử lý
               dữ liệu cá nhân của tôi và các thông tin khác do tôi cung cấp cho mục đích và theo
               phương thức được mô tả chi tiết tại
-              <a href="#">Chính sách Bảo vệ Dữ liệu cá nhân</a>.
+              <a href="https://thuvienphapluat.vn/van-ban/Cong-nghe-thong-tin/Nghi-dinh-13-2023-ND-CP-bao-ve-du-lieu-ca-nhan-465185.aspx">Chính sách Bảo vệ Dữ liệu cá nhân</a>.
             </span>
           </label>
           <button type="submit" class="submit-btn">Gửi yêu cầu</button>
@@ -175,6 +175,65 @@
       </div>
     </form>
   </main>
+  <footer class="footer">
+    <div class="footer_top">
+      <h2>Tìm chiếc xe phù hợp với bạn</h2>
+
+      <p>
+        Hàng nghìn mẫu xe chất lượng đang chờ bạn khám phá.
+      </p>
+
+      <a href="/Phuc/SanPham.html" class="footer_btn">
+        Khám phá ngay
+      </a>
+
+    </div>
+
+
+    <div class="footer_content">
+      <div class="footer_logo">
+        <img src="/images/logo.png">
+        <p>
+          Chi nhánh 1: 123A 3/2, Ninh Kiều, Cần Thơ.
+        </p>
+        <p>
+          Chi nhánh 2: 78 CMT8, Tân An, Cần Thơ
+        </p>
+      </div>
+
+      <div class="footer_menu">
+        <h3>AutoPrime</h3>
+        <a href="/Nguyen/trangchu.html">Trang chủ</a>
+        <a href="/Phuc/SanPham.html">Kho xe</a>
+        <a href="/tai/suachuachung.html">Dịch vụ</a>
+        <a href="">Giới thiệu</a>
+      </div>
+
+
+      <div class="footer_menu">
+        <h3>Hỗ trợ</h3>
+        <a href="">FAQ</a>
+        <a href="/toan/lienhe.html">Liên hệ</a>
+        <a href="">Điều khoản</a>
+        <a href="">Bảo mật</a>
+      </div>
+
+
+      <div class="footer_menu">
+        <h3>Theo dõi</h3>
+        <a href="https://www.facebook.com/groups/649228858868758?locale=vi_VN" target="_blank"><i class="fa-brands fa-facebook"></i> Facebook</a>
+        <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i> Instagram</a>
+        <a href="https://www.youtube.com/" target="_blank"><i class="fa-brands fa-youtube"></i> Youtube</a>
+      </div>
+    </div>
+
+    <div class="footer_bottom">
+      <p>
+        © 2026 AutoPrime. All Rights Reserved.
+      </p>
+    </div>
+  </footer>
+  <script src="/tai/datlich.js"></script>
 </body>
 
 </html>

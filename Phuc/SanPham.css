@@ -6,9 +6,9 @@
 }
 
 body{
-    font-family:Arial,sans-serif;
+    font-family: "Times New Roman", Arial,sans-serif;
     background:#f5f5f5;
-    color:#333;
+    /* color:#333; */
     overflow-x:hidden;
 }
 
@@ -17,181 +17,86 @@ img{
     max-width:100%;
 }
 
-/*HEADER*/
-.header{
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    height:100px;
-    padding:0 30px;
-    background:linear-gradient(135deg,#aaa 0%,#acaaaa 5%,#fff 10%,#fff 90%,#acaaaa 95%,#aaa 100%);
-}
-
-.header_logo{
-    height:70%;
-}
-
-.header_logo img{
-    width:300px;
-    height:100%;
-}
-
-#nav{
-    display:flex;
-    flex:1;
-    justify-content:center;
-    align-items:center;
-    gap:50px;
-    list-style:none;
-}
-
-#nav a{
-    text-decoration:none;
-    color:#000;
-    font-size:26px;
-    font-weight:600;
-    transition:.3s;
-}
-
-#nav .header_a--active,
-#nav a:hover{
-    color:darkblue;
-}
-
-.header_icon{
-    display:flex;
-    align-items:center;
-    gap:20px;
-}
-
-.icon_group{
-    display:flex;
-    gap:12px;
-}
-
-.chuong img{
-    height:28px;
-}
-
-.basket img{
-    height:30px;
-}
-
-.header_button{
-    padding:10px 20px;
-    border:2px solid #a2a5aa;
-    border-radius:8px;
-    background:#fff;
-    font-size:16px;
-    font-weight:600;
-    cursor:pointer;
-    transition:.3s;
-}
-
-.header_button:hover{
-    background:#0d6efd;
-    color:#fff;
-}
 
 /*HERO*/
-
 .hero{
-    position:relative;
-    width:100%;
-    height:700px;
-    overflow:hidden;
-}
-
-.hero img{
-    width:100%;
-    height:100%;
-    object-fit:cover;
-}
-
-.hero-overlay{
-    position:absolute;
-    inset:0;
-    background:rgba(0,0,0,.45);
+    position:relative; 
+    min-height:800px;
+    height:90vh;
+    max-height:900px;
 }
 
 .hero-content{
     position:absolute;
-    top:50%;
-    left:50%;
-    transform:translate(-50%,-50%);
-    text-align:center;
+    left:70px;
+    bottom:150px;
     color:#fff;
-    z-index:2;
-}
-
-.hero-content h4{
-    font-size:28px;
-    letter-spacing:3px;
-    margin-bottom:20px;
+    z-index:10;
 }
 
 .hero-content h1{
     font-size:72px;
-    font-weight:800;
-    margin-bottom:20px;
+    font-weight:300;
+    line-height:1.1;
+    color:#fff;
+    letter-spacing:-2px;
 }
 
 .hero-content p{
-    font-size:22px;
-    margin-bottom:40px;
-}
-
-.hero-btn{
-    display:inline-block;
-    padding:16px 42px;
-    background:#d62828;
+    margin-top:10px;
+    font-size:24px;
+    font-weight:300;
     color:#fff;
-    text-decoration:none;
-    font-weight:700;
-    transition:.3s;
 }
 
-.hero-btn:hover{
-    background:#111;
-}
-
-/*CONTENT*/
-
-.content{
-    width:1200px;
-    margin:80px auto;
-}
-
-.section-heading{
-    text-align:center;
-    margin-bottom:50px;
-}
-
-.section-heading h2{
-    font-size:36px;
-    margin-bottom:15px;
+.hero-content h4{
+    margin-bottom:20px;
+    font-size:18px;
+    letter-spacing:3px;
     text-transform:uppercase;
 }
 
-.section-heading p{
-    width:700px;
-    margin:auto;
-    color:#777;
-    line-height:1.8;
+.hero img{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transition:opacity .6s ease-in-out;
 }
+
+.hero-img-2{
+    opacity:0;
+    animation:heroFade 10s ease-in-out infinite;
+}
+
+@keyframes heroFade{
+    0%, 45%{
+        opacity:0;
+    }
+    55%, 95%{
+        opacity:1;
+    }
+    100%{
+        opacity:0;
+    }
+}
+
 
 /*SEARCH BOX*/
 
 .search-box{
     width:90%;
     max-width:1400px;
-    margin:-90px auto 80px;
+    margin:-60px auto 80px;
     background:#fff;
     padding:35px;
     border-radius:8px;
     box-shadow:0 20px 45px rgba(0,0,0,.18);
     position:relative;
     z-index:20;
+    
 }
 
 .car-search{
@@ -244,6 +149,32 @@ img{
 .search-btn:hover{
     background:#111;
 }
+
+/*CONTENT*/
+
+.content{
+    width:min(1200px,95%);
+    margin:80px auto;
+}
+.section-heading{
+    text-align:center;
+    margin-bottom:50px;
+}
+
+.section-heading h2{
+    font-size:36px;
+    margin-bottom:15px;
+    text-transform:uppercase;
+}
+
+.section-heading p{
+    width:700px;
+    margin:auto;
+    color:#777;
+    line-height:1.8;
+}
+
+
 /*FEATURED*/
 .featured__cards{
     display:grid;
@@ -376,29 +307,154 @@ img{
     color:#555;
     font-size:14px;
 }
+/* RESPONSIVE */
+/*LAPTOP*/
 
-/*RESPONSIVE*/
+@media (min-width:1201px){
 
-@media(max-width:1200px){
+}
+/*TABLET*/
 
-.content{
+@media (max-width:1200px){
+
+.header{
+    padding:0 20px;
+}
+
+#nav{
+    gap:25px;
+}
+
+#nav a{
+    font-size:20px;
+}
+
+.hero{
+    height:600px;
+}
+
+.hero-content h4{
+    font-size:24px;
+}
+
+.hero-content h1{
+    font-size:56px;
+}
+
+.hero-content p{
+    font-size:20px;
+}
+
+.search-box{
     width:95%;
+}
+
+.car-search{
+    grid-template-columns:repeat(2,1fr);
+}
+
+.featured__cards{
+    grid-template-columns:repeat(2,1fr);
 }
 
 .section-heading p{
     width:100%;
 }
 
-.featured__cards{
-    grid-template-columns:repeat(2,1fr);
 }
+
+/*MOBILE*/
+
+@media (max-width:768px){
+
+.header{
+    flex-wrap:wrap;
+    height:auto;
+    padding:15px;
+    gap:15px;
 }
-@media(max-width:768px) {
+
+.header_logo{
+    width:100%;
+    text-align:center;
+}
+
+.header_logo img{
+    margin:auto;
+}
+
+#nav{
+    width:100%;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:15px;
+}
+
+#nav a{
+    font-size:16px;
+}
+
+.header_icon{
+    width:100%;
+    justify-content:center;
+}
+
+.hero{
+    height:500px;
+}
+
+.hero-content{
+    width:90%;
+}
+
+.hero-content h4{
+    font-size:18px;
+    letter-spacing:1px;
+}
+
+.hero-content h1{
+    font-size:38px;
+}
+
+.hero-content p{
+    font-size:16px;
+}
+
+.hero-btn{
+    padding:14px 30px;
+}
+
+.search-box{
+    margin:-60px auto 50px;
+    padding:20px;
+}
+
+.car-search{
+    grid-template-columns:1fr;
+}
+
+.content{
+    margin:50px auto;
+}
+
+.section-heading h2{
+    font-size:28px;
+}
+
 .featured__cards{
     grid-template-columns:1fr;
 }
 
-.featured-card img{
-    aspect-ratio:16/9;
+.card-body{
+    padding:20px;
 }
+
+.card-body h3{
+    font-size:20px;
+}
+
+.price strong{
+    font-size:22px;
+}
+
 }

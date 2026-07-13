@@ -107,6 +107,30 @@
     color: white;
 }
 
+.basket a{
+    position: relative;
+    display: inline-block;
+}
+
+#cart-count{
+    position: absolute;
+    top: -5px;
+    right: -8px;
+
+    width:20px;
+    height:20px;
+    border-radius:50%;
+    background:#e53935;
+    color:#fff;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    font-size:12px;
+    font-weight:bold;
+}
+
 
 /*  Body  */
 
@@ -132,7 +156,7 @@
 
 .brands-grid{
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 20px;
 }
 

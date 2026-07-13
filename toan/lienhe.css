@@ -1,0 +1,126 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    margin:0;
+    padding:0;
+    background:#eef5ff;
+}
+
+/* Chia 2 cột */
+.contact-container{
+    display:flex;
+    gap:30px;
+    align-items:stretch;
+
+    width:100%;
+    padding:20px;
+}
+/* Form liên hệ */
+.contact-box{
+    flex:2;
+    background:#fff;
+    padding:30px;
+    border-radius:12px;
+    box-shadow:0 4px 15px rgba(0,0,0,.1);
+}
+
+.contact-box h3{
+    margin-bottom:20px;
+    font-size:28px;
+    color:#0066cc;
+}
+
+.input-box{
+    margin-bottom:18px;
+}
+
+.input-box input,
+.input-box textarea{
+    width:100%;
+    padding:14px;
+    border:2px solid #cfe3ff;
+    border-radius:8px;
+    font-size:18px;
+    outline:none;
+    transition:.3s;
+}
+
+.input-box input:focus,
+.input-box textarea:focus{
+    border-color:#0066cc;
+    box-shadow:0 0 8px rgba(0,102,204,.2);
+}
+
+.input-box textarea{
+    height:160px;
+    resize:none;
+}
+
+/* Nút gửi */
+.send-btn{
+    width:100%;
+    background:#0066cc;
+    color:#fff;
+    border:none;
+    padding:16px;
+    font-size:20px;
+    border-radius:8px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.send-btn:hover{
+    background:#004d99;
+}
+
+/* Hotline */
+.hotline-box{
+    flex:1;
+    background:#fff;
+    border:2px solid #cfe3ff;
+    border-radius:12px;
+    padding:30px;
+    box-shadow:0 4px 15px rgba(0,0,0,.1);
+
+    display:flex;
+    flex-direction:column;
+    justify-content:space-evenly;
+}
+
+.hotline-box h2{
+    color:#0066cc;
+    font-size:28px;
+    margin-bottom:20px;
+}
+
+.hotline-box p{
+    color:#333;
+    font-size:19px;
+    line-height:1.8;
+    margin-bottom:12px;
+}
+
+.hotline-box strong{
+    color:#0066cc;
+}
+
+/* Responsive */
+@media screen and (max-width:768px){
+
+    .contact-container{
+        flex-direction:column;
+        gap:20px;
+    }
+
+    .contact-box,
+    .hotline-box{
+        width:100%;
+        flex:1;
+    }
+
+}

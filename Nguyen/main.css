@@ -179,6 +179,15 @@
     margin-bottom: 40px;
 }
 
+.featured-title h2{
+    color: darkblue;
+}
+
+.featured-title p{
+    color: black;
+    font-size: 1.5rem;
+}
+
 
 /* BỐ CỤC CHÍNH */
 

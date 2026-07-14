@@ -300,6 +300,8 @@ body {
     margin-top: 40px;
 }
 
+
+
 .tech-col, .design-col {
     flex: 1;
     display: flex;
@@ -502,9 +504,7 @@ body {
     color: #9fb3c8;
 }
 
-/* ==========================================================
-   Responsive
-   ========================================================== */
+/*Responsive*/
 
 /* Laptop / small desktop (<= 1200px) */
 @media (max-width: 1200px) {

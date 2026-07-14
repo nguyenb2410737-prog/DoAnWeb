@@ -14,7 +14,7 @@
 <body>
 <header class="header">
         <div class="header_logo">
-                <img src="/images/logo-ngang.png" alt="Logo">
+            <img src="/images/logo-ngang.png" alt="Logo">
         </div>
         <ul id="nav">
             <li><a href="/Nguyen/trangchu.html" class="header_a">Trang chủ</a></li>
@@ -37,37 +37,25 @@
 
             <button class="header_button">Đăng nhập</button>
         </div>
-
-    
 </header>
+
 <!-- Main -->
 <main>
-
-
     <!--hero background-->
-        <section class="hero">
-
-            <img src="images/bg-1.jpg" alt="Banner" class="hero-img-1">
-            <img src="images/bg2.jpg" alt="Banner" class="hero-img-2">
-            <div class="hero-overlay"></div>
-
-            <div class="hero-content">
-
-                <h4>WE HAVE EVERYTHING</h4>
-
-                <h1>YOUR CAR NEEDS!</h1>
-
-                <p>Find your dream car with the best price</p>
-
-            </div>
-
-        </section>
+    <section class="hero">
+        <img src="images/bg-1.jpg" alt="Banner" class="hero-img-1">
+        <img src="images/bg2.jpg" alt="Banner" class="hero-img-2">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h4>WE HAVE EVERYTHING</h4>
+            <h1>YOUR CAR NEEDS!</h1>
+            <p>Find your dream car with the best price</p>
+        </div>
+    </section>
 
     <!-- SEARCH -->
     <section class="search-box">
-
         <form class="car-search">
-
             <div class="form-group">
                 <label>Hãng xe</label>
                 <select>
@@ -107,7 +95,7 @@
                     <option>-- Chọn giá --</option>
                     <option>Dưới 1 tỷ</option>
                     <option>1 - 2 tỷ</option>
-                    <option>2 - 3 tỷ</option>
+                    <option>2 - 4 tỷ</option>
                     <option>Trên 4 tỷ</option>
                 </select>
             </div>
@@ -144,285 +132,230 @@
             <button type="submit" class="search-btn">
                 TÌM KIẾM XE
             </button>
-
         </form>
-
     </section>
 
     <!-- CONTENT -->
     <section class="content">
-
         <div class="section-heading">
-
             <h2>FEATURED CAR</h2>
-
             <p>
                 Khám phá những mẫu xe nổi bật với thiết kế hiện đại,
                 vận hành mạnh mẽ và mức giá hấp dẫn.
             </p>
-
         </div>
 
         <div class="featured__cards">
 
             <!-- Card 1 -->
-<a href="muahang.html" class="car-link">
-
-    <div class="featured-card">
-
-        <span class="badge-left">New</span>
-
-        <img src="images/2025_BMW_3-series_3_1600.jpg" alt="BMW">
-
-        <div class="card-body">
-
-            <h3>BMW 3 SERIES 2025</h3>
-
-            <span class="car-type">
-                NEW CAR | AUTOMATIC | SPORT
-            </span>
-
-            <div class="price">
-                <del>$45,000</del>
-                <strong>$1.850.000.000</strong>
-            </div>
-
-            <p>
-                BMW 3 Series sở hữu thiết kế sang trọng,
-                động cơ mạnh mẽ cùng nhiều công nghệ an toàn.
-            </p>
-
-            <div class="specs">
-                <span>⛽ Xăng</span>
-                <span>⚙ Tự động</span>
-                <span>👥 4 chỗ</span>
-                <span>📅 2025</span>
-            </div>
-
-        </div>
-
-    </div>
-</a>
+            <a href="muahang.html" class="car-link" 
+               data-brand="BMW" 
+               data-type="Sedan" 
+               data-year="2025" 
+               data-price="1850000000" 
+               data-transmission="Tự động" 
+               data-fuel="Xăng" 
+               data-condition="Xe mới">
+                <div class="featured-card">
+                    <span class="badge-left">New</span>
+                    <img src="images/2025_BMW_3-series_3_1600.jpg" alt="BMW">
+                    <div class="card-body">
+                        <h3>BMW 3 SERIES 2025</h3>
+                        <span class="car-type">NEW CAR | AUTOMATIC | SPORT</span>
+                        <div class="price">
+                            <del>$45,000</del>
+                            <strong>$1.850.000.000</strong>
+                        </div>
+                        <p>
+                            BMW 3 Series sở hữu thiết kế sang trọng,
+                            động cơ mạnh mẽ cùng nhiều công nghệ an toàn.
+                        </p>
+                        <div class="specs">
+                            <span>⛽ Xăng</span>
+                            <span>⚙ Tự động</span>
+                            <span>👥 4 chỗ</span>
+                            <span>📅 2025</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
 
             <!-- Card 2 -->
-<a href="muahang2.html" class="car-link">
+            <a href="muahang2.html" class="car-link" 
+               data-brand="Mercedes" 
+               data-type="Sedan" 
+               data-year="2025" 
+               data-price="2600000000" 
+               data-transmission="Tự động" 
+               data-fuel="Xăng" 
+               data-condition="Xe mới">
+                <div class="featured-card">
+                    <span class="badge-left">New</span>
+                    <img src="images/mercedes-benz-c300.jpg" alt="C300">
+                    <div class="card-body">
+                        <h3>Mecerdes C300</h3>
+                        <span class="car-type">NEW CAR | AUTOMATIC | SPORT</span>
+                        <div class="price">
+                            <del>$55,000</del>
+                            <strong>$2.600.000.000</strong>
+                        </div>
+                        <p>
+                            Mercedes E300 mang phong cách doanh nhân, nội thất cao cấp và vận hành êm ái.
+                        </p>
+                        <div class="specs">
+                            <span>⛽ Xăng</span>
+                            <span>⚙ Tự động</span>
+                            <span>👥 4 chỗ</span>
+                            <span>📅 2025</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
 
-    <div class="featured-card">
-
-        <span class="badge-left">New</span>
-
-        <img src="images/mercedes-benz-c300.jpg" alt="C300">
-
-        <div class="card-body">
-
-            <h3>Mecerdes C300</h3>
-
-            <span class="car-type">
-                NEW CAR | AUTOMATIC | SPORT
-            </span>
-
-            <div class="price">
-                <del>$55,000</del>
-                <strong>$2.600.000.000</strong>
-            </div>
-
-            <p>
-                Mercedes E300 mang phong cách doanh
-                nhân, nội thất cao cấp và vận hành êm ái.
-            </p>
-
-            <div class="specs">
-                <span>⛽ Xăng</span>
-                <span>⚙ Tự động</span>
-                <span>👥 4 chỗ</span>
-                <span>📅 2025</span>
-            </div>
-
-        </div>
-
-    </div>
-</a>
             <!-- Card 3 -->
-            <a href="muahang3.html" class="car-link">
+            <a href="muahang3.html" class="car-link" 
+               data-brand="Audi" 
+               data-type="Sedan" 
+               data-year="2025" 
+               data-price="2400000000" 
+               data-transmission="Tự động" 
+               data-fuel="Xăng" 
+               data-condition="Xe mới">
+                <article class="featured-card">
+                    <span class="badge-left">New</span>
+                    <img src="images/AudiA6.jpg" alt="AudiA6">
+                    <div class="card-body">
+                        <h3>Audi A6</h3>
+                        <span class="car-type">NEW CAR | AUTOMATIC | SPORT</span>
+                        <div class="price">
+                            <del>$52,000</del>
+                            <strong>$2.400.000.000</strong>
+                        </div>
+                        <p>
+                            Audi A6 sở hữu ngoại hình thể thao, khoang lái hiện đại và công nghệ tiên tiến.
+                        </p>
+                        <div class="specs">
+                            <span>⛽ Xăng</span>
+                            <span>⚙ Tự động</span>
+                            <span>👥 4 chỗ</span>
+                            <span>📅 2025</span>
+                        </div>
+                    </div>
+                </article>
+            </a>
 
-    <article class="featured-card">
+            <!-- Card 4 -->
+            <a href="muahang4.html" class="car-link" 
+               data-brand="Audi" 
+               data-type="SUV" 
+               data-year="2025" 
+               data-price="2750000000" 
+               data-transmission="Tự động" 
+               data-fuel="Hybrid" 
+               data-condition="Xe mới">
+                <div class="featured-card">
+                    <span class="badge-left">New</span>
+                    <img src="images/q7.jpg" alt="Lexus ES300h">
+                    <div class="card-body">
+                        <h3>Audi Q7</h3>
+                        <span class="car-type">NEW CAR | AUTOMATIC | HYBRID</span>
+                        <div class="price">
+                            <del>$58,000</del>
+                            <strong>$2.750.000.000</strong>
+                        </div>
+                        <p>
+                            Lexus ES300h nổi bật với thiết kế sang trọng, nội thất đẳng cấp và khả năng tiết kiệm nhiên liệu.
+                        </p>
+                        <div class="specs">
+                            <span>⛽ Hybrid</span>
+                            <span>⚙ Tự động</span>
+                            <span>👥 5 chỗ</span>
+                            <span>📅 2025</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
 
-        <span class="badge-left">New</span>
+            <!-- Card 5 -->
+            <a href="muahang5.html" class="car-link" 
+               data-brand="Porsche" 
+               data-type="SUV" 
+               data-year="2025" 
+               data-price="3450000000" 
+               data-transmission="Tự động" 
+               data-fuel="Xăng" 
+               data-condition="Xe mới">
+                <div class="featured-card">
+                    <span class="badge-left">New</span>
+                    <img src="images/pana.jpg" alt="Porsche Panamera">
+                    <div class="card-body">
+                        <h3>Porsche Panamera</h3>
+                        <span class="car-type">NEW CAR | AUTOMATIC | SUV</span>
+                        <div class="price">
+                            <del>$78,000</del>
+                            <strong>$3.450.000.000</strong>
+                        </div>
+                        <p>
+                            Porsche Macan mang phong cách thể thao, khả năng tăng tốc mạnh mẽ cùng cảm giác lái vượt trội.
+                        </p>
+                        <div class="specs">
+                            <span>⛽ Xăng</span>
+                            <span>⚙ Tự động</span>
+                            <span>👥 5 chỗ</span>
+                            <span>📅 2025</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
 
-        <img src="images/AudiA6.jpg" alt="AudiA6">
-
-        <div class="card-body">
-
-            <h3>Audi A6</h3>
-
-            <span class="car-type">
-                NEW CAR | AUTOMATIC | SPORT
-            </span>
-
-            <div class="price">
-                <del>$52,000</del>
-                <strong>$2.400.000.000</strong>
-            </div>
-
-            <p>
-                Audi A6 sở hữu ngoại hình thể thao,
-                        khoang lái hiện đại và công nghệ tiên tiến.
-            </p>
-
-            <div class="specs">
-                <span>⛽ Xăng</span>
-                <span>⚙ Tự động</span>
-                <span>👥 4 chỗ</span>
-                <span>📅 2025</span>
-            </div>
-
-        </div>
-
-    </article>
-</a>
-    <!-- Card 4 -->
-<a href="muahang4.html" class="car-link">
-    <div class="featured-card">
-
-        <span class="badge-left">New</span>
-
-        <img src="images/q7.jpg" alt="Lexus ES300h">
-
-        <div class="card-body">
-
-            <h3>Audi Q7</h3>
-
-            <span class="car-type">
-                NEW CAR | AUTOMATIC | HYBRID
-            </span>
-
-            <div class="price">
-                <del>$58,000</del>
-                <strong>$2.750.000.000</strong>
-            </div>
-
-            <p>
-                Lexus ES300h nổi bật với thiết kế sang trọng,
-                nội thất đẳng cấp và khả năng tiết kiệm nhiên liệu.
-            </p>
-
-            <div class="specs">
-                <span>⛽ Hybrid</span>
-                <span>⚙ Tự động</span>
-                <span>👥 5 chỗ</span>
-                <span>📅 2025</span>
-            </div>
-
-        </div>
-
-    </div>
-</a>
-
-<!-- Card 5 -->
-<a href="muahang5.html" class="car-link">
-    <div class="featured-card">
-
-        <span class="badge-left">New</span>
-
-        <img src="images/pana.jpg" alt="Porsche Panamera">
-
-        <div class="card-body">
-
-            <h3>Porsche Panamera</h3>
-
-            <span class="car-type">
-                NEW CAR | AUTOMATIC | SUV
-            </span>
-
-            <div class="price">
-                <del>$78,000</del>
-                <strong>$3.450.000.000</strong>
-            </div>
-
-            <p>
-                Porsche Macan mang phong cách thể thao,
-                khả năng tăng tốc mạnh mẽ cùng cảm giác lái vượt trội.
-            </p>
-
-            <div class="specs">
-                <span>⛽ Xăng</span>
-                <span>⚙ Tự động</span>
-                <span>👥 5 chỗ</span>
-                <span>📅 2025</span>
-            </div>
-
-        </div>
-
-    </div>
-</a>
-
-<!-- Card 6 -->
-<a href="muahang6.html" class="car-link">
-    <div class="featured-card">
-
-        <span class="badge-left">New</span>
-
-        <img src="images/eqs.jpg" alt="Mercedes eqs">
-
-        <div class="card-body">
-
-            <h3>Mercedes EQs</h3>
-
-            <span class="car-type">
-                NEW CAR | AUTOMATIC | LUXURY
-            </span>
-
-            <div class="price">
-                <del>$95,000</del>
-                <strong>$4.950.000.000</strong>
-            </div>
-
-            <p>
-                Mercedes-Benz S450 là mẫu sedan hạng sang
-                với nội thất xa xỉ và hàng loạt công nghệ hiện đại.
-            </p>
-
-            <div class="specs">
-                <span>⛽ Xăng</span>
-                <span>⚙ Tự động</span>
-                <span>👥 5 chỗ</span>
-                <span>📅 2025</span>
-            </div>
-
-        </div>
-
-    </div>
-</a>
-
+            <!-- Card 6 -->
+            <a href="muahang6.html" class="car-link" 
+               data-brand="Mercedes" 
+               data-type="Sedan" 
+               data-year="2025" 
+               data-price="4950000000" 
+               data-transmission="Tự động" 
+               data-fuel="Xăng" 
+               data-condition="Xe mới">
+                <div class="featured-card">
+                    <span class="badge-left">New</span>
+                    <img src="images/eqs.jpg" alt="Mercedes eqs">
+                    <div class="card-body">
+                        <h3>Mercedes EQs</h3>
+                        <span class="car-type">NEW CAR | AUTOMATIC | LUXURY</span>
+                        <div class="price">
+                            <del>$95,000</del>
+                            <strong>$4.950.000.000</strong>
+                        </div>
+                        <p>
+                            Mercedes-Benz S450 là mẫu sedan hạng sang với nội thất xa xỉ và hàng loạt công nghệ hiện đại.
+                        </p>
+                        <div class="specs">
+                            <span>⛽ Xăng</span>
+                            <span>⚙ Tự động</span>
+                            <span>👥 5 chỗ</span>
+                            <span>📅 2025</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
 
         </div>
     </section>
- </main>
+</main>
 
 <footer class="footer">
         <div class="footer_top">
             <h2>Tìm chiếc xe phù hợp với bạn</h2>
-
-            <p>
-                Hàng nghìn mẫu xe chất lượng đang chờ bạn khám phá.
-            </p>
-
-            <a href="/Phuc/SanPham.html" class="footer_btn">
-                Khám phá ngay
-            </a>
-
+            <p>Hàng nghìn mẫu xe chất lượng đang chờ bạn khám phá.</p>
+            <a href="/Phuc/SanPham.html" class="footer_btn">Khám phá ngay</a>
         </div>
-
 
         <div class="footer_content">
             <div class="footer_logo">
                 <img src="/images/logo.png">
-                <p>
-                    Chi nhánh 1: 123A 3/2, Ninh Kiều, Cần Thơ.
-                </p>
-                <p>
-                    Chi nhánh 2: 78 CMT8, Tân An, Cần Thơ
-                </p>
+                <p>Chi nhánh 1: 123A 3/2, Ninh Kiều, Cần Thơ.</p>
+                <p>Chi nhánh 2: 78 CMT8, Tân An, Cần Thơ</p>
             </div>
 
             <div class="footer_menu">
@@ -433,7 +366,6 @@
                 <a href="">Giới thiệu</a>
             </div>
 
-
             <div class="footer_menu">
                 <h3>Hỗ trợ</h3>
                 <a href="">FAQ</a>
@@ -441,7 +373,6 @@
                 <a href="">Điều khoản</a>
                 <a href="">Bảo mật</a>
             </div>
-
 
             <div class="footer_menu">
                 <h3>Theo dõi</h3>
@@ -452,11 +383,10 @@
         </div>
 
         <div class="footer_bottom">
-            <p>
-                © 2026 AutoPrime. All Rights Reserved.
-            </p>
+            <p>© 2026 AutoPrime. All Rights Reserved.</p>
         </div>
-    </footer>
-  <script src="SanPham.js"></script>
+</footer>
+    <script src="SanPham.js"></script>
 </body>
+
 </html>

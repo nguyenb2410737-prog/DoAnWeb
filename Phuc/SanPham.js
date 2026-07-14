@@ -62,16 +62,13 @@ document.addEventListener('DOMContentLoaded', function () {
         if (filters.transmission !== '' && transmission !== filters.transmission) return false;
         if (filters.fuel !== '' && fuel !== filters.fuel) return false;
         if (filters.condition !== '' && condition !== filters.condition) return false;
-        
         // Kiểm tra khoảng giá riêng biệt
         if (filters.priceRange !== '' && !isPriceInRange(price, filters.priceRange)) return false;
-
         return true;
     }
-
     /* HÀM XỬ LÝ CHÍNH KHI BẤM NÚT TÌM KIẾM */
     function handleFilterSubmit(event) {
-        event.preventDefault(); // Chặn việc load lại trang
+        // event.preventDefault(); // Chặn việc load lại trang
 
         // Quét qua TẤT CẢ các select
         const filters = {

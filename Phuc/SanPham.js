@@ -68,7 +68,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
     /* HÀM XỬ LÝ CHÍNH KHI BẤM NÚT TÌM KIẾM */
     function handleFilterSubmit(event) {
-        // event.preventDefault(); // Chặn việc load lại trang
+        event.preventDefault(); // Chặn việc load lại trang
 
         // Quét qua TẤT CẢ các select
         const filters = {

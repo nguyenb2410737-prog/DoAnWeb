@@ -82,6 +82,32 @@ h1.title {
     transform: scale(1.02);
 }
 
+/* Thông báo lỗi, thành công cho từng field  */
+.field .notification {
+    display: none;         /* mặc định ẩn, chỉ hiện khi có class failure */
+    font-size: 13px;
+    margin-top: 4px;
+}
+
+.field.failure input {
+    border-color: red;
+    box-shadow: 0 0 0 2px rgba(255, 0, 0, 0.15);
+}
+ 
+.field.failure .notification {
+    display: block;
+    color: red;
+}
+ 
+.field.success input {
+    border-color: green;
+    box-shadow: 0 0 0 2px rgba(0, 128, 0, 0.15);
+}
+ 
+.field.success .notification {
+    display: none;
+}
+
 .terms {
     display: flex;
     align-items: flex-start;

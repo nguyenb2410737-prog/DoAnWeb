@@ -20,6 +20,12 @@ main{
 .form--grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  /* background-color: #eef2ff; */
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgb(73, 40, 237);
+
+  padding: 50px 36px;
+  background-color: rgb(249, 252, 255);
   gap: 0 60px;
 }
  .section{
@@ -173,20 +179,7 @@ textarea{
     max-width: 760px;
     margin: 8px auto 0;
 }
-/* .consent{
-    display: flex;
-    align-items: flex-start;
-    gap: 10px;
-    width: 100%;
-    margin-bottom: 16px;
-}
-.consent input[type="checkbox"] {
-  width: 16px;
-  height: 16px;
-  margin-top: 5px;
-  flex-shrink: 0;
-  cursor: pointer;
-} */
+
 .consent.invalid span{
     color: red;
 }

@@ -6,6 +6,22 @@
     font-family:'Times New Roman', Arial, Helvetica, sans-serif;
 }
 
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%; 
+}
+
+main{
+    flex:1;
+}
+
+body {
+    display: flex;
+    flex-direction: column; 
+    min-height: 100vh;      /*Đơn vị viewpoint height cho phép xem 100% màn hình của thiết bị */
+}
+
 /* Header */
 
 .header{

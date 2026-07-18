@@ -102,3 +102,23 @@ document.addEventListener('DOMContentLoaded', function () {
     //Tìm Kiếm xe
     searchForm.addEventListener('submit', handleFilterSubmit);
 });
+
+
+/* Hàm chuẩn hóa khi hover vào từng sản phẩm -> Sinh ra href có kèm id sản phẩm */
+function generateHoverLinks(){
+    const carLinks = document.querySelectorAll(".car-link");
+
+    carLinks.forEach(link => {
+        const baseHref = link.getAttribute("href");
+        const carId = link.getAttribute("id");
+
+        if(baseHref && carId){
+            const finalLink = `${baseHref}?fromItem=${carId}`;
+            link.setAttribute("href", finalLink);
+        }
+    });
+}
+
+window.addEventListener("load", () =>{
+    generateHoverLinks();
+});

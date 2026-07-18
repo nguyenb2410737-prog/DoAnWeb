@@ -2,7 +2,7 @@ const CART_KEY="cartItems";
 
 function getCart(){
     const cart=localStorage.getItem(CART_KEY);
-    return cart ? JSON.parse(cart) : [];
+    return cart?JSON.parse(cart):[];
 }
 
 function saveCart(cart){
@@ -16,151 +16,90 @@ function formatPrice(price){
 function updateCartCount(){
     const cart=getCart();
 
-    let count=0;
+    let totalQuantity=0;
 
-    cart.forEach(item=>{
-        count+=item.quantity;
-    });
-
-    const badge=document.getElementById("cart-count");
-
-    if(badge){
-        badge.innerText=count;
+    for(let i=0;i<cart.length;i++){
+        totalQuantity+=cart[i].quantity;
     }
+
+    document.getElementById("cart-count").textContent=totalQuantity;
 }
 
 function renderCart(){
+
     const cart=getCart();
     const container=document.getElementById("cart-container");
+    const template=document.getElementById("cart-template");
 
-    container.innerHTML="";
+    container.querySelectorAll(".cart-item:not(#cart-template)").forEach(item=>{
+        item.remove();
+    });
+
     if(cart.length===0){
 
         document.querySelector(".cart-wrapper").style.display="none";
-
         document.getElementById("empty-cart").style.display="flex";
 
         updateCartCount();
-
         return;
     }
 
     document.querySelector(".cart-wrapper").style.display="flex";
-
     document.getElementById("empty-cart").style.display="none";
 
     let subTotal=0;
 
-    cart.forEach((item,index)=>{
+    for(let i=0;i<cart.length;i++){
+
+        const item=cart[i];
         console.log(item);
-        console.log("IMAGE =", item.image);;
         const itemTotal=item.price*item.quantity;
 
         subTotal+=itemTotal;
 
-        container.innerHTML+=`
+        const clone=template.cloneNode(true);
 
-        <article class="cart-item">
+        clone.removeAttribute("id");
+        clone.hidden=false;
 
-            <div class="cart-image">
+        clone.querySelector(".car-image").src=item.image;
+        clone.querySelector(".car-name").textContent=item.name;
+        clone.querySelector(".car-color").textContent=item.color;
+        clone.querySelector(".car-year").textContent=item.nam;
 
-                <img src="${item.image}">
+        clone.querySelector(".car-price").textContent=formatPrice(item.price);
+        clone.querySelector(".car-total").textContent=formatPrice(itemTotal);
 
-            </div>
+        clone.querySelector(".quantity-number").textContent=item.quantity;
 
-            <div class="cart-info">
+        clone.querySelector(".minus-btn").addEventListener("click",function(){
+            changeQuantity(i,-1);
+        });
 
-                <h2 class="car-name">
-                    ${item.name}
-                </h2>
+        clone.querySelector(".plus-btn").addEventListener("click",function(){
+            changeQuantity(i,1);
+        });
 
-                <p class="car-version">
-                    ${item.version||""}
-                </p>
+        clone.querySelector(".remove-btn").addEventListener("click",function(){
+            deleteItem(i);
+        });
+        container.appendChild(clone);
 
-                <div class="car-detail">
-                    <span>Màu</span>
-                    <strong>${item.color}</strong>
-                </div>
-
-                <div class="car-detail">
-                    <span>Năm sản xuất</span>
-                    <strong>${item.year}</strong>
-                </div>
-
-                <div class="car-detail">
-                    <span>Động cơ</span>
-                    <strong>${item.engine||"--"}</strong>
-                </div>
-
-                <div class="car-detail">
-                    <span>Hộp số</span>
-                    <strong>${item.transmission||"--"}</strong>
-                </div>
-
-                <div class="car-detail">
-                    <span>Nhiên liệu</span>
-                    <strong>${item.fuel||"--"}</strong>
-                </div>
-
-                <div class="car-detail">
-                    <span>Đơn giá</span>
-                    <strong>${formatPrice(item.price)}</strong>
-                </div>
-
-                <div class="car-detail">
-                    <span>Thành tiền</span>
-                    <strong>${formatPrice(itemTotal)}</strong>
-                </div>
-
-                <div class="quantity-wrapper">
-                    <span>Số lượng</span>
-
-                    <div class="quantity-box">
-
-                        <button class="quantity-btn"
-                            onclick="changeQuantity(${index},-1)">
-                            -
-                        </button>
-
-                        <span class="quantity-number">
-                            ${item.quantity}
-                        </span>
-
-                        <button class="quantity-btn"
-                            onclick="changeQuantity(${index},1)">
-                            +
-                        </button>
-
-                    </div>
-                </div>
-                <div class="cart-action">
-                    <button class="remove-btn"
-                        onclick="deleteItem(${index})">
-                        🗑 Xóa khỏi giỏ hàng
-                    </button>
-                </div>
-            </div>
-        </article>
-
-        `;
-});
+    }
 
     const vat=subTotal*0.1;
     const grandTotal=subTotal+vat;
 
-    document.getElementById("sub-total").innerText= formatPrice(subTotal);
-
-    document.getElementById("vat").innerText= formatPrice(vat);
-
-    document.getElementById("grand-total").innerText= formatPrice(grandTotal);
+    document.getElementById("sub-total").textContent=formatPrice(subTotal);
+    document.getElementById("vat").textContent=formatPrice(vat);
+    document.getElementById("grand-total").textContent=formatPrice(grandTotal);
 
     updateCartCount();
 
 }
 
 function changeQuantity(index,change){
-    let cart=getCart();
+    const cart=getCart();
     cart[index].quantity+=change;
     if(cart[index].quantity<=0){
         cart.splice(index,1);
@@ -171,13 +110,16 @@ function changeQuantity(index,change){
 }
 
 function deleteItem(index){
-    let cart=getCart();
+    const cart=getCart();
     cart.splice(index,1);
     saveCart(cart);
     renderCart();
 
 }
 
-window.onload=function(){
+function setup(){
     renderCart();
+
 }
+
+window.onload=setup;

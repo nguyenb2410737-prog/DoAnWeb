@@ -134,7 +134,10 @@ body {
 }
 
 /* Banner */
-
+.banner{
+    max-width: 1600px;
+    margin: 0 auto;
+}
 .banner img{
     display:block;
     width:100%;

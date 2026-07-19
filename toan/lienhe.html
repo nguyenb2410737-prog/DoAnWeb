@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Liên hệ</title>
-
+<link rel="icon" href="/images/logo.png">
 <link rel="stylesheet" href="/Nguyen/main.css">
 <link rel="stylesheet" href="lienhe.css">
 
@@ -12,89 +12,95 @@
 
 <body>
 
-<header class="header">
-    <div class="header_logo">
-        <img src="/images/logo-ngang.png" alt="Logo">
-    </div>
+    <header class="header">
+            <div class="header_logo">
+                    <img src="/images/logo-ngang.png" alt="Logo">
+            </div>
+            <ul id="nav">
+                <li><a href="/Nguyen/trangchu.html" class="header_a">Trang chủ</a></li>
+                <li><a href="/Phuc/SanPham.html" class="header_a">Kho xe</a></li>
+                <li><a href="/tai/suachuachung.html" class="header_a">Dịch vụ</a></li>
+                <li><a href="/do/gioithieu.html" class="header_a">Giới thiệu</a></li>
+                <li><a href="/toan/lienhe.html" class="header_a--active">Liên hệ</a></li>
+            </ul>
 
-    <ul id="nav">
-        <li><a href="/Nguyen/trangchu.html" class="header_a">Trang chủ</a></li>
-        <li><a href="/Phuc/SanPham.html" class="header_a">Kho xe</a></li>
-        <li><a href="/tai/suachuachung.html" class="header_a">Dịch vụ</a></li>
-        <li><a href="/do/gioithieu.html" class="header_a">Giới thiệu</a></li>
-        <li><a href="/toan/lienhe.html" class="header_a--active">Liên hệ</a></li>
-    </ul>
+            <div class="header_icon">
+                <div class="icon_group">
+                    <div class="chuong">
+                        <a href="/Nguyen/thongbao.html"><img src="/images/chuong.png"></a>
+                    </div>
 
-    <div class="basket">
-        <a href="/Nguyen/giohang.html">
-            <img src="/images/giohang.png" alt="Giỏ hàng">
-        </a>
-    </div>
+                    <div class="basket">
+                        <a href="/Nguyen/giohang.html">
+                            <img src="/images/giohang.png">
+                            <span id="cart-count">0</span>
+                        </a>
+                        
+                    </div>
+                </div>
 
-    <a href="/Nguyen/Dangnhap.html">
-        <button class="header_button">Đăng nhập</button>
-    </a>
+                <a href="/Nguyen/Dangnhap.html"><button class="header_button">Đăng nhập</button></a>
+            </div>
+    </header>
 
-</header>
+    <main>
 
-<main>
+        <section class="contact-container">
 
-<section class="contact-container">
+            <section class="contact-box">
 
-<section class="contact-box">
+                <h2>LIÊN HỆ VỚI CHÚNG TÔI</h2>
 
-<h2>LIÊN HỆ VỚI CHÚNG TÔI</h2>
+                <form>
 
-<form>
+                    <div class="input-box">
+                        <input type="text" placeholder="Họ tên*" required>
+                    </div>
 
-<div class="input-box">
-    <input type="text" placeholder="Họ tên*" required>
-</div>
+                    <div class="input-box">
+                        <input type="email" placeholder="Email*" required>
+                    </div>
 
-<div class="input-box">
-    <input type="email" placeholder="Email*" required>
-</div>
+                    <div class="input-box">
+                        <input type="tel" placeholder="Số điện thoại*" required>
+                    </div>
 
-<div class="input-box">
-    <input type="tel" placeholder="Số điện thoại*" required>
-</div>
+                    <div class="input-box">
+                        <textarea placeholder="Nhập nội dung*" required></textarea>
+                    </div>
 
-<div class="input-box">
-    <textarea placeholder="Nhập nội dung*" required></textarea>
-</div>
+                    <button type="submit" class="send-btn">
+                        Gửi liên hệ của bạn
+                    </button>
 
-<button type="submit" class="send-btn">
-    Gửi liên hệ của bạn
-</button>
+                </form>
 
-</form>
+            </section>
+            <aside class="hotline-box">
 
-</section>
-<aside class="hotline-box">
+                <h2>HOTLINE HỖ TRỢ</h2>
 
-    <h2>HOTLINE HỖ TRỢ</h2>
+                <p>Gọi để được tư vấn về sản phẩm, dịch vụ.</p>
 
-    <p>Gọi để được tư vấn về sản phẩm, dịch vụ.</p>
+                <p><strong>Tổng đài CSKH:</strong> 1800 545434</p>
 
-    <p><strong>Tổng đài CSKH:</strong> 1800 545434</p>
+                <p><strong>Bán hàng Online:</strong> 02923 769 823</p>
 
-    <p><strong>Bán hàng Online:</strong> 02923 769 823</p>
+                <p><strong>Hotline trả góp:</strong> 02923 769 823</p>
 
-    <p><strong>Hotline trả góp:</strong> 02923 769 823</p>
+                <p><strong>Cứu hộ xe máy:</strong> 02923 768080</p>
 
-    <p><strong>Cứu hộ xe máy:</strong> 02923 768080</p>
+                <p><strong>Email:</strong> support@abc.com</p>
 
-    <p><strong>Email:</strong> support@abc.com</p>
+                <p><strong>Thời gian:</strong> 08:00 - 22:00 (T2 - CN)</p>
 
-    <p><strong>Thời gian:</strong> 08:00 - 22:00 (T2 - CN)</p>
+            </aside>
 
-</aside>
+        </section>
 
-</section>
+    </main>
 
-</main>
-
-<footer class="footer">
+    <footer class="footer">
         <div class="footer_top">
             <h2>Tìm chiếc xe phù hợp với bạn</h2>
 

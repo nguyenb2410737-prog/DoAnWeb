@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Giới Thiệu - AutoPrime</title>
+    <link rel="icon" href="/images/logo.png">
     <link rel="stylesheet" href="/do/gioithieu.css">
     <link rel="stylesheet" href="/Nguyen/main.css">
 </head>
@@ -14,10 +15,10 @@
                     <img src="/images/logo-ngang.png" alt="Logo">
             </div>
             <ul id="nav">
-                <li><a href="/Nguyen/trangchu.html" class="header_a">Trang chủ</a></li>
+                <li><a href="/Nguyen/trangchu.html" class="header_a--active">Trang chủ</a></li>
                 <li><a href="/Phuc/SanPham.html" class="header_a">Kho xe</a></li>
                 <li><a href="/tai/suachuachung.html" class="header_a">Dịch vụ</a></li>
-                <li><a href="/do/gioithieu.html" class="header_a--active">Giới thiệu</a></li>
+                <li><a href="/do/gioithieu.html" class="header_a">Giới thiệu</a></li>
                 <li><a href="/toan/lienhe.html" class="header_a">Liên hệ</a></li>
             </ul>
 
@@ -28,7 +29,11 @@
                     </div>
 
                     <div class="basket">
-                        <a href="/Nguyen/giohang.html"><img src="/images/giohang.png"></a>
+                        <a href="/Nguyen/giohang.html">
+                            <img src="/images/giohang.png">
+                            <span id="cart-count">0</span>
+                        </a>
+                        
                     </div>
                 </div>
 
@@ -172,6 +177,6 @@
         </div>
     </footer>
 
-    <script src="./js/main.js"></script>
+    <script src="/do/gioithieu.js"></script>
 </body>
 </html>

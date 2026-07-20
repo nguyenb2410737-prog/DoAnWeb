@@ -16,3 +16,18 @@ thumbnails.forEach(thumbnail => {
     });
 
 });
+
+const menuToggle = document.getElementById("menuToggle");
+const headerMenu = document.getElementById("headerMenu");
+
+menuToggle.addEventListener("click", (e) => {
+    e.stopPropagation();
+    headerMenu.classList.toggle("active");
+     console.log("clicked");
+});
+
+document.addEventListener("click", (e)=> {
+    if(!menuToggle.contains(e.target) && !headerMenu.contains(e.target)) {
+        headerMenu.classList.remove("active");
+    }
+});

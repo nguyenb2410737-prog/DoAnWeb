@@ -2,65 +2,16 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Times New Roman', Arial, sans-serif;
+
 }
 
 body {
-    font-family: 'Times New Roman','Segoe UI', Arial, sans-serif;
     line-height: 1.6;
     color: #333;
     background-color: #ffffff;
 }
 
-/* Thiết kế Header (Sử dụng Flexbox) */
-.header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 5%;
-    background-color: #ffffff;
-    border-bottom: 1px solid #eeeeee;
-    position: relative; /* Thêm để định vị menu mobile chính xác hơn */
-}
-
-.header .logo img {
-    height: 45px; 
-    display: block;
-}
-
-.navbar ul {
-    display: flex;
-    list-style: none;
-}
-
-.navbar ul li {
-    margin-left: 25px;
-}
-
-.navbar ul li a {
-    text-decoration: none;
-    color: #333333;
-    font-weight: 600;
-    font-size: 15px;
-    text-transform: uppercase;
-    transition: color 0.3s ease;
-}
-
-.navbar ul li a:hover, 
-.navbar ul li a.active {
-    color: #b89454; 
-    border-bottom: 2px solid #b89454;
-    padding-bottom: 5px;
-}
-
-/* Nút ẩn/hiện menu hamburger trên PC */
-.menu-toggle {
-    display: none;
-    font-size: 26px;
-    background: none;
-    border: none;
-    cursor: pointer;
-    color: #333;
-}
 
 /* Thiết kế Hero Banner */
 .about-hero {

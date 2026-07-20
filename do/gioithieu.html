@@ -6,7 +6,7 @@
     <title>Giới Thiệu - AutoPrime</title>
     <link rel="icon" href="/images/logo.png">
     <link rel="stylesheet" href="/do/gioithieu.css">
-    <link rel="stylesheet" href="/Nguyen/main.css">
+    <link rel="stylesheet" href="/Nguyen/main1.css">
 </head>
 <body>
    
@@ -14,30 +14,44 @@
             <div class="header_logo">
                     <img src="/images/logo-ngang.png" alt="Logo">
             </div>
-            <ul id="nav">
-                <li><a href="/Nguyen/trangchu.html" class="header_a--active">Trang chủ</a></li>
-                <li><a href="/Phuc/SanPham.html" class="header_a">Kho xe</a></li>
-                <li><a href="/tai/suachuachung.html" class="header_a">Dịch vụ</a></li>
-                <li><a href="/do/gioithieu.html" class="header_a">Giới thiệu</a></li>
-                <li><a href="/toan/lienhe.html" class="header_a">Liên hệ</a></li>
-            </ul>
+            
+            <button id="menuToggle" class="menu-toggle">
+                <b class="fa-solid fa-bars">☰</b>
+            </button>
 
-            <div class="header_icon">
-                <div class="icon_group">
-                    <div class="chuong">
-                        <a href="/Nguyen/thongbao.html"><img src="/images/chuong.png"></a>
+            <div id="headerMenu" class="header_menu">
+
+                <ul id="nav">
+                    <li><a href="/Nguyen/trangchu.html" >Trang chủ</a></li>
+                    <li><a href="/Phuc/SanPham.html">Kho xe</a></li>
+                    <li><a href="/tai/suachuachung.html">Dịch vụ</a></li>
+                    <li><a href="/do/gioithieu.html" class="header_a--active">Giới thiệu</a></li>
+                    <li><a href="/toan/lienhe.html">Liên hệ</a></li>
+                </ul>
+
+                <div class="header_icon">
+                    <div class="icon_group">
+                        <div class="chuong">
+                            <a href="/Nguyen/thongbao.html">
+                                <img src="/images/chuong.png">
+                            </a>
+                        </div>
+
+                        <div class="basket">
+                            <a href="/Nguyen/giohang.html">
+                                <img src="/images/giohang.png">
+                                <span id="cart-count">0</span>
+                            </a>
+                        </div>
+
                     </div>
 
-                    <div class="basket">
-                        <a href="/Nguyen/giohang.html">
-                            <img src="/images/giohang.png">
-                            <span id="cart-count">0</span>
-                        </a>
-                        
-                    </div>
+                    <a href="/Nguyen/Dangnhap.html">
+                        <button class="header_button">
+                            Đăng nhập
+                        </button>
+                    </a>
                 </div>
-
-                <a href="/Nguyen/Dangnhap.html"><button class="header_button">Đăng nhập</button></a>
             </div>
         </header>
 
@@ -177,6 +191,6 @@
         </div>
     </footer>
 
-    <script src="/do/gioithieu.js"></script>
+    <script src="/Nguyen/main.js"></script>
 </body>
 </html>

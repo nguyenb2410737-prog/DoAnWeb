@@ -140,6 +140,8 @@ if(formDangNhap) {
             return;
         }
         if(password === user.password){
+            localStorage.setItem('username', user.fullname);//lưu usename
+             
             alert('Đăng nhập thành công. ');
             window.location.href = '/Nguyen/trangchu.html';
         }else {

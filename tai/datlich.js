@@ -7,116 +7,163 @@ const carModel = document.getElementById('carModel');
 const plate = document.getElementById('plate');
 const province = document.getElementById('province');
 const ward = document.getElementById('ward');
-const consentLabel = document.getElementById('consent'); // thẻ label, dùng để tô đỏ
+const consentLabel = document.getElementById('consent');
 const consent = consentLabel.querySelector('input[type="checkbox"]'); // checkbox thật, dùng để check .checked
-const serviceInputs = form.querySelectorAll('input[name="service"]');
-const serviceList = form.querySelector('.service--list'); 
-const dateInput = form.querySelector('input[type="date"]');
-const timeInput = form.querySelector('input[type="time"]'); //querySelector lấy theo bất kỳ CSS
+const serviceInputs = form.querySelectorAll('input[name="service"]'); // nhiều phần tử, không thể dùng getElementById
+const serviceList = document.getElementById('serviceList');
+const dateInput = document.getElementById('dateInput');
+const timeInput = document.getElementById('timeInput');
 const km = document.getElementById('km');
 
 // du lieu cua ward 
 const wardData = {
-  hn: ['Ba Đình', 'Hoàn Kiếm', 'Đống Đa', 'Cầu Giấy'],
-  hcm: ['Quận 1', 'Quận 3', 'Bình Thạnh', 'Thủ Đức'],
-  ct: ['Ninh Kiều', 'Cái Răng', 'Bình Thủy', 'Tân An'],
-  dn: ['Hải Châu', 'Thanh Khê', 'Sơn Trà', 'Cẩm Lệ'],
+    hn: ['Ba Đình', 'Hoàn Kiếm', 'Đống Đa', 'Cầu Giấy'],
+    hcm: ['Quận 1', 'Quận 3', 'Bình Thạnh', 'Thủ Đức'],
+    ct: ['Ninh Kiều', 'Cái Răng', 'Bình Thủy', 'Tân An'],
+    dn: ['Hải Châu', 'Thanh Khê', 'Sơn Trà', 'Cẩm Lệ'],
 };
 
-// doi danh sach phuong xa khi chon tinh thanh
-province.addEventListener('change', () => { //dùng để lắng nghe sự kiện.
-    const list = wardData[province.value] || []; // lay danh sach tinh vua chon
-    ward.innerHTML = '<option value="">Phường/Xã</option>'; // xoa danh sach cu
-    list.forEach((name) => { //duyet tung phan tu
-        const option = document.createElement('option');
-        option.value = name; //gan gtri
-        option.textContent = name; // hiện thị chữ
-        ward.appendChild(option);//them vao select
-    });
-    ward.classList.remove('invalid');
-});
-// ham nhung ô sai
-function setInvalid(el, isInvalid) {
-  el.classList.toggle('invalid', isInvalid);
+function errorMessage(elmt) {
+    const formRow = elmt.parentElement;
+    if (formRow.classList.contains('success')) {
+        formRow.classList.remove('success');
+    }
+    formRow.classList.add('failure');
 }
- // Gỡ trạng thái lỗi ngay khi người dùng sửa lại
-[fullname, phone, email, carModel,km, plate, province, ward, dateInput, timeInput].forEach((el) => {
-  el.addEventListener('input', () => setInvalid(el, false));
-  el.addEventListener('change', () => setInvalid(el, false));
+
+function successMessage(elmt) {
+    const formRow = elmt.parentElement;
+    if (formRow.classList.contains('failure')) {
+        formRow.classList.remove('failure');
+    }
+    formRow.classList.add('success');
+}
+// xóa cá options đang có trong ward
+function resetWard() {
+    while (ward.options.length > 0) {
+        ward.remove(0);
+    }
+    const defaultOption = document.createElement('option');//tạo thẻo mới
+    defaultOption.value = '';
+    defaultOption.textContent = 'Phường/Xã';//gán chữ hiển thị cho option
+    ward.appendChild(defaultOption);// gán thẻ vào trang 
+}
+//nạp lại danh sách phường/xã theo tỉnh
+province.addEventListener('change', () => {
+    const list = wardData[province.value] || [];
+    resetWard();
+    list.forEach((name) => {
+        const option = document.createElement('option');
+        option.value = name;
+        option.textContent = name;
+        ward.appendChild(option);
+    });
+    ward.parentElement.classList.remove('failure', 'success');
 });
-serviceInputs.forEach((cb) => {
-  cb.addEventListener('change', () => setInvalid(serviceList, false));
-});
-consent.addEventListener('change', () => setInvalid(consentLabel, false));
- 
+//dọn mọi màu đỏ/xanh
+function clearAllMessages() {
+    form.querySelectorAll('.failure, .success').forEach((el) => {
+        el.classList.remove('failure', 'success');
+    });
+}
+
 form.addEventListener('submit', (e) => {
-    e.preventDefault(); // ngăn reset khi submit
+    e.preventDefault(); // ngăn load lại trang khi submit
     let isValid = true;
 
-    // ho ten
-    if(fullname.value.trim()===''){
-        setInvalid(fullname, true);
+    if (fullname.value.trim() === '') {
+        errorMessage(fullname);
         isValid = false;
-    }
-    // sdt
-    if(!/^\d{10,}$/.test(phone.value.trim())){
-        setInvalid(phone, true);
-    isValid = false;
+    } else {
+        successMessage(fullname);
     }
 
-    //email
-    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value.trim())){
-        setInvalid(email, true);
+    if (!/^\d{10,}$/.test(phone.value.trim())) {
+        errorMessage(phone);
         isValid = false;
+    } else {
+        successMessage(phone);
     }
 
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value.trim())) {
+        errorMessage(email);
+        isValid = false;
+    } else {
+        successMessage(email);
+    }
+
+    //  ít nhất 1 checkbox
     const hasService = Array.from(serviceInputs).some((cb) => cb.checked);
-    if(!hasService){
-        setInvalid(serviceList, true);
+    if (!hasService) {
+        errorMessage(serviceList);
         isValid = false;
+    } else {
+        successMessage(serviceList);
     }
-    if(plate.value.trim()===''){ // trim là gõ tay
-        setInvalid(plate, true);
+
+   
+    if (plate.value.trim() === '') {
+        errorMessage(plate);
         isValid = false;
+    } else {
+        successMessage(plate);
     }
-    if(carModel.value ===''){ // không ttrim là danh sách có sẵn
-      setInvalid(carModel, true);
-      isValid = false;
-    }
-     if(km.value.trim()===''){
-        setInvalid(km, true);
+
+    if (carModel.value === '') {
+        errorMessage(carModel);
         isValid = false;
+    } else {
+        successMessage(carModel);
     }
-    if(province.value ===''){
-        setInvalid(province, true);
+
+    if (km.value.trim() === '') {
+        errorMessage(km);
         isValid = false;
+    } else {
+        successMessage(km);
     }
-      if (ward.value === '') {
-        setInvalid(ward, true);
+
+    if (province.value === '') {
+        errorMessage(province);
         isValid = false;
+    } else {
+        successMessage(province);
     }
- 
-  // Ngày giờ
+
+    if (ward.value === '') {
+        errorMessage(ward);
+        isValid = false;
+    } else {
+        successMessage(ward);
+    }
+
     if (dateInput.value === '') {
-        setInvalid(dateInput, true);
+        errorMessage(dateInput);
         isValid = false;
+    } else {
+        successMessage(dateInput);
     }
+
     if (timeInput.value === '') {
-        setInvalid(timeInput, true);
+        errorMessage(timeInput);
         isValid = false;
+    } else {
+        successMessage(timeInput);
     }
- 
-     // Đồng ý điều khoản
-    if (!consent.checked) {
-        setInvalid(consentLabel, true);
-        isValid = false;
+
+   if (!consent.checked) {
+    alert('Vui lòng đồng ý với Chính sách Bảo vệ Dữ liệu cá nhân để tiếp tục.');
+    isValid = false;
+    return;
+}
+
+    if (!isValid) {
+        alert('Gửi yêu cầu thất bại! Vui lòng kiểm tra lại thông tin.');
+        return;
     }
-  if (!isValid){
-    alert('Gửi yêu cầu thất bại! Vui lòng kiểm tra lại thông tin.');
-     return;
-  }
- 
-  alert('Đặt lịch thành công! Chúng tôi sẽ liên hệ với bạn sớm nhất.');
-  form.reset();
-  ward.innerHTML = '<option value="">Phường/Xã</option>';
+
+    alert('Đặt lịch thành công! Chúng tôi sẽ liên hệ với bạn sớm nhất.');
+    form.reset();
+    resetWard();
+    clearAllMessages(); 
 });

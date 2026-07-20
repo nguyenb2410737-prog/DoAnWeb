@@ -65,7 +65,7 @@
           </div>
           <div class="field">
             <label>Dịch vụ <span class="req">*</span></label>
-            <div class="service--list">
+            <div class="service--list" id="serviceList">
               <div class="service--row">
                 <input type="checkbox" id="svc1" name="service">
                 <label for="svc1" class="service--name">Bảo dưỡng</label>
@@ -125,16 +125,20 @@
           <div class="field">
             <label>Tại <span class="req">*</span></label>
             <div class="row--2col">
-              <select id="province">
-                <option value="">Tỉnh thành</option>
-                <option value="hn">Hà Nội</option>
-                <option value="hcm">TP. Hồ Chí Minh</option>
-                <option value="ct">Cần Thơ</option>
-                <option value="dn">Đà Nẵng</option>
-              </select>
-              <select id="ward">
-                <option value="">Phường/Xã</option>
-              </select>
+              <div class="field-sub">
+                <select id="province">
+                  <option value="">Tỉnh thành</option>
+                  <option value="hn">Hà Nội</option>
+                  <option value="hcm">TP. Hồ Chí Minh</option>
+                  <option value="ct">Cần Thơ</option>
+                  <option value="dn">Đà Nẵng</option>
+                </select>
+              </div>
+              <div class="field-sub">
+                <select id="ward">
+                  <option value="">Phường/Xã</option>
+                </select>
+              </div>
             </div>
           </div>
           <div class="radio--group">
@@ -151,10 +155,10 @@
             <label>Thời gian <span class="req">*</span></label>
             <div class="row--2col">
               <div class="icon--input">
-                <input type="date">
+                <input type="date" id="dateInput">
               </div>
               <div class="icon--input">
-                <input type="time">
+                <input type="time" id="timeInput">
               </div>
             </div>
           </div>

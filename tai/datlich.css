@@ -6,7 +6,7 @@ body{
     background: white;
     color: black;
     margin:0;
-    /* padding:40px 20px; */
+  
 }
 main{
      padding:40px 20px; 
@@ -20,7 +20,7 @@ main{
 .form--grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  /* background-color: #eef2ff; */
+  
   border-radius: 10px;
   box-shadow: 0 4px 10px rgb(73, 40, 237);
 
@@ -63,9 +63,7 @@ main{
 .field label .req{
     color: red;
 }
-.field-with-count {
-  position: relative;
-}
+
 .field input[type="text"],
 .field input[type="tel"],
 .field input[type="email"],
@@ -80,7 +78,7 @@ main{
     background-color: white;
     outline: none;
     transition: border-color 0.15s ease;
-    /* font-family: inherit; */
+
 }
 .field input::placeholder,
 .field textarea::placeholder{
@@ -91,9 +89,17 @@ main{
 .field textarea:focus {
   border-color: rgb(255, 52, 255);
 }
-.field input.invalid,
-.field select.invalid{
-    border-color:red;
+.field.failure input,
+.field.failure select,
+.field.failure textarea,
+.field-sub.failure select {
+  border-color: red;
+}
+.field.success input,
+.field.success select,
+.field.success textarea,
+.field-sub.success select {
+  border-color: green;
 }
 textarea{
     resize: vertical;
@@ -106,8 +112,12 @@ textarea{
     gap: 16px;
     border-bottom: 1px solid white;
 }
-.service--list.invalid{
+.service--list.failure{
   border: 1px solid red;
+  border-radius: 6px;
+}
+.service--list.success{
+  border: 1px solid green;
   border-radius: 6px;
 }
 .service--row:last-child{
@@ -120,9 +130,17 @@ textarea{
     cursor: pointer;
     flex-shrink: 0;
 }
+.row--2col {
+  display: flex;
+  gap: 16px;
+}
+.row--2col > * {
+  flex: 1;
+  min-width: 0;
+}
 .service--name{
     flex: 1;
-    /* font-size: px; */
+
 }
 .icon--input{
     position: relative;
@@ -130,9 +148,12 @@ textarea{
 .icon--input input {
   padding-right: 40px;
 }
-/* .icon--input input.invalid{
-    border-color: red;
-} */
+.icon--input.failure input {
+  border-color: red;
+}
+.icon--input.success input {
+  border-color: green;
+}
 .radio--group{
     display: flex;
     gap: 28px;
@@ -180,8 +201,11 @@ textarea{
     margin: 8px auto 0;
 }
 
-.consent.invalid span{
+.consent.failure span{
     color: red;
+}
+.consent.success span{
+    color: green;
 }
 .submit-btn {
   background: gray;

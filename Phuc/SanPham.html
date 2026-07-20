@@ -6,38 +6,56 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Trang tìm kiếm xe ô tô mới và xe đã qua sử dụng" />
   <title>Sản Phẩm</title>
+  <link rel="stylesheet" href="/Nguyen/main1.css">
   <link rel="stylesheet" href="SanPham.css" />
-  <link rel="stylesheet" href="/Nguyen/main.css">
   <link rel="icon" href="/images/logo.png">
 </head>
 
 <body>
 <header class="header">
-        <div class="header_logo">
-            <img src="/images/logo-ngang.png" alt="Logo">
-        </div>
-        <ul id="nav">
-            <li><a href="/Nguyen/trangchu.html" class="header_a">Trang chủ</a></li>
-            <li><a href="SanPham.html" class="header_a--active">Kho xe</a></li>
-            <li><a href="/tai/suachuachung.html" class="header_a">Dịch vụ</a></li>
-            <li><a href="/do/gioithieu.html" class="header_a">Giới thiệu</a></li>
-            <li><a href="/toan/lienhe.html" class="header_a">Liên hệ</a></li>
-        </ul>
+            <div class="header_logo">
+                    <img src="/images/logo-ngang.png" alt="Logo">
+            </div>
+            
+            <button id="menuToggle" class="menu-toggle">
+                <b class="fa-solid fa-bars">☰</b>
+            </button>
 
-        <div class="header_icon">
-            <div class="icon_group">
-                <div class="chuong">
-                    <a href="/Nguyen/thongbao.html"><img src="/images/chuong.png"></a>
-                </div>
+            <div id="headerMenu" class="header_menu">
 
-                <div class="basket">
-                    <a href="/Nguyen/giohang.html"><img src="/images/giohang.png"></a>
+                <ul id="nav">
+                    <li><a href="/Nguyen/trangchu.html" >Trang chủ</a></li>
+                    <li><a href="/Phuc/SanPham.html" class="header_a--active">Kho xe</a></li>
+                    <li><a href="/tai/suachuachung.html">Dịch vụ</a></li>
+                    <li><a href="/do/gioithieu.html">Giới thiệu</a></li>
+                    <li><a href="/toan/lienhe.html">Liên hệ</a></li>
+                </ul>
+
+                <div class="header_icon">
+                    <div class="icon_group">
+                        <div class="chuong">
+                            <a href="/Nguyen/thongbao.html">
+                                <img src="/images/chuong.png">
+                            </a>
+                        </div>
+
+                        <div class="basket">
+                            <a href="/Nguyen/giohang.html">
+                                <img src="/images/giohang.png">
+                                <span id="cart-count">0</span>
+                            </a>
+                        </div>
+
+                    </div>
+
+                    <a href="/Nguyen/Dangnhap.html">
+                        <button class="header_button">
+                            Đăng nhập
+                        </button>
+                    </a>
                 </div>
             </div>
-
-            <a href="/tai/dnhap.html"><button class="header_button">Đăng nhập</button></a>
-        </div>
-</header>
+        </header>
 
 <!-- Main -->
 <main>
@@ -163,7 +181,7 @@
                         <span class="car-type">NEW CAR | AUTOMATIC | SPORT</span>
                         <div class="price">
                             <del>$72,500</del>
-                            <strong>$1.850.000.000</strong>
+                            <strong>1.850.000.000 VNĐ</strong>
                         </div>
                         <p>
                             BMW 3 Series sở hữu thiết kế sang trọng,
@@ -196,7 +214,7 @@
                         <span class="car-type">NEW CAR | AUTOMATIC | SPORT</span>
                         <div class="price">
                             <del>$101,000</del>
-                            <strong>$2.600.000.000</strong>
+                            <strong>2.600.000.000 VNĐ</strong>
                         </div>
                         <p>
                             Mercedes E300 mang phong cách doanh nhân, nội thất cao cấp và vận hành êm ái.
@@ -228,7 +246,7 @@
                         <span class="car-type">NEW CAR | AUTOMATIC | SPORT</span>
                         <div class="price">
                             <del>$95,000</del>
-                            <strong>$2.400.000.000</strong>
+                            <strong>2.400.000.000 VNĐ</strong>
                         </div>
                         <p>
                             Audi A6 sở hữu ngoại hình thể thao, khoang lái hiện đại và công nghệ tiên tiến.
@@ -260,7 +278,7 @@
                         <span class="car-type">NEW CAR | AUTOMATIC | SUV</span>
                         <div class="price">
                             <del>$142,000</del>
-                            <strong>$3.600.000.000</strong>
+                            <strong>3.600.000.000 VNĐ</strong>
                         </div>
                         <p>
                             Audi Q7 nổi bật với thiết kế sang trọng, nội thất đẳng cấp và khả năng tiết kiệm nhiên liệu.
@@ -292,7 +310,7 @@
                         <span class="car-type">NEW CAR | AUTOMATIC | Sport</span>
                         <div class="price">
                             <del>$253,000</del>
-                            <strong>$6.450.000.000</strong>
+                            <strong>6.450.000.000 VNĐ</strong>
                         </div>
                         <p>
                             Porsche Panamera  mang phong cách thể thao, khả năng tăng tốc mạnh mẽ cùng cảm giác lái vượt trội.
@@ -324,7 +342,7 @@
                         <span class="car-type">NEW CAR | AUTOMATIC | LUXURY</span>
                         <div class="price">
                             <del>$194,000</del>
-                            <strong>$4.950.000.000</strong>
+                            <strong>4.950.000.000 VNĐ</strong>
                         </div>
                         <p>
                             Mercedes-Benz S450 là mẫu sedan hạng sang với nội thất xa xỉ và hàng loạt công nghệ hiện đại.
@@ -332,7 +350,7 @@
                         <div class="specs">
                             <span>⚡ Điện</span>
                             <span>⚙ Tự động</span>
-                            <span>👥 7 chỗ</span>
+                            <span>👥 5 chỗ</span>
                             <span>📅 2023</span>
                         </div>
                     </div>
@@ -386,6 +404,7 @@
         </div>
 </footer>
     <script src="SanPham.js"></script>
+    <script src="/Nguyen/main.js"></script>
 </body>
 
 </html>

@@ -6,40 +6,56 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Trang tìm kiếm xe ô tô mới và xe đã qua sử dụng" />
   <title>Sản Phẩm</title>
-  <link rel="stylesheet" href="SanPham.css" />
-  <link rel="stylesheet" href="/Nguyen/main.css">
+  <link rel="stylesheet" href="/Nguyen/main1.css">
+  <link rel="stylesheet" href="SanPham.css" >
   <link rel="icon" href="/images/logo.png">
 </head>
 
 <body>
 <header class="header">
-        <div class="header_logo">
-                <img src="/images/logo-ngang.png" alt="Logo">
-        </div>
-        <ul id="nav">
-            <li><a href="/Nguyen/trangchu.html" class="header_a">Trang chủ</a></li>
-            <li><a href="SanPham.html" class="header_a--active">Kho xe</a></li>
-            <li><a href="/tai/suachuachung.html" class="header_a">Dịch vụ</a></li>
-            <li><a href="/do/gioithieu.html" class="header_a">Giới thiệu</a></li>
-            <li><a href="/toan/lienhe.html" class="header_a">Liên hệ</a></li>
-        </ul>
+            <div class="header_logo">
+                    <img src="/images/logo-ngang.png" alt="Logo">
+            </div>
+            
+            <button id="menuToggle" class="menu-toggle">
+                <b class="fa-solid fa-bars">☰</b>
+            </button>
 
-        <div class="header_icon">
-            <div class="icon_group">
-                <div class="chuong">
-                    <a href="/Nguyen/thongbao.html"><img src="/images/chuong.png"></a>
-                </div>
+            <div id="headerMenu" class="header_menu">
 
-                <div class="basket">
-                    <a href="/Nguyen/giohang.html"><img src="/images/giohang.png"></a>
+                <ul id="nav">
+                    <li><a href="/Nguyen/trangchu.html" >Trang chủ</a></li>
+                    <li><a href="/Phuc/SanPham.html" class="header_a--active">Kho xe</a></li>
+                    <li><a href="/tai/suachuachung.html">Dịch vụ</a></li>
+                    <li><a href="/do/gioithieu.html">Giới thiệu</a></li>
+                    <li><a href="/toan/lienhe.html">Liên hệ</a></li>
+                </ul>
+
+                <div class="header_icon">
+                    <div class="icon_group">
+                        <div class="chuong">
+                            <a href="/Nguyen/thongbao.html">
+                                <img src="/images/chuong.png">
+                            </a>
+                        </div>
+
+                        <div class="basket">
+                            <a href="/Nguyen/giohang.html">
+                                <img src="/images/giohang.png">
+                                <span id="cart-count">0</span>
+                            </a>
+                        </div>
+
+                    </div>
+
+                    <a href="/Nguyen/Dangnhap.html">
+                        <button class="header_button">
+                            Đăng nhập
+                        </button>
+                    </a>
                 </div>
             </div>
-
-            <button class="header_button">Đăng nhập</button>
-        </div>
-
-    
-</header>
+        </header>
 <!-- Main -->
 <main>
 
@@ -62,18 +78,15 @@
         </section>
 
     <!-- SEARCH -->
-    <section class="search-box">
-
+    <!-- <section class="search-box">
         <form class="car-search">
-
             <div class="form-group">
                 <label>Hãng xe</label>
                 <select>
                     <option>-- Chọn hãng --</option>
                     <option>BMW</option>
                     <option>Mercedes</option>
-                    <option>Toyota</option>
-                    <option>Honda</option>
+                    <option>Porsche</option>
                     <option>Audi</option>
                 </select>
             </div>
@@ -92,6 +105,7 @@
             <div class="form-group">
                 <label>Năm sản xuất</label>
                 <select>
+                    <option>-- Chọn năm --</option>
                     <option>2025</option>
                     <option>2024</option>
                     <option>2023</option>
@@ -102,16 +116,18 @@
             <div class="form-group">
                 <label>Khoảng giá</label>
                 <select>
-                    <option>Dưới 500 triệu</option>
-                    <option>500 triệu - 1 tỷ</option>
+                    <option>-- Chọn giá --</option>
+                    <option>Dưới 1 tỷ</option>
                     <option>1 - 2 tỷ</option>
-                    <option>Trên 2 tỷ</option>
+                    <option>2 - 4 tỷ</option>
+                    <option>Trên 4 tỷ</option>
                 </select>
             </div>
 
             <div class="form-group">
                 <label>Hộp số</label>
                 <select>
+                    <option>-- Chọn --</option>
                     <option>Tự động</option>
                     <option>Số sàn</option>
                 </select>
@@ -120,9 +136,9 @@
             <div class="form-group">
                 <label>Nhiên liệu</label>
                 <select>
+                    <option>-- Chọn nhiên liệu --</option>
                     <option>Xăng</option>
                     <option>Diesel</option>
-                    <option>Hybrid</option>
                     <option>Điện</option>
                 </select>
             </div>
@@ -130,6 +146,7 @@
             <div class="form-group">
                 <label>Tình trạng</label>
                 <select>
+                    <option>-- Chọn tình trạng xe --</option>
                     <option>Xe mới</option>
                     <option>Xe đã qua sử dụng</option>
                 </select>
@@ -138,10 +155,9 @@
             <button type="submit" class="search-btn">
                 TÌM KIẾM XE
             </button>
-
         </form>
+    </section> -->
 
-    </section>
 
     <!-- CONTENT -->
     <section class="content">
@@ -161,7 +177,14 @@
 
             <!-- Card 1 -->
 
-<a href="muahang.html" class="car-link" id="001">
+<a href="muahang.html" class="car-link" id="001"
+               data-brand="BMW" 
+               data-type="Sedan" 
+               data-year="2025" 
+               data-price="1850000000" 
+               data-transmission="Tự động" 
+               data-fuel="Xăng" 
+               data-condition="Xe mới">
     <article class="featured-card">
 
         <span class="badge-left">New</span>
@@ -178,7 +201,7 @@
 
             <div class="price">
                 <del>$45,000</del>
-                <strong>$1.850.000.000</strong>
+                <strong>1.850.000.000 VNĐ</strong>
             </div>
 
             <p>
@@ -200,7 +223,14 @@
 
             <!-- Card 2 -->
 
-<a href="muahang2.html" class="car-link" id="007">
+<a href="muahang8.html" class="car-link" id="007"
+               data-brand="BMW" 
+               data-type="Sedan" 
+               data-year="2025" 
+               data-price="1850000000" 
+               data-transmission="Tự động" 
+               data-fuel="Xăng" 
+               data-condition="Xe mới">
     <div class="featured-card">
 
         <span class="badge-left">New</span>
@@ -216,13 +246,12 @@
             </span>
 
             <div class="price">
-                <del>$55,000</del>
-                <strong>$2.600.000.000</strong>
+                <del>$228,000</del>
+                <strong>6.000.000.000 VNĐ</strong>
             </div>
 
             <p>
-                Mercedes E300 mang phong cách doanh
-                nhân, nội thất cao cấp và vận hành êm ái.
+                BMW M4 mang phong cách sport, nội thất cao cấp và vận hành êm ái.
             </p>
 
             <div class="specs">
@@ -238,7 +267,14 @@
 </a>
             <!-- Card 3 -->
 
-<a href="muahang2.html" class="car-link" id="008">
+<a href="muahang9.html" class="car-link" id="008"
+               data-brand="BMW" 
+               data-type="SUV" 
+               data-year="2025" 
+               data-price="1850000000" 
+               data-transmission="Tự động" 
+               data-fuel="Xăng" 
+               data-condition="Xe mới">
     <div class="featured-card">
 
         <span class="badge-left">New</span>
@@ -254,19 +290,19 @@
             </span>
 
             <div class="price">
-                <del>$52,000</del>
-                <strong>$2.400.000.000</strong>
+                <del>$94,000</del>
+                <strong>3.600.000.000 VNĐ</strong>
             </div>
 
             <p>
-                Audi A6 sở hữu ngoại hình thể thao,
+                BMW iX3 sở hữu ngoại hình thể thao,
                         khoang lái hiện đại và công nghệ tiên tiến.
             </p>
 
             <div class="specs">
-                <span>⛽ Xăng</span>
+                <span>⚡Điện</span>
                 <span>⚙ Tự động</span>
-                <span>👥 4 chỗ</span>
+                <span>👥 7 chỗ</span>
                 <span>📅 2025</span>
             </div>
 
@@ -337,5 +373,6 @@
         </div>
     </footer>
   <script src="SanPham.js"></script>
+  <script src="/Nguyen/main.js"></script>
 </body>
 </html>

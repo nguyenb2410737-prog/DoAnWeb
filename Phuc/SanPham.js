@@ -31,19 +31,24 @@ document.addEventListener('DOMContentLoaded', function () {
 
     /* HÀM KIỂM TRA KHOẢNG GIÁ */
     function isPriceInRange(price, rangeText) {
-        switch (rangeText) {
-            case 'Dưới 1 tỷ':
-                return price < 1000000000;
-            case '1 - 2 tỷ':
-                return price >= 1000000000 && price <= 2000000000;
-            case '2 - 4 tỷ':
-                return price >= 2000000000 && price <= 4000000000;
-            case 'Trên 4 tỷ':
-                return price > 4000000000;
-            default:
-                return true;
-        }
+    switch (rangeText) {
+        case 'Dưới 2 tỷ':
+            return price < 2000000000;
+
+        case '2 - 4 tỷ':
+            return price >= 2000000000 && price < 4000000000;
+
+        case '4 - 6 tỷ':
+            return price >= 4000000000 && price < 6000000000;
+
+        case 'Trên 6 tỷ':
+            return price >= 6000000000;
+
+        default:
+            return true;
     }
+}
+
 
     /* HÀM KIỂM TRA CARD CÓ KHỚP BỘ LỌC */
     function isCardMatch(card, filters) {

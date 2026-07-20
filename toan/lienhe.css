@@ -5,6 +5,7 @@
     font-family: 'Times New Roman', Arial, Helvetica, sans-serif;
 }
 
+/* Tinh chỉnh thêm phần css vì các ô công cụ còn sát với phần đầu tiên và cài lại css theo Mobile first kèm RWD*/
 body{
     margin:0;
     padding:0;

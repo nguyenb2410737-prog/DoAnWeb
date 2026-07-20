@@ -6,41 +6,54 @@
     <title>Giỏ hàng - AutoPrime</title>
     <link rel="icon" href="/images/logo.png">
     <link rel="stylesheet" href="giohang.css">
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="main1.css">
 </head>
 
 <body>
     <header class="header">
-        <div class="header_logo">
-                <img src="/images/logo-ngang.png" alt="Logo">
-        </div>
-        <ul id="nav">
-            <li><a href="/Nguyen/trangchu.html" class="header_a">Trang chủ</a></li>
-            <li><a href="/Phuc/SanPham.html" class="header_a">Kho xe</a></li>
-            <li><a href="/tai/suachuachung.html" class="header_a">Dịch vụ</a></li>
-            <li><a href="/do/gioithieu.html" class="header_a">Giới thiệu</a></li>
-            <li><a href="/toan/lienhe.html" class="header_a">Liên hệ</a></li>
-        </ul>
-
-        <div class="header_icon">
-            <div class="icon_group">
-                <div class="chuong">
-                    <a href="/Nguyen/thongbao.html"><img src="/images/chuong.png"></a>
-                </div>
-
-                <div class="basket">
-                    <a href="/Nguyen/giohang.html">
-                        <img src="/images/giohang.png">
-                        <span id="cart-count">0</span>
-                    </a>
-                    
-                </div>
-                 
+            <div class="header_logo">
+                    <img src="/images/logo-ngang.png" alt="Logo">
             </div>
+            
+            <button id="menuToggle" class="menu-toggle">
+                <b class="fa-solid fa-bars">☰</b>
+            </button>
 
-            <a href="/tai/dnhap.html"><button class="header_button">Đăng nhập</button></a>
-        </div>
-    </header>
+            <div id="headerMenu" class="header_menu">
+
+                <ul id="nav">
+                    <li><a href="/Nguyen/trangchu.html">Trang chủ</a></li>
+                    <li><a href="/Phuc/SanPham.html">Kho xe</a></li>
+                    <li><a href="/tai/suachuachung.html">Dịch vụ</a></li>
+                    <li><a href="/do/gioithieu.html">Giới thiệu</a></li>
+                    <li><a href="/toan/lienhe.html">Liên hệ</a></li>
+                </ul>
+
+                <div class="header_icon">
+                    <div class="icon_group">
+                        <div class="chuong">
+                            <a href="/Nguyen/thongbao.html">
+                                <img src="/images/chuong.png">
+                            </a>
+                        </div>
+
+                        <div class="basket">
+                            <a href="/Nguyen/giohang.html">
+                                <img src="/images/giohang.png">
+                                <span id="cart-count">0</span>
+                            </a>
+                        </div>
+
+                    </div>
+
+                    <a href="/Nguyen/Dangnhap.html">
+                        <button class="header_button">
+                            Đăng nhập
+                        </button>
+                    </a>
+                </div>
+            </div>
+        </header>
 
     <section class="cart-banner">
         <h1>GIỎ HÀNG</h1>
@@ -105,7 +118,7 @@
 
         </section>
 
-        <aside class="cart-summary">
+        <section class="cart-summary">
             <h2>TỔNG ĐƠN HÀNG</h2>
             <div class="summary-row">
                 <span>Tạm tính</span>
@@ -142,7 +155,7 @@
 
             </div>
 
-        </aside>
+        </section>
 
     </main>
 
@@ -223,7 +236,8 @@
             </p>
         </div>
     </footer>
-
+    <script src="/Nguyen/main.js"></script>
     <script src="/Nguyen/giohang.js"></script>
+    
 </body>
 </html>

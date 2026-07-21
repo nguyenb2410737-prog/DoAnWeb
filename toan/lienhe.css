@@ -2,56 +2,52 @@
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family: 'Times New Roman', Arial, Helvetica, sans-serif;
+    font-family:'Times New Roman', Arial, Helvetica, sans-serif;
 }
 
-/* Tinh chỉnh thêm phần css vì các ô công cụ còn sát với phần đầu tiên và cài lại css theo Mobile first kèm RWD*/
 body{
-    margin:0;
-    padding:0;
     background:#eef5ff;
 }
+
 main{
-    margin:0;
-    padding:0;
-}
-
-/* Chia 2 cột */
-.contact-container{
-    margin-top:-20px;
-    display:flex;
-    gap:30px;
-    align-items:stretch;
-
     width:100%;
-    padding:20px;
 }
-/* Form liên hệ */
-.contact-box{
-    flex:2;
+
+.contact-container{
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+    width:100%;
+    padding:16px;
+}
+
+.contact-box,
+.hotline-box{
+    width:100%;
     background:#fff;
-    padding:30px;
     border-radius:12px;
+    padding:20px;
     box-shadow:0 4px 15px rgba(0,0,0,.1);
 }
 
-.contact-box h3{
-    margin-bottom:20px;
-    font-size:28px;
+.contact-box h3,
+.hotline-box h2{
     color:#0066cc;
+    font-size:22px;
+    margin-bottom:18px;
 }
 
 .input-box{
-    margin-bottom:18px;
+    margin-bottom:16px;
 }
 
 .input-box input,
 .input-box textarea{
     width:100%;
-    padding:14px;
+    padding:12px;
     border:2px solid #cfe3ff;
     border-radius:8px;
-    font-size:18px;
+    font-size:16px;
     outline:none;
     transition:.3s;
 }
@@ -63,19 +59,18 @@ main{
 }
 
 .input-box textarea{
-    height:160px;
+    height:140px;
     resize:none;
 }
 
-/* Nút gửi */
 .send-btn{
     width:100%;
+    padding:14px;
     background:#0066cc;
     color:#fff;
     border:none;
-    padding:16px;
-    font-size:20px;
     border-radius:8px;
+    font-size:18px;
     cursor:pointer;
     transition:.3s;
 }
@@ -84,49 +79,107 @@ main{
     background:#004d99;
 }
 
-/* Hotline */
 .hotline-box{
-    flex:1;
-    background:#fff;
     border:2px solid #cfe3ff;
-    border-radius:12px;
-    padding:30px;
-    box-shadow:0 4px 15px rgba(0,0,0,.1);
-
     display:flex;
     flex-direction:column;
-    justify-content:space-evenly;
-}
-
-.hotline-box h2{
-    color:#0066cc;
-    font-size:28px;
-    margin-bottom:20px;
+    gap:15px;
 }
 
 .hotline-box p{
     color:#333;
-    font-size:19px;
-    line-height:1.8;
-    margin-bottom:12px;
+    font-size:16px;
+    line-height:1.7;
 }
 
 .hotline-box strong{
     color:#0066cc;
 }
 
-/* Responsive */
-@media screen and (max-width:768px){
+/* TABLET*/
+
+@media (min-width:768px){
 
     .contact-container{
-        flex-direction:column;
-        gap:20px;
+        padding:25px;
+        gap:25px;
     }
 
     .contact-box,
     .hotline-box{
-        width:100%;
+        padding:25px;
+    }
+
+    .contact-box h3,
+    .hotline-box h2{
+        font-size:26px;
+    }
+
+    .input-box input,
+    .input-box textarea{
+        font-size:17px;
+        padding:14px;
+    }
+
+    .input-box textarea{
+        height:150px;
+    }
+
+    .send-btn{
+        font-size:19px;
+        padding:15px;
+    }
+
+    .hotline-box p{
+        font-size:18px;
+    }
+
+}
+
+/* DESKTOP */
+
+@media (min-width:1024px){
+
+    .contact-container{
+        flex-direction:row;
+        align-items:stretch;
+        gap:30px;
+        padding:30px;
+    }
+
+    .contact-box{
+        flex:2;
+        padding:30px;
+    }
+
+    .hotline-box{
         flex:1;
+        padding:30px;
+        justify-content:space-evenly;
+    }
+
+    .contact-box h3,
+    .hotline-box h2{
+        font-size:30px;
+    }
+
+    .input-box input,
+    .input-box textarea{
+        font-size:18px;
+        padding:15px;
+    }
+
+    .input-box textarea{
+        height:170px;
+    }
+
+    .send-btn{
+        font-size:20px;
+        padding:16px;
+    }
+
+    .hotline-box p{
+        font-size:19px;
     }
 
 }

@@ -194,7 +194,7 @@ body{
     margin: 0;
     text-shadow: 0 1px 3px black;
 }
-@media (max-width:720px) {
+@media (max-width:600px) {
     .container {
         flex-direction: column-reverse;
         min-height: auto;

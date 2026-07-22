@@ -17,20 +17,22 @@ body {
     padding: 32px 16px;
 }
 
+
 .container {
     position: relative;
     width: 920px;
     max-width: 100%;
-    min-height: 500px;
+    min-height: auto;
     background: white;
     border-radius: 20px;
     box-shadow: 0 10px 30px rgb(107, 171, 255);
     overflow: hidden;
     display: flex;
+    flex-direction: column-reverse;
 }
 
 .container__form {
-    width: 50%;
+    width: 100%;
     display: flex;
     align-items: center;
     padding: 46px 48px;
@@ -166,11 +168,11 @@ h1.title {
 }
 
 .img {
+    display: none;
     position: relative;
     width: 50%;
     background: blue;
     color: white;
-    display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -208,17 +210,19 @@ h1.title {
     text-shadow: 0 1px 3px black;
 }
 
-@media (max-width:720px) {
-    .container {
-        flex-direction: column-reverse;
-        min-height: auto;
-    }
 
-    .img {
-        display: none;
+@media (min-width: 600px) {
+    .container {
+        flex-direction: row;
+        min-height: 500px;
     }
 
     .container__form {
-        width: 100%;
+        width: 50%;
+    }
+
+    .img {
+        display: flex;
+        width: 50%;
     }
 }

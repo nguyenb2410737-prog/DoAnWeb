@@ -31,7 +31,7 @@ main{
     box-shadow:0 4px 15px rgba(0,0,0,.1);
 }
 
-.contact-box h3,
+.contact-box h2,
 .hotline-box h2{
     color:#0066cc;
     font-size:22px;
@@ -111,7 +111,7 @@ main{
         padding:25px;
     }
 
-    .contact-box h3,
+    .contact-box h2,
     .hotline-box h2{
         font-size:26px;
     }
@@ -159,7 +159,7 @@ main{
         justify-content:space-evenly;
     }
 
-    .contact-box h3,
+    .contact-box h2,
     .hotline-box h2{
         font-size:30px;
     }

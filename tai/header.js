@@ -1,25 +1,32 @@
-window.onload = function () {
-    const loginBtn = document.getElementById('loginBtn');
-    if (!loginBtn) return;
-    
+const loginLink = document.getElementById('loginLink');
+const userMenu = document.getElementById('usermenu');
+const userName = document.getElementById('userName');
+const userSelect = document.getElementById('userSelect');
 
-    function update() {
-       const username = localStorage.getItem('username'); 
-        if (username) {
-            loginBtn.textContent = "Dang Xuat";
-        } else {
-            loginBtn.textContent = "Dang Nhap";
-        }
+function update() {
+    const username = localStorage.getItem('username');
+
+    if (username) {
+        loginLink.style.display = 'none';
+        userMenu.style.display = 'block';
+        userName.textContent = username;
+    } else {
+        loginLink.style.display = 'block';
+        userMenu.style.display = 'none';
     }
-    update(); 
-    loginBtn.addEventListener('click', function (e) {
-         e.preventDefault(); //  // chặn thẻ <a> nhảy trang theo href mặc định
-        const username = localStorage.getItem("username");
-        if (username) {
-            localStorage.removeItem("username");
-            window.location.href = "/Nguyen/trangchu.html";
-        } else { // gia trị la null
-            window.location.href = "/tai/dnhap.html";
-        }
-    });
 }
+
+update();
+
+userSelect.addEventListener('change', function () {
+    const action = userSelect.value;
+
+    if (action === 'account') {
+        window.location.href = "#"; // không có trang 
+    } else if (action === 'logout') {
+        localStorage.removeItem('username');
+        window.location.href = "/tai/dnhap.html";
+    }
+
+    userSelect.selectedIndex = 0; //Đưa  về mục đầu vị trí của mục đang chọn trong select
+});

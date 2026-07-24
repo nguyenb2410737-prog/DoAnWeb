@@ -99,10 +99,15 @@ document.addEventListener('DOMContentLoaded', function () {
                 card.style.display = 'none'; // Ẩn xe không phù hợp
             }
         });
-
+        // cuon xuong phan loc
+        document.getElementById("fil").scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+        });
         // Hiển thị thông báo nếu không tìm thấy bất kỳ chiếc xe nào
         noResultMsg.style.display = (visibleCount === 0) ? 'block' : 'none';
-    }
+        
+}
 
     //Tìm Kiếm xe
     searchForm.addEventListener('submit', handleFilterSubmit);

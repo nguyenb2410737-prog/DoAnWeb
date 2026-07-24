@@ -1,10 +1,3 @@
-:root{
-    --color-primary:#1c69d4;
-    --color-primary-hover:#134e9e;
-    --color-border:#e5e5e5;
-    --color-text-muted:#4a4a4a;
-}
-
 * {
     margin: 0;
     padding: 0;
@@ -18,88 +11,10 @@ body {
     line-height: 1.6;
 }
 
-
-/*CONTAINER*/
 .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 15px;
-}
-
-
-/*HEADER*/
-.header {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    gap: 15px;
-    padding: 12px 15px;
-    background-color: #ffffff;
-    border-bottom: 1px solid var(--color-border);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-}
-
-.header_logo img {
-    height: 40px;
-    object-fit: contain;
-}
-
-#nav {
-    display: flex;
-    list-style: none;
-    order: 3;
-    width: 100%;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 10px;
-    font-size: 13px;
-}
-
-#nav a {
-    text-decoration: none;
-    color: #666666;
-    font-size: 15px;
-    font-weight: 500;
-    transition: color 0.3s;
-}
-
-#nav a:hover, .header_a--active {
-    color: var(--color-primary) !important;
-}
-
-.header_icon {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-}
-
-.icon_group {
-    display: flex;
-    gap: 12px;
-}
-
-.chuong img, .basket img {
-    width: 24px;
-    height: 24px;
-    cursor: pointer;
-}
-
-.header_button {
-    background-color: var(--color-primary);
-    color: #ffffff;
-    border: none;
-    padding: 10px 20px;
-    font-size: 14px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.header_button:hover {
-    background-color: var(--color-primary-hover);
 }
 
 
@@ -132,7 +47,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(90deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.2) 100%);
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.2) 100%);
     z-index: 1;
 }
 
@@ -182,42 +97,12 @@ body {
     margin-bottom: 30px;
 }
 
-.btn {
-    padding: 12px 20px;
-    font-size: 14px;
-    font-weight: 600;
-    text-decoration: none;
-    text-transform: uppercase;
-    text-align: center;
-    transition: all 0.3s;
-    display: inline-block;
-}
-
-.btn-primary {
-    background-color: var(--color-primary);
-    color: #ffffff;
-}
-
-.btn-primary:hover {
-    background-color: var(--color-primary-hover);
-}
-
-.btn-outline {
-    border: 2px solid #ffffff;
-    color: #ffffff;
-}
-
-.btn-outline:hover {
-    background-color: #ffffff;
-    color: #000000;
-}
-
 .hero-info {
     display: flex;
     flex-direction: column;
     gap: 15px;
     flex-wrap: wrap;
-    border-top: 1px solid rgba(255,255,255,0.3);
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
     padding-top: 20px;
 }
 
@@ -234,6 +119,52 @@ body {
 }
 
 
+/*BUTTON*/
+.btn {
+    padding: 12px 20px;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+    transition: all 0.3s;
+    display: inline-block;
+}
+
+.buton-primary {
+    background: #0066B1;
+    color: #ffffff;
+}
+
+.buton-primary:hover {
+    background: #004C8C;
+}
+
+.buton-outline {
+    border: 2px solid #ffffff;
+    color: #ffffff;
+}
+
+.buton-outline:hover {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.btn-discover-spec {
+    background-color: #0066B1;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 12px 25px;
+    font-size: 14px;
+    font-weight: 600;
+    transition: background-color 0.3s;
+}
+
+.btn-discover-spec:hover {
+    background-color: #004C8C;
+}
+
+
 /*QUICK MENU*/
 .quick-menu {
     display: flex;
@@ -243,7 +174,7 @@ body {
     gap: 15px;
     padding: 20px;
     background-color: #f6f6f6;
-    border-bottom: 1px solid var(--color-border);
+    border-bottom: 1px solid #DDDDDD;
 }
 
 .quick-menu-left {
@@ -256,7 +187,7 @@ body {
 
 .quick-menu-left a {
     text-decoration: none;
-    color: var(--color-text-muted);
+    color: #666666;
     font-size: 14px;
     font-weight: 600;
 }
@@ -264,7 +195,7 @@ body {
 .spec-btn {
     background-color: #ffffff;
     color: #000000;
-    border: 1px solid var(--color-text-muted);
+    border: 1px solid #666666;
     padding: 8px 20px;
     font-size: 13px;
     font-weight: 600;
@@ -283,17 +214,21 @@ body {
     max-width: 800px;
     margin: 0 auto;
     font-size: 16px;
-    color: var(--color-text-muted);
+    color: #666666;
 }
 
 
-/*TECH / DESIGN / SPECS SECTIONS*/
-.driving-technology, .exterior-design, .specifications {
+/*TECHNOLOGY */
+.driving-technology,
+.exterior-design,
+.specifications {
     padding: 50px 0;
     background-color: #ffffff;
 }
 
-.driving-technology h2, .exterior-design h2, .specifications h2 {
+.driving-technology h2,
+.exterior-design h2,
+.specifications h2 {
     font-size: 24px;
     font-weight: 300;
     text-align: center;
@@ -330,27 +265,31 @@ body {
     margin-bottom: 12px;
 }
 
-.tech-grid, .design-grid {
+.tech-grid,
+.design-grid {
     display: flex;
     flex-direction: column;
     gap: 20px;
     margin-top: 40px;
 }
 
-.tech-col, .design-col {
+.tech-col,
+.design-col {
     flex: 1;
     display: flex;
     flex-direction: column;
 }
 
-.tech-col img, .design-col img {
+.tech-col img,
+.design-col img {
     width: 100%;
     aspect-ratio: 4 / 3;
     object-fit: cover;
     margin-bottom: 20px;
 }
 
-.tech-col h3, .design-col h3 {
+.tech-col h3,
+.design-col h3 {
     font-size: 18px;
     font-weight: 600;
     margin-bottom: 15px;
@@ -362,7 +301,7 @@ body {
 
 .app-features li {
     font-size: 14px;
-    color: var(--color-text-muted);
+    color: #666666;
     margin-bottom: 8px;
 }
 
@@ -381,16 +320,18 @@ body {
 }
 
 .dot.active {
-    background-color: var(--color-primary);
+    background-color: #0066B1;
     width: 24px;
     border-radius: 4px;
 }
 
+
+/*DESIGN */
 .spec-model {
     font-size: 22px;
     font-weight: 600;
     text-align: center;
-    color: var(--color-primary);
+    color: #0066B1;
     margin-bottom: 40px;
 }
 
@@ -424,12 +365,12 @@ body {
     justify-content: space-between;
     text-align: left;
     padding-bottom: 15px;
-    border-bottom: 1px solid var(--color-border);
+    border-bottom: 1px solid #DDDDDD;
     font-size: 15px;
 }
 
 .spec-row .label {
-    color: var(--color-text-muted);
+    color: #666666;
 }
 
 .spec-row .value {
@@ -443,173 +384,51 @@ body {
     justify-content: center;
 }
 
-.btn-discover-spec {
-    background-color: var(--color-primary);
-    color: #ffffff;
-    text-decoration: none;
-    padding: 12px 25px;
-    font-size: 14px;
-    font-weight: 600;
-    transition: background-color 0.3s;
-}
 
-.btn-discover-spec:hover {
-    background-color: var(--color-primary-hover);
-}
+/*RESPONSIVE*/
+@media (min-width: 576px) {
 
-
-/*FOOTER*/
-.footer {
-    background: #0B1220;
-    color: white;
-    margin-top: 60px;
-}
-
-.footer_top {
-    padding: 70px 20px;
-    text-align: center;
-    border-bottom: 1px solid rgba(255,255,255,.08);
-}
-
-.footer_top h2 {
-    font-size: 26px;
-    margin-bottom: 15px;
-    font-weight: 700;
-}
-
-.footer_top p {
-    color: #cfd8e3;
-    margin-bottom: 35px;
-    font-size: 15px;
-}
-
-.footer_btn {
-    display: inline-block;
-    background: #2563EB;
-    color: white;
-    padding: 16px 40px;
-    border-radius: 50px;
-    text-decoration: none;
-    transition: .35s;
-}
-
-.footer_btn:hover {
-    background: #1d4ed8;
-    transform: translateY(-4px);
-}
-
-.footer_content {
-    width: 94%;
-    margin: auto;
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 35px;
-    text-align: center;
-    padding: 50px 0;
-}
-
-.footer_logo img {
-    width: 220px;
-    margin-bottom: 20px;
-}
-
-.footer_logo p {
-    line-height: 1.9;
-    color: #cfd8e3;
-}
-
-.footer_menu h3 {
-    margin-bottom: 25px;
-    font-size: 20px;
-}
-
-.footer_menu {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.footer_menu a {
-    color: #cfd8e3;
-    margin-bottom: 15px;
-    text-decoration: none;
-    transition: .3s;
-}
-
-.footer_menu a:hover {
-    color: #4F9CF9;
-    transform: translateX(8px);
-}
-
-.footer_bottom {
-    border-top: 1px solid rgba(255,255,255,.08);
-    text-align: center;
-    padding: 25px;
-    color: #9fb3c8;
-}
-
-
-/*RESPONSIVE - Mobile*/
-@media (min-width: 577px){
-
-    .container{
+    .container {
         padding: 0 30px;
     }
 
-    .header{
-        padding: 15px 20px;
-    }
-
-    #nav{
-        gap: 15px;
-        font-size: unset;
-    }
-
-    .header_icon{
-        gap: 25px;
-    }
-
-    .icon_group{
-        gap: 20px;
-    }
-
-    .hero{
+    .hero {
         padding: 110px 20px 60px;
     }
 
-    .tag{
+    .tag {
         font-size: 14px;
         letter-spacing: 4px;
     }
 
-    .hero-text h1{
+    .hero-text h1 {
         font-size: 42px;
         letter-spacing: 1px;
     }
 
-    .hero-text h3{
+    .hero-text h3 {
         font-size: 18px;
         letter-spacing: 2px;
         margin-bottom: 30px;
     }
 
-    .hero-buttons{
+    .hero-buttons {
         flex-direction: row;
         gap: 15px;
         margin-bottom: 40px;
     }
 
-    .btn{
+    .btn {
         padding: 12px 30px;
         text-align: left;
     }
 
-    .hero-info{
+    .hero-info {
         flex-direction: row;
         gap: 30px;
     }
 
-    .quick-menu-left{
+    .quick-menu-left {
         justify-content: normal;
         width: auto;
         gap: 20px;
@@ -617,155 +436,96 @@ body {
 
     .driving-technology,
     .exterior-design,
-    .specifications{
+    .specifications {
         padding: 80px 0;
     }
 
     .driving-technology h2,
     .exterior-design h2,
-    .specifications h2{
+    .specifications h2 {
         font-size: 32px;
     }
-
     .tech-grid,
-    .design-grid{
+    .design-grid {
         gap: 20px;
     }
-
-    .spec-row{
+    .spec-row {
         flex-direction: row;
         gap: 0;
         text-align: left;
     }
 
-    .spec-row .value{
+    .spec-row .value {
         text-align: right;
     }
-
-    .spec-action{
+    .spec-action {
         justify-content: flex-end;
-    }
-
-    .footer{
-        margin-top: 120px;
-    }
-
-    .footer_top h2{
-        font-size: 42px;
-    }
-
-    .footer_top p{
-        font-size: 18px;
-    }
-
-    .footer_content{
-        grid-template-columns: 1fr 1fr;
-        gap: 40px;
-        text-align: left;
-        padding: 70px 0;
-    }
-
-    .footer_menu{
-        align-items: stretch;
     }
 }
 
 
-/*RESPONSIVE - TABLET*/
-@media (min-width: 901px){
+@media (min-width: 768px) {
 
-    .header{
-        flex-wrap: nowrap;
-        gap: 0;
-        padding: 15px 30px;
-    }
-
-    #nav{
-        order: 0;
-        width: auto;
-        justify-content: normal;
-        flex-wrap: nowrap;
-        gap: 30px;
-    }
-
-    .quick-menu{
+    .quick-menu {
         flex-direction: row;
         align-items: center;
         gap: 0;
         padding: 20px 30px;
     }
-
-    .quick-menu-left{
+    .quick-menu-left {
         flex-wrap: nowrap;
         justify-content: flex-start;
         width: auto;
         gap: 40px;
     }
 
-    .hero{
+    .hero {
         height: 80vh;
         padding: 0;
     }
 
-    .hero-text{
+    .hero-text {
         max-width: 600px;
     }
 
-    .hero-text h1{
+    .hero-text h1 {
         font-size: 54px;
     }
-
-    .hero-text h3{
+    .hero-text h3 {
         font-size: 24px;
         letter-spacing: 3px;
     }
 
-    .hero-info{
+    .hero-info {
         gap: 50px;
         flex-wrap: nowrap;
     }
 
     .tech-grid,
-    .design-grid{
+    .design-grid {
         flex-direction: row;
     }
 
-    .spec-content-wrapper{
+    .spec-content-wrapper {
         flex-direction: row;
-    }
-
-    .footer_content{
-        grid-template-columns: 1.5fr 1fr 1fr 1fr;
     }
 }
+@media (min-width: 1200px) {
 
-
-/*RESPONSIVE - DESKTOP*/
-@media (min-width: 1201px){
-
-    .container{
+    .container {
         padding: 0 20px;
     }
 
-    .header{
-        padding: 15px 50px;
-    }
-
-    .quick-menu{
+    .quick-menu {
         padding: 20px 50px;
     }
 
-    .hero-text h1{
+    .hero-text h1 {
         font-size: 64px;
     }
 
     .tech-grid,
-    .design-grid{
+    .design-grid {
         gap: 30px;
-    }
-
-    .footer_content{
-        width: 90%;
-        gap: 60px;
     }
 }

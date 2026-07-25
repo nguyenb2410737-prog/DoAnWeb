@@ -662,8 +662,7 @@ body {
     }
 
     .header_logo img{
-        width:300px;
-    }
+        width: clamp(180px, 20vw, 300px);    }
 
     .header_menu{
         display:flex !important;
@@ -682,13 +681,13 @@ body {
         flex:1;
         justify-content:center;
         align-items:center;
-        gap:50px;
+        gap: clamp(15px, 3vw, 50px);
         margin:0 20px;
     }
 
     #nav li a{
-        padding:0;
-        font-size:26px;
+        font-size: clamp(16px, 1.6vw, 26px);
+        white-space: nowrap;
     }
 
     .header_icon{
@@ -708,10 +707,47 @@ body {
         width:auto;
     }
 
+    .header-auth{
+        flex: 1 1 auto;   
+        min-width:0;     
+        display:flex;
+        justify-content:flex-end;
+        align-items:center;
+    }
+
+    #loginLink{
+        display:inline-flex;
+        min-width:0;
+        text-decoration:none;
+    }
+
+    .header-user{
+        display:flex;
+        min-width:0;     
+    }
+
+    .header_select,
+    .header_button{
+        max-width: 140px;
+        width: 100%;
+        border:2px solid #a2a5aa;
+        border-radius:8px;
+        background:#fff;
+        cursor:pointer;
+        white-space:nowrap;
+        overflow:hidden;
+        text-overflow:ellipsis;
+    }
+
+    .header_select{
+        padding:8px 10px;
+        font-size:14px;
+    }
+
     .header_button{
         padding:10px 20px;
         font-size:16px;
-        font-weight: bold;
+        font-weight:bold;
     }
 
 

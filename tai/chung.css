@@ -225,7 +225,7 @@ main {
     outline: none;
     border-color: rgb(0, 0, 254);
 } */
-@media screen and (min-width: 577px) {
+@media screen and (min-width:768px) {
     .container {
         flex-direction: row;
     }

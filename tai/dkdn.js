@@ -22,52 +22,44 @@ function validateEmail(value) {
 }
 
 //local strorage 
-function getUsers() {
-    const json = localStorage.getItem('users'); //đọc chuỗi JSON từ localStorage
+function getUser() {
+    const json = localStorage.getItem('user'); //đọc chuỗi JSON từ localStorage
     if(json === null){
-        return [];
+        return null;
     }
-    return JSON.parse(json); // chuyển chuỗi JSON thành mảng object thật
+    return JSON.parse(json); // chuyển chuỗi JSON thành object thật
 }
 
-function saveUsers(users){
-    localStorage.setItem('users', JSON.stringify(users)); /// stringify mảng -> lưu
+function saveUser(user){
+    localStorage.setItem('user', JSON.stringify(user)); /// stringify  -> lưu
 }
 
 function isEmailRegistered(email) {
-    const users = getUsers(); /// laays danh sach dang cos
-    for(let i=0; i< users.length; i++){
-        if(users[i].email.toLowerCase() == email.toLowerCase()) {
-            return true;
-        }
+    const user = getUser();
+    if(!user){
+        return false;
     }
-    return false;
+    return user.email.toLowerCase() === email.toLowerCase();
 }
 
 function registerUser(fullname, email, pw){
-    const users = getUsers();
+    // const user = getUser();
 
     const newUser = {
         fullname : fullname,
         email  : email,
         password : pw,
     }
-    users.push(newUser);// thêm user mới vào cuối mảng
-    saveUsers(users);     // lưu lại toàn bộ mảng (đã có thêm user mới) vào localStorage
+    saveUser(newUser);     // lưu lại vào localStorage
 }
 function findUserByEmail(email) {
-    const users = getUsers(); // lấy danh sách user hiện có
-    for (let i = 0; i < users.length; i++) {
-        if (users[i].email.toLowerCase() === email.toLowerCase()) {
-            return users[i]; // tìm thấy 
-        }
+   const user = getUser();
+
+    if(user && user.email.toLowerCase() === email.toLowerCase()){
+        return user;
     }
     return undefined; // khong thay
 }
-
-
-
-
 
 const formDangKy = document.getElementById('formDangKy');
 if(formDangKy){
@@ -77,7 +69,8 @@ if(formDangKy){
     const pw2 = document.getElementById('pwReg2');
     const agree = document.getElementById('agree');
 
-    formDangKy.addEventListener('submit', () => {
+    formDangKy.addEventListener('submit', (event) => {
+        event.preventDefault();
         let isValid = true;
 
         if(nameInput.value.trim()=== ''){
@@ -128,8 +121,8 @@ const formDangNhap = document.getElementById('formDangNhap');
 if(formDangNhap) {
     const emailIn = document.getElementById('email');
     const pwIn = document.getElementById('password');
-    formDangNhap.addEventListener('submit', () => {
-
+    formDangNhap.addEventListener('submit', (event) => {
+        event.preventDefault();
         const email = emailIn.value.trim();
         const password = pwIn.value;
 
@@ -140,7 +133,7 @@ if(formDangNhap) {
             return;
         }
         if(password === user.password){
-            localStorage.setItem('username', user.fullname);//lưu usename
+            // localStorage.setItem('username', user.fullname);//lưu usename
              
             alert('Đăng nhập thành công. ');
             window.location.href = '/Nguyen/trangchu.html';

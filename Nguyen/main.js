@@ -16,6 +16,30 @@ thumbnails.forEach(thumbnail => {
     });
 
 });
+/* Cập nhật số lượng trong giỏ hàng*/
+const CART_KEY="cartItems";
+
+function getCart(){
+    const cart=localStorage.getItem(CART_KEY);
+    return cart?JSON.parse(cart):[];
+}
+
+function updateCartCount(){
+    const cart=getCart();
+
+    let totalQuantity=0;
+
+    for(let i=0;i<cart.length;i++){
+        totalQuantity+=cart[i].quantity;
+    }
+
+    document.getElementById("cart-count").textContent=totalQuantity;
+}
+function setup(){
+    updateCartCount();
+}
+
+window.addEventListener("load", setup, false);
 
 /*Phần chuyển đổi nút button khi đăng nhập*/
 const loginLink = document.getElementById('loginLink');

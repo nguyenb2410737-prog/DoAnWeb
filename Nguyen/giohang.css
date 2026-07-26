@@ -84,7 +84,7 @@ img{
 }
 
 .cart-item[hidden]{
-    display:none !important;
+    display:none;
 }
 
 /* Image */

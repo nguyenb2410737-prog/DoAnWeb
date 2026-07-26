@@ -19,7 +19,8 @@ img {
 /*HERO*/
 .hero {
     position: relative;
-    height: 400px;
+    width: 100%;
+    aspect-ratio: 4 / 5;
     overflow: hidden;
 }
 
@@ -62,6 +63,7 @@ img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: center center;
     transition: opacity .6s ease-in-out;
 }
 
@@ -305,7 +307,7 @@ img {
 @media (min-width: 576px) {
 
     .hero {
-        height: 450px;
+        aspect-ratio: 16 / 10;
     }
 
     .hero-content h1 {
@@ -321,7 +323,7 @@ img {
 @media (min-width: 768px) {
 
     .hero {
-        height: 600px;
+        aspect-ratio: 16 / 9;
     }
 
     .hero-content {
@@ -395,6 +397,7 @@ img {
 @media (min-width: 1200px) {
 
     .hero {
+        aspect-ratio: unset;
         height: 90vh;
     }
 
@@ -412,6 +415,7 @@ img {
 
     .search-box {
         width: 90%;
+        margin: -120px auto 80px;
     }
 
     .section-heading p {

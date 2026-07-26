@@ -1,5 +1,5 @@
 //chung 
- 
+
 function errorMessage(elmt) {
     const formRow = elmt.parentElement;
     if (formRow.classList.contains('success')) {
@@ -7,7 +7,7 @@ function errorMessage(elmt) {
     }
     formRow.classList.add('failure');
 }
- 
+
 function successMessage(elmt) {
     const formRow = elmt.parentElement;
     if (formRow.classList.contains('failure')) {
@@ -22,71 +22,64 @@ function validateEmail(value) {
 }
 
 //local strorage 
-function getUsers() {
-    const json = localStorage.getItem('users'); //đọc chuỗi JSON từ localStorage
-    if(json === null){
-        return [];
+function getUser() {
+    const json = localStorage.getItem('user'); //đọc chuỗi JSON từ localStorage
+    if (json === null) {
+        return null;
     }
-    return JSON.parse(json); // chuyển chuỗi JSON thành mảng object thật
+    return JSON.parse(json); // chuyển chuỗi JSON thành object thật
 }
 
-function saveUsers(users){
-    localStorage.setItem('users', JSON.stringify(users)); /// stringify mảng -> lưu
+function saveUser(user) {
+    localStorage.setItem('user', JSON.stringify(user)); /// stringify  -> lưu
 }
 
 function isEmailRegistered(email) {
-    const users = getUsers(); /// laays danh sach dang cos
-    for(let i=0; i< users.length; i++){
-        if(users[i].email.toLowerCase() == email.toLowerCase()) {
-            return true;
-        }
+    const user = getUser();
+    if (!user) {
+        return false;
     }
-    return false;
+    return user.email.toLowerCase() === email.toLowerCase();
 }
 
-function registerUser(fullname, email, pw){
-    const users = getUsers();
+function registerUser(fullname, email, pw) {
+    // const user = getUser();
 
     const newUser = {
-        fullname : fullname,
-        email  : email,
-        password : pw,
+        fullname: fullname,
+        email: email,
+        password: pw,
     }
-    users.push(newUser);// thêm user mới vào cuối mảng
-    saveUsers(users);     // lưu lại toàn bộ mảng (đã có thêm user mới) vào localStorage
+    saveUser(newUser);     // lưu lại vào localStorage
 }
 function findUserByEmail(email) {
-    const users = getUsers(); // lấy danh sách user hiện có
-    for (let i = 0; i < users.length; i++) {
-        if (users[i].email.toLowerCase() === email.toLowerCase()) {
-            return users[i]; // tìm thấy 
-        }
+    const user = getUser();
+
+    if (user && user.email.toLowerCase() === email.toLowerCase()) {
+        return user;
     }
     return undefined; // khong thay
 }
 
-
-
-
-
 const formDangKy = document.getElementById('formDangKy');
-if(formDangKy){
+if (formDangKy) {
     const nameInput = document.getElementById('fullname');
     const emailInput = document.getElementById('email');
     const pw1 = document.getElementById('pwReg1');
     const pw2 = document.getElementById('pwReg2');
     const agree = document.getElementById('agree');
 
-    formDangKy.addEventListener('submit', () => {
+    formDangKy.addEventListener('submit', (event) => {
+        event.preventDefault();
         let isValid = true;
 
-        if(nameInput.value.trim()=== ''){
+        if (nameInput.value.trim() === '') {
             errorMessage(nameInput);
             isValid = false;
-        }else{
+        } else {
             successMessage(nameInput);
         }
-            //email
+        //email
         if (!validateEmail(emailInput.value)) {
             errorMessage(emailInput);
             isValid = false;
@@ -97,27 +90,27 @@ if(formDangKy){
             successMessage(emailInput);
         }
         //pw
-        if(pw1.value.length < 6){
+        if (pw1.value.length < 6) {
             errorMessage(pw1);
             isValid = false;
-        }else{
+        } else {
             successMessage(pw1);
         }
 
-        if(pw2.value !== pw1.value || pw2.value === ''){
+        if (pw2.value !== pw1.value || pw2.value === '') {
             errorMessage(pw2);
             isValid = false;
-        }else{
+        } else {
             successMessage(pw2);
         }
         if (!agree.checked) {
             alert('Bạn cần đồng ý với Điều khoản sử dụng và Chính sách bảo mật');
             isValid = false;
         }
-        if(!isValid) return;
+        if (!isValid) return;
 
         registerUser(nameInput.value.trim(), emailInput.value.trim(), pw1.value);
- 
+
         alert('Đăng ký thành công!');
         window.location.href = '/tai/dnhap.html';
     });
@@ -125,26 +118,25 @@ if(formDangKy){
 
 const formDangNhap = document.getElementById('formDangNhap');
 
-if(formDangNhap) {
+if (formDangNhap) {
     const emailIn = document.getElementById('email');
     const pwIn = document.getElementById('password');
-    formDangNhap.addEventListener('submit', () => {
-
+    formDangNhap.addEventListener('submit', (event) => {
+        event.preventDefault();
         const email = emailIn.value.trim();
         const password = pwIn.value;
 
         const user = findUserByEmail(email);
 
-        if(!user){
+        if (!user) {
             alert('Vui lòng nhập đúng email đã đăng ký.');
             return;
         }
-        if(password === user.password){
-            localStorage.setItem('username', user.fullname);//lưu usename
-             
+        if (password === user.password) {
+            localStorage.setItem('currentUser', JSON.stringify(user)); // sao chép thông tin sang currentuser
             alert('Đăng nhập thành công. ');
             window.location.href = '/Nguyen/trangchu.html';
-        }else {
+        } else {
             alert('Sai email hoặc mật khẩu.');
         }
     })

@@ -211,7 +211,7 @@ h1.title {
 }
 
 
-@media (min-width: 600px) {
+@media (min-width: 768px) {
     .container {
         flex-direction: row;
         min-height: 500px;

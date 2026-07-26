@@ -4,7 +4,7 @@ const userName = document.getElementById('userName');
 const userSelect = document.getElementById('userSelect');
 
 function update() {
-    const json = localStorage.getItem('user');
+    const json = localStorage.getItem('currentUser');// đọc local của currentuser
     const user = json ? JSON.parse(json) : null;
     if (user) {
         loginLink.style.display = 'none';
@@ -24,9 +24,11 @@ if (userSelect) {
         if (action === 'account') {
             window.location.href = "#";// không có trang 
         } else if (action === 'logout') {
-            window.location.href = "/tai/dnhap.html";
+            localStorage.removeItem('currentUser') // xóa 
+            window.location.href = "/Nguyen/trangchu.html";
+            
         }
 
         userSelect.selectedIndex = 0;//Đưa  về mục đầu vị trí của mục đang chọn trong select
     });
-}
+}   

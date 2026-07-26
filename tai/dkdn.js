@@ -1,5 +1,5 @@
 //chung 
- 
+
 function errorMessage(elmt) {
     const formRow = elmt.parentElement;
     if (formRow.classList.contains('success')) {
@@ -7,7 +7,7 @@ function errorMessage(elmt) {
     }
     formRow.classList.add('failure');
 }
- 
+
 function successMessage(elmt) {
     const formRow = elmt.parentElement;
     if (formRow.classList.contains('failure')) {
@@ -24,45 +24,45 @@ function validateEmail(value) {
 //local strorage 
 function getUser() {
     const json = localStorage.getItem('user'); //đọc chuỗi JSON từ localStorage
-    if(json === null){
+    if (json === null) {
         return null;
     }
     return JSON.parse(json); // chuyển chuỗi JSON thành object thật
 }
 
-function saveUser(user){
+function saveUser(user) {
     localStorage.setItem('user', JSON.stringify(user)); /// stringify  -> lưu
 }
 
 function isEmailRegistered(email) {
     const user = getUser();
-    if(!user){
+    if (!user) {
         return false;
     }
     return user.email.toLowerCase() === email.toLowerCase();
 }
 
-function registerUser(fullname, email, pw){
+function registerUser(fullname, email, pw) {
     // const user = getUser();
 
     const newUser = {
-        fullname : fullname,
-        email  : email,
-        password : pw,
+        fullname: fullname,
+        email: email,
+        password: pw,
     }
     saveUser(newUser);     // lưu lại vào localStorage
 }
 function findUserByEmail(email) {
-   const user = getUser();
+    const user = getUser();
 
-    if(user && user.email.toLowerCase() === email.toLowerCase()){
+    if (user && user.email.toLowerCase() === email.toLowerCase()) {
         return user;
     }
     return undefined; // khong thay
 }
 
 const formDangKy = document.getElementById('formDangKy');
-if(formDangKy){
+if (formDangKy) {
     const nameInput = document.getElementById('fullname');
     const emailInput = document.getElementById('email');
     const pw1 = document.getElementById('pwReg1');
@@ -73,13 +73,13 @@ if(formDangKy){
         event.preventDefault();
         let isValid = true;
 
-        if(nameInput.value.trim()=== ''){
+        if (nameInput.value.trim() === '') {
             errorMessage(nameInput);
             isValid = false;
-        }else{
+        } else {
             successMessage(nameInput);
         }
-            //email
+        //email
         if (!validateEmail(emailInput.value)) {
             errorMessage(emailInput);
             isValid = false;
@@ -90,27 +90,27 @@ if(formDangKy){
             successMessage(emailInput);
         }
         //pw
-        if(pw1.value.length < 6){
+        if (pw1.value.length < 6) {
             errorMessage(pw1);
             isValid = false;
-        }else{
+        } else {
             successMessage(pw1);
         }
 
-        if(pw2.value !== pw1.value || pw2.value === ''){
+        if (pw2.value !== pw1.value || pw2.value === '') {
             errorMessage(pw2);
             isValid = false;
-        }else{
+        } else {
             successMessage(pw2);
         }
         if (!agree.checked) {
             alert('Bạn cần đồng ý với Điều khoản sử dụng và Chính sách bảo mật');
             isValid = false;
         }
-        if(!isValid) return;
+        if (!isValid) return;
 
         registerUser(nameInput.value.trim(), emailInput.value.trim(), pw1.value);
- 
+
         alert('Đăng ký thành công!');
         window.location.href = '/tai/dnhap.html';
     });
@@ -118,7 +118,7 @@ if(formDangKy){
 
 const formDangNhap = document.getElementById('formDangNhap');
 
-if(formDangNhap) {
+if (formDangNhap) {
     const emailIn = document.getElementById('email');
     const pwIn = document.getElementById('password');
     formDangNhap.addEventListener('submit', (event) => {
@@ -128,16 +128,15 @@ if(formDangNhap) {
 
         const user = findUserByEmail(email);
 
-        if(!user){
+        if (!user) {
             alert('Vui lòng nhập đúng email đã đăng ký.');
             return;
         }
-        if(password === user.password){
-            // localStorage.setItem('username', user.fullname);//lưu usename
-             
+        if (password === user.password) {
+            localStorage.setItem('currentUser', JSON.stringify(user)); // sao chép thông tin sang currentuser
             alert('Đăng nhập thành công. ');
             window.location.href = '/Nguyen/trangchu.html';
-        }else {
+        } else {
             alert('Sai email hoặc mật khẩu.');
         }
     })

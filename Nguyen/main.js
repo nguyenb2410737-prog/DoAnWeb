@@ -40,11 +40,11 @@ function updateCartCount(){
 
     document.getElementById("cart-count").textContent=totalQuantity;
 }
-function setup(){
+function setupMain(){
     updateCartCount();
 }
 
-window.addEventListener("load", setup, false);
+window.addEventListener("load", setupMain, false);
 
 /*Phần chuyển đổi nút button khi đăng nhập*/
 const loginLink = document.getElementById('loginLink');

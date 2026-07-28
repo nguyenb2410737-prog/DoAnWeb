@@ -3,17 +3,7 @@ function formatPrice(price){
     return price.toLocaleString("vi-VN")+" VNĐ";
 }
 
-function updateCartCount(){
-    const cart=getCart();
 
-    let totalQuantity=0;
-
-    for(let i=0;i<cart.length;i++){
-        totalQuantity+=cart[i].quantity;
-    }
-
-    document.getElementById("cart-count").textContent=totalQuantity;
-}
 
 function renderCart(){
 
@@ -107,9 +97,9 @@ function deleteItem(index){
 
 }
 
-function setup(){
+function setupGiohang(){
     renderCart();
 
 }
 
-window.onload=setup;
+window.onload=setupGiohang;

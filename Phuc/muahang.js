@@ -40,25 +40,13 @@ function orderSelectedProduct(){
         localStorage.setItem("cartItems", JSON.stringify(cartItems));
         updateCartCount();
         console.log(cartItems);
-        showToast('Đã thêm vào giỏ hàng', 'success');
+        showToast("Đã thêm vào giỏ hàng",'success');
     }
     else{
-        alert("Trình duyệt không hỗ trợ Local Storage");
+        showToast("Trình duyệt không hỗ trợ Local Storage", 'warning');
     }
 }
 
-// Hàm cho biết số lượng sản phẩm nằm trong giỏ hàng.
-function updateCartCount(){
-    let cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
-
-    let totalQuantity = 0;
-
-    for(let i = 0; i < cartItems.length; i++){
-        totalQuantity += cartItems[i].quantity;
-    }
-
-    document.getElementById("cart-count").textContent = totalQuantity;
-}
 //Cài đặt định dạng tiền
 function setPrices(){
     const prices = document.querySelectorAll(".car-price");
@@ -75,10 +63,10 @@ function addEventToCartButton(){
     addCartBtn.addEventListener("click", orderSelectedProduct, false);
 }
 
-function setup(){
+function setupMuahang(){
     setPrices();
     addEventToCartButton();
     updateCartCount();
 }
 
-window.addEventListener("load", setup, false);
+window.addEventListener("load", setupMuahang, false);

@@ -1,13 +1,3 @@
-const CART_KEY="cartItems";
-
-function getCart(){
-    const cart=localStorage.getItem(CART_KEY);
-    return cart?JSON.parse(cart):[];
-}
-
-function saveCart(cart){
-    localStorage.setItem(CART_KEY,JSON.stringify(cart));
-}
 
 function formatPrice(price){
     return price.toLocaleString("vi-VN")+" VNĐ";

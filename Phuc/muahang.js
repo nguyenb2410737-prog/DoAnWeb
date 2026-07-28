@@ -40,7 +40,7 @@ function orderSelectedProduct(){
         localStorage.setItem("cartItems", JSON.stringify(cartItems));
         updateCartCount();
         console.log(cartItems);
-        alert("Đã thêm vào giỏ hàng");
+        showToast('Đã thêm vào giỏ hàng', 'success');
     }
     else{
         alert("Trình duyệt không hỗ trợ Local Storage");

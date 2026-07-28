@@ -152,17 +152,17 @@ form.addEventListener('submit', (e) => {
     }
 
    if (!consent.checked) {
-    alert('Vui lòng đồng ý với Chính sách Bảo vệ Dữ liệu cá nhân để tiếp tục.');
+    showToast('Vui lòng đồng ý với Chính sách Bảo vệ Dữ liệu cá nhân để tiếp tục.', 'warning');
     isValid = false;
     return;
 }
 
     if (!isValid) {
-        alert('Gửi yêu cầu thất bại! Vui lòng kiểm tra lại thông tin.');
+        showToast('Gửi yêu cầu thất bại! Vui lòng kiểm tra lại thông tin.', 'error');
         return;
     }
 
-    alert('Đặt lịch thành công! Chúng tôi sẽ liên hệ với bạn sớm nhất.');
+    showToast('Đặt lịch thành công! Chúng tôi sẽ liên hệ với bạn sớm nhất.', 'success');
     form.reset();
     resetWard();
     clearAllMessages(); 

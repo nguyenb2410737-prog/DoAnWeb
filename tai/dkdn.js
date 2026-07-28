@@ -104,15 +104,17 @@ if (formDangKy) {
             successMessage(pw2);
         }
         if (!agree.checked) {
-            alert('Bạn cần đồng ý với Điều khoản sử dụng và Chính sách bảo mật');
+            showToast('Bạn cần đồng ý với Điều khoản sử dụng và Chính sách bảo mật', 'warning');
             isValid = false;
         }
         if (!isValid) return;
 
         registerUser(nameInput.value.trim(), emailInput.value.trim(), pw1.value);
 
-        alert('Đăng ký thành công!');
-        window.location.href = '/tai/dnhap.html';
+        showToast('Đăng ký thành công!', 'success');
+        setTimeout(() =>  {
+                    window.location.href = '/tai/dnhap.html';
+        }, 1000);
     });
 }
 
@@ -129,15 +131,17 @@ if (formDangNhap) {
         const user = findUserByEmail(email);
 
         if (!user) {
-            alert('Vui lòng nhập đúng email đã đăng ký.');
+            showToast('Vui lòng nhập đúng email đã đăng ký.', 'error');
             return;
         }
         if (password === user.password) {
             localStorage.setItem('currentUser', JSON.stringify(user)); // sao chép thông tin sang currentuser
-            alert('Đăng nhập thành công. ');
-            window.location.href = '/Nguyen/trangchu.html';
+            showToast('Đăng nhập thành công. ', 'success');
+            setTimeout(() =>  {
+                    window.location.href = '/Nguyen/trangchu.html';
+            }, 1000);
         } else {
-            alert('Sai email hoặc mật khẩu.');
+            showToast('Sai email hoặc mật khẩu.', 'error');
         }
     })
 }

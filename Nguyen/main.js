@@ -24,6 +24,11 @@ function getCart(){
     return cart?JSON.parse(cart):[];
 }
 
+function saveCart(cart){
+    localStorage.setItem(CART_KEY,JSON.stringify(cart));
+}
+
+
 function updateCartCount(){
     const cart=getCart();
 

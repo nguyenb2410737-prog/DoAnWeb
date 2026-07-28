@@ -30,16 +30,28 @@ function saveCart(cart){
 
 
 function updateCartCount(){
-    const cart=getCart();
 
-    let totalQuantity=0;
-
-    for(let i=0;i<cart.length;i++){
-        totalQuantity+=cart[i].quantity;
+    const cartCount = document.getElementById("cart-count");
+    if(!cartCount){
+        return;
     }
+    const currentUser = JSON.parse(localStorage.getItem("currentUser"));
+    // chưa đăng nhập
+    if(!currentUser){
+        cartCount.textContent="0";
+        cartCount.style.display="none";
+        return;
+    }
+    const cart=getCart();
+    let totalQuantity=0;
+    for(let i=0;i<cart.length;i++){
 
-    document.getElementById("cart-count").textContent=totalQuantity;
+        totalQuantity += cart[i].quantity;
+
+    }
+    cartCount.textContent=totalQuantity;
 }
+
 function setupMain(){
     updateCartCount();
 }
@@ -74,6 +86,7 @@ if (userSelect) {
             window.location.href = "#";// không có trang 
         } else if (action === 'logout') {
             localStorage.removeItem('currentUser') // xóa 
+            updateCartCount();
             window.location.href = "/Nguyen/trangchu.html";
             
         }

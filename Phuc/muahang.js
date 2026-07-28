@@ -8,6 +8,20 @@ function isExistedInCart(item, cartItems){
 }
 
 function orderSelectedProduct(){
+
+    const currentUser = JSON.parse(localStorage.getItem("currentUser"));
+
+    // Chưa đăng nhập
+    if(!currentUser){
+        showToast("Vui lòng đăng nhập trước khi mua hàng", "warning");
+        // lưu lại trang hiện tại
+        localStorage.setItem("redirectAfterLogin", window.location.href);
+        setTimeout(()=>{
+            window.location.href="/tai/dnhap.html";
+        },1000);
+        return;
+    }
+
     const newItem = {
         id: document.querySelector(".car-id").textContent,
         name: document.querySelector(".car-name").textContent,

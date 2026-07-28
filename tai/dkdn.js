@@ -135,11 +135,40 @@ if (formDangNhap) {
             return;
         }
         if (password === user.password) {
-            localStorage.setItem('currentUser', JSON.stringify(user)); // sao chép thông tin sang currentuser
-            showToast('Đăng nhập thành công. ', 'success');
-            setTimeout(() =>  {
-                    window.location.href = '/Nguyen/trangchu.html';
-            }, 1000);
+
+            localStorage.setItem(
+                'currentUser',
+                JSON.stringify(user)
+            );
+
+
+            showToast('Đăng nhập thành công.', 'success');
+
+
+            setTimeout(() => {
+
+
+                const redirect =
+                localStorage.getItem("redirectAfterLogin");
+
+
+                if(redirect){
+
+                    localStorage.removeItem(
+                        "redirectAfterLogin"
+                    );
+
+                    window.location.href = redirect;
+
+                }
+                else{
+
+                    window.location.href="/Nguyen/trangchu.html";
+
+                }
+
+
+            },1000);
         } else {
             showToast('Sai email hoặc mật khẩu.', 'error');
         }

@@ -31,7 +31,7 @@ img{
     bottom:30px;
     width:auto;
     color:#fff;
-    z-index:10;
+    /* z-index:10; */
 }
 
 .hero-content h4{
@@ -57,43 +57,41 @@ img{
 }
 
 .hero img{
-    position:absolute;
-    top:0;
-    left:0;
+    position:absolute;/*chồng 2 ảnh dc lên nhau*/
     width:100%;
     height:100%;
     object-fit:cover;
-    object-position:center center;
-    transition:opacity .6s ease-in-out;
+    transition:opacity .6s ease-in-out;/*hiểu ứng chuyển hình*/
 }
 
 .hero-img-2{
     opacity:0;
-    animation:heroFade 10s ease-in-out infinite;
+    animation:heroFade 10s ease-in-out infinite;/*dùng animation 10s chuyển 1 lần*/
 }
 
 @keyframes heroFade{
-    0%, 45%{ opacity:0; }
-    55%, 95%{ opacity:1; }
-    100%{ opacity:0; }
+    0%, 45%{ opacity:0; } /*ảnh 1*/
+    55%, 95%{ opacity:1; }/*ảnh 2 đè lên*/
+    100%{ opacity:0; } /*ảnh 2 mờ đi chuyển lại thành ảnh 1*/
 }
 
 
 /*SEARCH BOX*/
 .search-box{
     width:95%;
-    max-width:1400px;
+    max-width:1600px;
     margin:-40px auto 50px;
     background:#fff;
     padding:20px;
-    border-radius:8px;
+    border-radius:8px; /*bo góc*/
     box-shadow:0 20px 45px rgba(0,0,0,.18);
     position:relative;
-    z-index:20;
+    /* z-index:20; */
 }
 
+
 .car-search{
-    display:grid;
+    display:grid; /* chia theo grid layout */
     grid-template-columns:1fr;
     gap:20px;
 }
@@ -122,10 +120,6 @@ img{
     transition:.3s;
 }
 
-.form-group select:focus{
-    border-color:#d62828;
-}
-
 .search-btn{
     width:100%;
     height:52px;
@@ -134,7 +128,7 @@ img{
     color:#fff;
     font-size:16px;
     font-weight:700;
-    cursor:pointer;
+    cursor:pointer; /*đổi mũi tên thành dấu tay khi trỏ vào*/
     align-self:end;
     transition:.3s;
 }

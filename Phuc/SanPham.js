@@ -114,7 +114,7 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
-/* Hàm chuẩn hóa khi hover vào từng sản phẩm -> Sinh ra href có kèm id sản phẩm */
+/* Hàm chuẩn hóa khi hover vào từng sản phẩm -> Sinh ra href có kèm id sản phẩm hàm của Nguyên viết*/
 function generateHoverLinks(){
     const carLinks = document.querySelectorAll(".car-link");
 

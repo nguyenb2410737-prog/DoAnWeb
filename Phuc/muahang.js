@@ -18,7 +18,7 @@ function orderSelectedProduct(){
         localStorage.setItem("redirectAfterLogin", window.location.href);
         setTimeout(()=>{
             window.location.href="/tai/dnhap.html";
-        },1000);
+        },3000);
         return;
     }
 

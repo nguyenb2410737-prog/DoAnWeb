@@ -20,7 +20,7 @@ img{
     width:100%;
     max-width:1800px;   
     margin:0 auto;    
-    aspect-ratio:3 / 4;
+    aspect-ratio:3 / 4; /* tỉ lệ rộng chia cao */
     overflow:hidden;
 }
 
@@ -266,13 +266,6 @@ img{
 .price{
     margin-bottom:18px;
 }
-
-.price del{
-    display:block;
-    color:#777;
-    margin-bottom:5px;
-}
-
 .price strong{
     font-size:22px;
     color:#111;
@@ -336,7 +329,7 @@ img{
     }
 
     .car-search{
-        grid-template-columns:repeat(2,1fr);
+        grid-template-columns:repeat(2,1fr); /* chia kích thước cột */
     }
 
     .content{

@@ -131,39 +131,7 @@ body{
 }
 
 
-/* Footer */
 
-.footer{
-    background:#111;
-    padding:25px 20px;
-}
-
-/* Back to top */
-
-.back-to-top{
-    position:fixed;
-    bottom:20px;
-    right:-60px;
-    width:45px;
-    height:45px;
-    border:none;
-    border-radius:50%;
-    background:#b89454;
-    color:#fff;
-    cursor:pointer;
-    font-size:20px;
-    transition:.4s;
-    z-index:999;
-}
-
-.back-to-top.show{
-    right:20px;
-}
-
-.back-to-top:hover{
-    background:#9c7b41;
-    transform:scale(1.1);
-}
 
 
 /*TABLET */
@@ -290,32 +258,5 @@ body{
 
     .back-to-top.show{
         right:30px;
-    }
-
-    /* Trả lại menu desktop */
-
-    .menu-toggle{
-        display:none;
-    }
-
-    .navbar{
-        position:static;
-        width:auto;
-        max-height:none;
-        opacity:1;
-        overflow:visible;
-        border:none;
-        background:transparent;
-    }
-
-    .navbar ul{
-        flex-direction:row;
-        padding:0;
-    }
-
-    .navbar ul li{
-        margin-left:25px;
-        margin-top:0;
-        margin-bottom:0;
     }
 }

@@ -86,7 +86,7 @@ function changeQuantity(index,change){
     const cart=getCart();
     cart[index].quantity+=change;
     if(cart[index].quantity<=0){
-        cart.splice(index,1); \\Xóa khỏi giỏ hàng nếu số lượng nhỏ hơn bằng 0
+        cart.splice(index,1); //Xóa khỏi giỏ hàng nếu số lượng nhỏ hơn bằng 0
     }
     saveCart(cart);
     renderCart();
@@ -95,7 +95,7 @@ function changeQuantity(index,change){
 
 function deleteItem(index){
     const cart=getCart();
-    cart.splice(index,1); \\ Cứ xóa, ko quan tâm số lượng
+    cart.splice(index,1); //Cứ xóa, ko quan tâm số lượng
     saveCart(cart);
     renderCart();
 

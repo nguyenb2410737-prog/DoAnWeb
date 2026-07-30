@@ -29,7 +29,7 @@ img {
     position: absolute;
     left: 20px;
     right: 20px;
-    bottom: 65px; /* NÂNG CẤP: Tăng từ 25px -> 65px để chữ đẩy lên trên, không bị box search che */
+    bottom: 65px; 
     width: auto;
     color: #fff;
     z-index: 5;
@@ -105,7 +105,7 @@ img {
 
 .form-group label {
     font-size: 15px;
-    font-weight: 600;
+    font-weight: 600; 
     color: #444;
     margin-bottom: 8px;
 }

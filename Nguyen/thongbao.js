@@ -5,7 +5,7 @@ function showToast(message, type = "success") {
 
     toast.textContent = message;
 
-    toast.classList.remove("success", "error", "warning", "info");
+    toast.classList.remove("success", "error", "warning", "info"); // Đảm bảo khi đổi trạng thái mới thì xóa toàn bộ các class cũ
     toast.classList.add(type);
     toast.classList.add("show");
 

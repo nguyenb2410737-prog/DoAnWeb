@@ -9,7 +9,7 @@
 html, body {
     margin: 0;
     padding: 0;
-     min-height: 100vh;          /*Đơn vị viewpoint height cho phép xem 100% màn hình của thiết bị */
+    min-height: 100vh;          /*Đơn vị viewpoint height cho phép xem 100% màn hình của thiết bị */
 }
 
 .toast{
@@ -59,6 +59,7 @@ html, body {
     position:sticky;
     top: 0;
     left: 0;
+    width: 100%;
     z-index: 9999;
     display:flex;
     justify-content:space-between;

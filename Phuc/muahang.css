@@ -58,26 +58,23 @@ body {
 }
 
 
-/*HERO*/
+/* HERO SECTION */
 .hero {
     position: relative;
     height: auto;
-    padding: 100px 15px 50px;
-    display: flex;
-    align-items: center;
+    padding: 0;
     color: #ffffff;
     overflow: hidden;
+    background-color: #000000;
 }
 
 .hero-bg {
-    position: absolute;
-    top: 0;
-    left: 0;
     display: block;
     width: 100%;
-    height: 100%;
+    height: auto;
     object-fit: cover;
     object-position: center;
+    position: static;
     z-index: 0;
 }
 
@@ -92,9 +89,16 @@ body {
 }
 
 .hero-content {
-    position: relative;
-    z-index: 2;
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
+    height: 100%;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 15px 12px;
 }
 
 .hero-text {
@@ -102,67 +106,46 @@ body {
 }
 
 .tag {
-    font-size: 12px;
+    font-size: 10px;
     letter-spacing: 2px;
     color: #e5e5e5;
     display: block;
-    margin-bottom: 10px;
+    margin-bottom: 4px;
 }
 
 .hero-text h1 {
     font-family: "Helvetica Neue", Arial, sans-serif;
-    font-size: 32px;
+    font-size: 22px;
     font-weight: 700;
     line-height: 1.1;
     letter-spacing: 0;
-    margin-bottom: 5px;
+    margin-bottom: 2px;
     color: #ffffff;
     text-shadow: 0 3px 14px rgba(0, 0, 0, 0.55);
 }
 
 .hero-text h3 {
     font-family: "Helvetica Neue", Arial, sans-serif;
-    font-size: 15px;
+    font-size: 12px;
     font-weight: 300;
     letter-spacing: 1px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     color: #e9edf2;
     text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
 }
 
+/* --- ĐÃ CHỈNH SỬA: NÚT BẤM TRÊN MOBILE --- */
 .hero-buttons {
     display: flex;
-    flex-direction: column;
-    gap: 10px;
-    margin-bottom: 30px;
+    flex-direction: row; /* Xếp hàng ngang trên mobile */
+    gap: 8px;
+    margin-bottom: 10px;
 }
 
-.hero-info {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    flex-wrap: wrap;
-    border-top: 1px solid rgba(255, 255, 255, 0.3);
-    padding-top: 20px;
-}
-
-.hero-info h4 {
-    font-size: 12px;
-    color: #a6a6a6;
-    text-transform: uppercase;
-    margin-bottom: 5px;
-}
-
-.hero-info p {
-    font-size: 20px;
-    font-weight: 600;
-}
-
-
-/*BUTTON*/
 .btn {
-    padding: 12px 20px;
-    font-size: 14px;
+    flex: 1;
+    padding: 8px 6px; /* Giảm padding gọn gàng */
+    font-size: 11px;  /* Giảm cỡ chữ nút */
     font-weight: 600;
     text-decoration: none;
     text-transform: uppercase;
@@ -170,6 +153,7 @@ body {
     transition: all 0.3s;
     cursor: pointer;
     display: inline-block;
+    white-space: nowrap;
 }
 
 .buton-primary {
@@ -182,13 +166,35 @@ body {
 }
 
 .buton-outline {
-    border: 2px solid #ffffff;
+    border: 1px solid #ffffff;
     color: #ffffff;
 }
 
 .buton-outline:hover {
     background-color: #ffffff;
     color: #000000;
+}
+
+/* --- ĐÃ CHỈNH SỬA: KHỐI THÔNG TIN / GIÁ TRÊN MOBILE --- */
+.hero-info {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Chia 2 cột gọn gàng */
+    gap: 6px 12px;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    padding-top: 8px;
+}
+
+.hero-info h4 {
+    font-size: 9px;
+    color: #a6a6a6;
+    text-transform: uppercase;
+    margin-bottom: 2px;
+}
+
+.hero-info p {
+    font-size: 13px; /* Giảm cỡ chữ thông số/giá từ 20px xuống 13px */
+    font-weight: 600;
+    color: #ffffff;
 }
 
 .btn-discover-spec {
@@ -206,7 +212,7 @@ body {
 }
 
 
-/*QUICK MENU*/
+/* QUICK MENU */
 .quick-menu {
     display: flex;
     flex-direction: column;
@@ -244,7 +250,7 @@ body {
 }
 
 
-/*INTRO*/
+/* INTRO */
 .intro {
     padding: 60px 0;
     text-align: center;
@@ -259,7 +265,7 @@ body {
 }
 
 
-/*TECHNOLOGY */
+/* TECHNOLOGY */
 .driving-technology,
 .exterior-design,
 .specifications {
@@ -367,7 +373,7 @@ body {
 }
 
 
-/*DESIGN */
+/* DESIGN */
 .spec-model {
     font-size: 22px;
     font-weight: 600;
@@ -426,47 +432,49 @@ body {
 }
 
 
-/*RESPONSIVE*/
+/* RESPONSIVE */
 @media (min-width: 576px) {
 
     .container {
         padding: 0 30px;
     }
 
-    .hero {
-        padding: 110px 20px 60px;
-    }
-
     .tag {
-        font-size: 14px;
-        letter-spacing: 4px;
+        font-size: 12px;
+        letter-spacing: 3px;
     }
 
     .hero-text h1 {
-        font-size: 42px;
-        letter-spacing: 1px;
+        font-size: 36px;
     }
 
     .hero-text h3 {
-        font-size: 18px;
-        letter-spacing: 2px;
-        margin-bottom: 30px;
+        font-size: 16px;
+        margin-bottom: 20px;
     }
 
     .hero-buttons {
-        flex-direction: row;
-        gap: 15px;
-        margin-bottom: 40px;
+        gap: 12px;
+        margin-bottom: 25px;
     }
 
     .btn {
-        padding: 12px 30px;
-        text-align: left;
+        padding: 10px 20px;
+        font-size: 12px;
     }
 
     .hero-info {
-        flex-direction: row;
-        gap: 30px;
+        grid-template-columns: repeat(4, 1fr); /* 4 cột khi lên màn hình lớn hơn */
+        gap: 15px;
+        padding-top: 15px;
+    }
+
+    .hero-info h4 {
+        font-size: 10px;
+    }
+
+    .hero-info p {
+        font-size: 15px;
     }
 
     .quick-menu-left {
@@ -519,8 +527,29 @@ body {
         width: auto;
         gap: 40px;
     }
+
     .hero {
         min-height: 48vw;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        background-color: transparent;
+    }
+
+    .hero-bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .hero-content {
+        position: relative;
+        top: auto;
+        left: auto;
+        height: auto;
+        display: block;
         padding: 0;
     }
 
@@ -536,9 +565,24 @@ body {
         letter-spacing: 3px;
     }
 
+    .btn {
+        padding: 12px 30px;
+        font-size: 14px;
+    }
+
     .hero-info {
+        display: flex;
+        flex-direction: row;
         gap: 50px;
         flex-wrap: nowrap;
+    }
+
+    .hero-info h4 {
+        font-size: 12px;
+    }
+
+    .hero-info p {
+        font-size: 20px;
     }
 
     .tech-grid,
@@ -550,6 +594,7 @@ body {
         flex-direction: row;
     }
 }
+
 @media (min-width: 1028px) {
 
     .container {

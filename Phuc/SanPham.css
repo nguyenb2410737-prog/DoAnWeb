@@ -1,388 +1,391 @@
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-body{
-    font-family:"Times New Roman", Arial, sans-serif;
-    background:#f5f5f5;
-    overflow-x:hidden;
+body {
+    font-family: "Times New Roman", Arial, sans-serif;
+    background: #f5f5f5;
+    overflow-x: hidden;
 }
 
-img{
-    display:block;
-    max-width:100%;
-}
-/*HERO*/
-.hero{
-    position:relative;
-    width:100%;
-    max-width:1800px;   
-    margin:0 auto;    
-    aspect-ratio:3 / 4; /* tỉ lệ rộng chia cao */
-    overflow:hidden;
+img {
+    display: block;
+    max-width: 100%;
 }
 
-.hero-content{
-    position:absolute;
-    left:20px;
-    right:20px;
-    bottom:30px;
-    width:auto;
-    color:#fff;
-    /* z-index:10; */
+/* HERO SECTION */
+.hero {
+    position: relative;
+    width: 100%;
+    max-width: 1800px;   
+    margin: 0 auto;    
+    aspect-ratio: 16 / 9; /* Khung tỉ lệ chuẩn 16:9 */
+    overflow: hidden;
 }
 
-.hero-content h4{
-    margin-bottom:12px;
-    font-size:14px;
-    letter-spacing:1px;
-    text-transform:uppercase;
+.hero-content {
+    position: absolute;
+    left: 20px;
+    right: 20px;
+    bottom: 65px; /* NÂNG CẤP: Tăng từ 25px -> 65px để chữ đẩy lên trên, không bị box search che */
+    width: auto;
+    color: #fff;
+    z-index: 5;
 }
 
-.hero-content h1{
-    font-size:28px;
-    font-weight:300;
-    line-height:1.1;
-    color:#fff;
-    letter-spacing:-1px;
+.hero-content h4 {
+    margin-bottom: 6px;
+    font-size: 12px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
 }
 
-.hero-content p{
-    margin-top:10px;
-    font-size:14px;
-    font-weight:300;
-    color:#fff;
+.hero-content h1 {
+    font-size: 22px;
+    font-weight: 300;
+    line-height: 1.1;
+    color: #fff;
+    letter-spacing: -1px;
 }
 
-.hero img{
-    position:absolute;/*chồng 2 ảnh dc lên nhau*/
-    width:100%;
-    height:100%;
-    object-fit:cover;
-    transition:opacity .6s ease-in-out;/*hiểu ứng chuyển hình*/
+.hero-content p {
+    margin-top: 6px;
+    font-size: 13px;
+    font-weight: 300;
+    color: #fff;
 }
 
-.hero-img-2{
-    opacity:0;
-    animation:heroFade 10s ease-in-out infinite;/*dùng animation 10s chuyển 1 lần*/
+.hero img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity .6s ease-in-out;
 }
 
-@keyframes heroFade{
-    0%, 45%{ opacity:0; } /*ảnh 1*/
-    55%, 95%{ opacity:1; }/*ảnh 2 đè lên*/
-    100%{ opacity:0; } /*ảnh 2 mờ đi chuyển lại thành ảnh 1*/
+.hero-img-2 {
+    opacity: 0;
+    animation: heroFade 10s ease-in-out infinite;
 }
 
-
-/*SEARCH BOX*/
-.search-box{
-    width:95%;
-    max-width:1600px;
-    margin:-40px auto 50px;
-    background:#fff;
-    padding:20px;
-    border-radius:8px; /*bo góc*/
-    box-shadow:0 20px 45px rgba(0,0,0,.18);
-    position:relative;
-    /* z-index:20; */
+@keyframes heroFade {
+    0%, 45% { opacity: 0; } 
+    55%, 95% { opacity: 1; }
+    100% { opacity: 0; } 
 }
 
 
-.car-search{
-    display:grid; /* chia theo grid layout */
-    grid-template-columns:1fr;
-    gap:20px;
+/* SEARCH BOX */
+.search-box {
+    width: 95%;
+    max-width: 1600px;
+    margin: -30px auto 50px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 20px 45px rgba(0,0,0,.18);
+    position: relative;
+    z-index: 10;
 }
 
-.form-group{
-    display:flex;
-    flex-direction:column;
+.car-search {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
 }
 
-.form-group label{
-    font-size:15px;
-    font-weight:600;
-    color:#444;
-    margin-bottom:8px;
+.form-group {
+    display: flex;
+    flex-direction: column;
 }
 
-.form-group select{
-    width:100%;
-    height:52px;
-    border:1px solid #ddd;
-    border-radius:4px;
-    padding:0 15px;
-    font-size:15px;
-    background:#fff;
-    outline:none;
-    transition:.3s;
+.form-group label {
+    font-size: 15px;
+    font-weight: 600;
+    color: #444;
+    margin-bottom: 8px;
 }
 
-.search-btn{
-    width:100%;
-    height:52px;
-    border:none;
-    background:#d62828;
-    color:#fff;
-    font-size:16px;
-    font-weight:700;
-    cursor:pointer; /*đổi mũi tên thành dấu tay khi trỏ vào*/
-    align-self:end;
-    transition:.3s;
+.form-group select {
+    width: 100%;
+    height: 52px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 0 15px;
+    font-size: 15px;
+    background: #fff;
+    outline: none;
+    transition: .3s;
 }
 
-.search-btn:hover{
-    background:#111;
+.search-btn {
+    width: 100%;
+    height: 52px;
+    border: none;
+    background: #d62828;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    align-self: end;
+    transition: .3s;
 }
 
-
-/*CONTENT*/
-.content{
-    width:min(1200px,95%);
-    margin:50px auto;
-}
-
-.section-heading{
-    text-align:center;
-    margin-bottom:50px;
-}
-
-.section-heading h2{
-    font-size:28px;
-    margin-bottom:15px;
-    text-transform:uppercase;
-}
-
-.section-heading p{
-    width:100%;
-    margin:auto;
-    color:#777;
-    line-height:1.8;
+.search-btn:hover {
+    background: #111;
 }
 
 
-/*FEATURED CARDS*/
-.featured__cards{
-    display:grid;
-    grid-template-columns:1fr;
-    gap:35px;
-    align-items:stretch;
+/* CONTENT */
+.content {
+    width: min(1200px, 95%);
+    margin: 50px auto;
 }
 
-.car-link{
-    display:block;
-    height:100%;
-    text-decoration:none;
-    color:inherit;
+.section-heading {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-heading h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.section-heading p {
+    width: 100%;
+    margin: auto;
+    color: #777;
+    line-height: 1.8;
+}
+
+
+/* FEATURED CARDS */
+.featured__cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 35px;
+    align-items: stretch;
+}
+
+.car-link {
+    display: block;
+    height: 100%;
+    text-decoration: none;
+    color: inherit;
 }
 
 .car-link:hover,
-.car-link *{
-    text-decoration:none;
-    color:inherit;
+.car-link * {
+    text-decoration: none;
+    color: inherit;
 }
 
-.featured-card{
-    position:relative;
-    display:flex;
-    flex-direction:column;
-    height:100%;
-    background:#fff;
-    border:1px solid #ececec;
-    overflow:hidden;
-    transition:.35s;
+.featured-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background: #fff;
+    border: 1px solid #ececec;
+    overflow: hidden;
+    transition: .35s;
 }
 
-.featured-card:hover{
-    transform:translateY(-8px);
-    box-shadow:0 15px 35px rgba(0,0,0,.12);
+.featured-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(0,0,0,.12);
 }
 
-.featured-card img{
-    width:100%;
-    aspect-ratio:16/9;
-    object-fit:cover;
-    transition:.4s;
+.featured-card img {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    transition: .4s;
 }
 
-.featured-card:hover img{
-    transform:scale(1.08);
+.featured-card:hover img {
+    transform: scale(1.08);
 }
 
 .badge-left,
-.badge-right{
-    position:absolute;
-    top:15px;
-    color:#fff;
-    font-size:11px;
-    font-weight:700;
-    padding:6px 12px;
-    z-index:2;
+.badge-right {
+    position: absolute;
+    top: 15px;
+    color: #fff;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 6px 12px;
+    z-index: 2;
 }
 
-.badge-left{
-    left:15px;
-    background:#ff6b00;
+.badge-left {
+    left: 15px;
+    background: #ff6b00;
 }
 
-.badge-right{
-    right:15px;
-    background:#111;
+.badge-right {
+    right: 15px;
+    background: #111;
 }
 
-.card-body{
-    flex:1;
-    display:flex;
-    flex-direction:column;
-    padding:20px;
+.card-body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
 }
 
-.card-body h3{
-    min-height:58px;
-    font-size:20px;
-    color:#c96d1c;
-    margin-bottom:10px;
-    line-height:1.3;
-    text-transform:uppercase;
+.card-body h3 {
+    min-height: 58px;
+    font-size: 20px;
+    color: #c96d1c;
+    margin-bottom: 10px;
+    line-height: 1.3;
+    text-transform: uppercase;
 }
 
-.car-type{
-    display:block;
-    min-height:20px;
-    margin-bottom:18px;
-    font-size:12px;
-    color:#999;
-    letter-spacing:.5px;
+.car-type {
+    display: block;
+    min-height: 20px;
+    margin-bottom: 18px;
+    font-size: 12px;
+    color: #999;
+    letter-spacing: .5px;
 }
 
-.price{
-    margin-bottom:18px;
-}
-.price strong{
-    font-size:22px;
-    color:#111;
+.price {
+    margin-bottom: 18px;
 }
 
-.card-body p{
-    flex:1;
-    margin-bottom:22px;
-    color:#666;
-    line-height:1.8;
+.price strong {
+    font-size: 22px;
+    color: #111;
 }
 
-.specs{
-    display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:12px;
-    padding-top:18px;
-    border-top:1px solid #eee;
-    margin-top:auto;
+.card-body p {
+    flex: 1;
+    margin-bottom: 22px;
+    color: #666;
+    line-height: 1.8;
 }
 
-.specs span{
-    display:flex;
-    align-items:center;
-    gap:6px;
-    color:#555;
-    font-size:14px;
+.specs {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    padding-top: 18px;
+    border-top: 1px solid #eee;
+    margin-top: auto;
+}
+
+.specs span {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: #555;
+    font-size: 14px;
 }
 
 
-/*RESPONSIVE*/
-@media (min-width:768px){
+/* RESPONSIVE */
+@media (min-width: 768px) {
 
-    .hero{
-        aspect-ratio:16/9;
+    .hero {
+        aspect-ratio: 16 / 9;
     }
 
-    .hero-content{
-        left:70px;
-        right:auto;
-        bottom:150px;
-        width:90%;
+    .hero-content {
+        left: 70px;
+        right: auto;
+        bottom: 150px;
+        width: 90%;
     }
 
-    .hero-content h4{
-        font-size:24px;
-        letter-spacing:3px;
+    .hero-content h4 {
+        font-size: 24px;
+        letter-spacing: 3px;
     }
 
-    .hero-content h1{
-        font-size:56px;
+    .hero-content h1 {
+        font-size: 56px;
     }
 
-    .hero-content p{
-        font-size:20px;
+    .hero-content p {
+        font-size: 20px;
     }
 
-    .search-box{
-        margin:-60px auto 80px;
-        padding:35px;
+    .search-box {
+        margin: -60px auto 80px;
+        padding: 35px;
     }
 
-    .car-search{
-        grid-template-columns:repeat(2,1fr); /* chia kích thước cột */
+    .car-search {
+        grid-template-columns: repeat(2, 1fr);
     }
 
-    .content{
-        margin:80px auto;
+    .content {
+        margin: 80px auto;
     }
 
-    .section-heading h2{
-        font-size:36px;
+    .section-heading h2 {
+        font-size: 36px;
     }
 
-    .featured__cards{
-        grid-template-columns:repeat(2,1fr);
+    .featured__cards {
+        grid-template-columns: repeat(2, 1fr);
     }
 
-    .card-body{
-        padding:25px;
+    .card-body {
+        padding: 25px;
     }
 
-    .card-body h3{
-        font-size:22px;
+    .card-body h3 {
+        font-size: 22px;
     }
 
-    .price strong{
-        font-size:24px;
+    .price strong {
+        font-size: 24px;
     }
 }
 
-@media (min-width:1028px){
+@media (min-width: 1028px) {
 
-    .hero{
-        aspect-ratio:21/9;
+    .hero {
+        aspect-ratio: 21 / 9;
     }
 
-    .hero-content h4{
-        font-size:18px;
+    .hero-content h4 {
+        font-size: 18px;
     }
 
-    .hero-content h1{
-        font-size:72px;
+    .hero-content h1 {
+        font-size: 72px;
     }
 
-    .hero-content p{
-        font-size:24px;
+    .hero-content p {
+        font-size: 24px;
     }
 
-    .search-box{
-        width:90%;
-        margin:-120px auto 80px;
+    .search-box {
+        width: 90%;
+        margin: -120px auto 80px;
     }
 
-    .car-search{
-        grid-template-columns:repeat(4,1fr);
+    .car-search {
+        grid-template-columns: repeat(4, 1fr);
     }
 
-    .section-heading p{
-        width:700px;
+    .section-heading p {
+        width: 700px;
     }
 
-    .featured__cards{
-        grid-template-columns:repeat(3,1fr);
+    .featured__cards {
+        grid-template-columns: repeat(3, 1fr);
     }
 }

@@ -136,38 +136,21 @@ if (formDangNhap) {
         }
         if (password === user.password) {
 
-            localStorage.setItem(
-                'currentUser',
-                JSON.stringify(user)
-            );
-
-
+            localStorage.setItem('currentUser',JSON.stringify(user));
             showToast('Đăng nhập thành công.', 'success');
 
-
+            // Trả ngược lại trang html mua hàng để tiếp tục thêm vào giỏ hàng.
             setTimeout(() => {
-
-
-                const redirect =
-                localStorage.getItem("redirectAfterLogin");
-
-
+                const redirect = localStorage.getItem("redirectAfterLogin");
                 if(redirect){
-
                     localStorage.removeItem(
                         "redirectAfterLogin"
                     );
-
                     window.location.href = redirect;
-
                 }
                 else{
-
                     window.location.href="/Nguyen/trangchu.html";
-
                 }
-
-
             },1000);
         } else {
             showToast('Sai email hoặc mật khẩu.', 'error');

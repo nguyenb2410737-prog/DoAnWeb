@@ -11,8 +11,12 @@ function renderCart(){
     const container=document.getElementById("cart-container");
     const template=document.getElementById("cart-template");
 
-    container.querySelectorAll(".cart-item:not(#cart-template)").forEach(item=>{
-        item.remove();
+    const cartItems = container.querySelectorAll(".cart-item");
+
+    cartItems.forEach(item => {
+        if (item.id !== "cart-template") {
+            item.remove();
+        }
     });
 
     if(cart.length===0){
@@ -82,7 +86,7 @@ function changeQuantity(index,change){
     const cart=getCart();
     cart[index].quantity+=change;
     if(cart[index].quantity<=0){
-        cart.splice(index,1);
+        cart.splice(index,1); \\Xóa khỏi giỏ hàng nếu số lượng nhỏ hơn bằng 0
     }
     saveCart(cart);
     renderCart();
@@ -91,7 +95,7 @@ function changeQuantity(index,change){
 
 function deleteItem(index){
     const cart=getCart();
-    cart.splice(index,1);
+    cart.splice(index,1); \\ Cứ xóa, ko quan tâm số lượng
     saveCart(cart);
     renderCart();
 

@@ -66,15 +66,17 @@ function setPrices(){
     const prices = document.querySelectorAll(".car-price");
 
     prices.forEach(item => {
-        item.innerText = Number(item.innerText.replace(/\D/g, ""))
-            .toLocaleString("vi-VN") + " VNĐ";
-    });
+        let text = item.innerText;
+        text = text.replace(/\D/g, "");
+        let price = Number(text);
+        price = price.toLocaleString("vi-VN");
+        item.innerText = price + " VNĐ";    });
 }
 
 
 function addEventToCartButton(){
     const addCartBtn = document.getElementById("addCartBtn");
-    addCartBtn.addEventListener("click", orderSelectedProduct, false);
+    addCartBtn.addEventListener("click", orderSelectedProduct);
 }
 
 function setupMuahang(){
@@ -83,4 +85,4 @@ function setupMuahang(){
     updateCartCount();
 }
 
-window.addEventListener("load", setupMuahang, false);
+window.addEventListener("load", setupMuahang);

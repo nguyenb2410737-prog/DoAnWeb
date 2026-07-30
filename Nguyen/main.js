@@ -5,7 +5,6 @@ const headerMenu = document.getElementById("headerMenu");
 menuToggle.addEventListener("click", (e) => {
     e.stopPropagation();
     headerMenu.classList.toggle("active");
-     console.log("clicked");
 });
 
 document.addEventListener("click", (e)=> {
@@ -25,13 +24,12 @@ const mainImage = document.getElementById("mainImage");
 const thumbnails = document.querySelectorAll(".thumbnail");
 thumbnails.forEach(thumbnail => {
     thumbnail.addEventListener("click", () => {
-        // Lấy ảnh trong thumbnail nhỏ dưới
         const img = thumbnail.querySelector("img");
         mainImage.src = img.src;
         thumbnails.forEach(item => {
             item.classList.remove("active");
         });
-        // Thêm ảnh mới
+        // Thêm ảnh mới, chỉ thêm cho ảnh thumbnail vừa được chọn thôi, còn các ảnh kia đã bị remove
         thumbnail.classList.add("active");
 
     });

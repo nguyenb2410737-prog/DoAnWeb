@@ -97,9 +97,25 @@ function deleteItem(index){
 
 }
 
+function checkout(){
+    const cart = getCart();
+    if(cart.length === 0){
+        showToast("Giỏ hàng đang trống!", "warning");
+        return;
+    }
+
+    showToast("Thanh toán thành công", "success");
+    saveCart([]);
+    renderCart();
+    updateCartCount();
+}
+
 function setupGiohang(){
     renderCart();
-
+    const checkoutBtn = document.getElementById("check-btn");
+    if(checkoutBtn){
+        checkoutBtn.addEventListener("click", checkout)
+    }
 }
 
 window.onload=setupGiohang;

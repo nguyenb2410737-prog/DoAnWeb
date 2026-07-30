@@ -12,47 +12,6 @@ body{
 }
 
 
-/* Hero */
-.about-hero{
-    background:linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
-    url('../images/img_for_intro1.png') no-repeat center/cover;
-    height:300px;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
-    color:#fff;
-    padding:0 20px;
-}
-
-.hero-text h1{
-    font-size:24px;
-    margin-bottom:12px;
-    font-weight:700;
-}
-
-.hero-text p{
-    font-size:16px;
-    margin-bottom:20px;
-    color:#f1f1f1;
-}
-
-.btn-hero{
-    display:inline-block;
-    padding:10px 22px;
-    background:#b89454;
-    color:#fff;
-    text-decoration:none;
-    font-weight:bold;
-    text-transform:uppercase;
-    border-radius:4px;
-    transition:.3s;
-}
-
-.btn-hero:hover{
-    background:#9c7b41;
-}
-
 /* Giới thiệu */
 
 .about-us-section{
@@ -171,29 +130,6 @@ body{
     gap:20px;
 }
 
-.value-item{
-    background:#fff;
-    padding:25px;
-    border-radius:6px;
-    border:1px solid #f0f0f0;
-    box-shadow:0 4px 15px rgba(0,0,0,.03);
-    text-align:justify;
-}
-
-.value-item .icon{
-    font-size:34px;
-    margin-bottom:15px;
-}
-
-.value-item h3{
-    font-size:22px;
-    margin-bottom:10px;
-}
-
-.value-item p{
-    font-size:17px;
-    color:#666;
-}
 
 /* Footer */
 
@@ -233,10 +169,6 @@ body{
 /*TABLET */
 
 @media (min-width:768px){
-
-    .about-hero{
-        height:380px;
-    }
 
     .hero-text h1{
         font-size:32px;
@@ -288,10 +220,6 @@ body{
 /* DESKTOP */
 
 @media (min-width:1025px){
-
-    .about-hero{
-        height:450px;
-    }
 
     .hero-text h1{
         font-size:38px;

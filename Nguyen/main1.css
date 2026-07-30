@@ -9,11 +9,7 @@
 html, body {
     margin: 0;
     padding: 0;
-    height: 100%; 
-}
-
-main{
-    flex:1;
+     min-height: 100vh;          /*Đơn vị viewpoint height cho phép xem 100% màn hình của thiết bị */
 }
 
 .toast{
@@ -56,16 +52,14 @@ main{
     background:#0d6efd;
 }
 
-body {
-    display: flex;
-    flex-direction: column; 
-    min-height: 100vh;      /*Đơn vị viewpoint height cho phép xem 100% màn hình của thiết bị */
-}
 
 /* Header */
 
 .header{
-    position:relative;
+    position:sticky;
+    top: 0;
+    left: 0;
+    z-index: 9999;
     display:flex;
     justify-content:space-between;
     align-items:center;
@@ -199,7 +193,7 @@ body {
 
 /* Banner */
 .banner{
-    max-width: 1600px;
+    width: 100%;
     margin: 0 auto;
 }
 .banner img{
@@ -731,15 +725,11 @@ body {
         margin-top:0;
     }
 
-    .chuong img{
-        height:30px;
-        width:auto;
-    }
-
+    .chuong img,
     .basket img{
         height:30px;
-        width:auto;
     }
+
 
     .header-auth{
         flex: 1 1 auto;   
@@ -779,7 +769,6 @@ body {
     }
 
     .header_button{
-        padding:10px 20px;
         font-size:16px;
         font-weight:bold;
     }

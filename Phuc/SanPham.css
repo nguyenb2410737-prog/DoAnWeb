@@ -1,38 +1,38 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: border-box; /* Kích thước bao gồm cả border và padding */
 }
 
 body {
     font-family: "Times New Roman", Arial, sans-serif;
     background: #f5f5f5;
-    overflow-x: hidden;
+    overflow-x: hidden; /* Ẩn thanh cuộn ngang chống tràn trang */
 }
 
 img {
-    display: block;
-    max-width: 100%;
+    display: block; /* Bỏ khoảng trống thừa dưới chân ảnh */
+    max-width: 100%; /* Giúp ảnh tự co giãn theo khung */
 }
 
 /* HERO SECTION */
 .hero {
-    position: relative;
+    position: relative; /* Làm mốc tọa độ cho phần tử con */
     width: 100%;
-    max-width: 1800px;   
-    margin: 0 auto;    
-    aspect-ratio: 16 / 9; /* Khung tỉ lệ chuẩn 16:9 */
-    overflow: hidden;
+    max-width: 1800px; /* Giới hạn chiều rộng tối đa khung chứa */
+    margin: 0 auto; /* Căn giữa phần tử theo chiều ngang */
+    aspect-ratio: 16 / 9; /* Giữ tỉ lệ khung hình chuẩn 16:9 */
+    overflow: hidden; /* Cắt bỏ phần nội dung vượt khung */
 }
 
 .hero-content {
-    position: absolute;
+    position: absolute; /* Định vị tự do theo mốc cha */
     left: 20px;
     right: 20px;
     bottom: 65px; 
     width: auto;
     color: #fff;
-    z-index: 5;
+    z-index: 5; /* Đẩy nội dung đè lên trên ảnh */
 }
 
 .hero-content h4 {
@@ -58,18 +58,18 @@ img {
 }
 
 .hero img {
-    position: absolute;
+    position: absolute; /* Đặt ảnh nằm đè lên khung hero */
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    transition: opacity .6s ease-in-out;
+    object-fit: cover; /* Phủ kín khung mà không méo ảnh */
+    transition: opacity .6s ease-in-out; /* Tạo hiệu ứng mượt khi đổi opacity */
 }
 
 .hero-img-2 {
     opacity: 0;
-    animation: heroFade 10s ease-in-out infinite;
+    animation: heroFade 10s ease-in-out infinite; /* Chạy animation mờ dần lặp vô tận */
 }
 
 @keyframes heroFade {
@@ -82,25 +82,25 @@ img {
 /* SEARCH BOX */
 .search-box {
     width: 95%;
-    max-width: 1600px;
-    margin: -30px auto 50px;
+    max-width: 1600px; /* Giới hạn độ rộng tối đa ô tìm */
+    margin: -30px auto 50px; /* Kéo ngược lên trên và căn giữa */
     background: #fff;
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 20px 45px rgba(0,0,0,.18);
-    position: relative;
-    z-index: 10;
+    box-shadow: 0 20px 45px rgba(0,0,0,.18); /* Tạo bóng đổ nổi bật cho hộp */
+    position: relative; /* Tạo mốc tọa độ và dùng z-index */
+    z-index: 10; /* Hiển thị đè lên trên ảnh hero */
 }
 
 .car-search {
-    display: grid;
+    display: grid; /* Bật bố cục dạng lưới thông minh */
     grid-template-columns: 1fr;
-    gap: 20px;
+    gap: 20px; /* Khoảng cách giữa các ô lưới */
 }
 
 .form-group {
-    display: flex;
-    flex-direction: column;
+    display: flex; /* Kích hoạt bố cục linh hoạt Flexbox */
+    flex-direction: column; /* Xếp các phần tử con theo cột */
 }
 
 .form-group label {
@@ -119,7 +119,7 @@ img {
     font-size: 15px;
     background: #fff;
     outline: none;
-    transition: .3s;
+    transition: .3s; /* Tạo hiệu ứng chuyển mượt 0.3 giây */
 }
 
 .search-btn {
@@ -130,9 +130,9 @@ img {
     color: #fff;
     font-size: 16px;
     font-weight: 700;
-    cursor: pointer;
-    align-self: end;
-    transition: .3s;
+    cursor: pointer; /* Đổi con trỏ thành hình bàn tay */
+    align-self: end; /* Căn nút xuống đáy ô Flexbox */
+    transition: .3s; /* Tạo hiệu ứng chuyển mượt 0.3 giây */
 }
 
 .search-btn:hover {
@@ -143,7 +143,7 @@ img {
 /* CONTENT */
 .content {
     width: min(1200px, 95%);
-    margin: 50px auto;
+    margin: 50px auto; /* Căn giữa khối nội dung chính */
 }
 
 .section-heading {
@@ -159,7 +159,7 @@ img {
 
 .section-heading p {
     width: 100%;
-    margin: auto;
+    margin: auto; /* Căn giữa đoạn văn bản */
     color: #777;
     line-height: 1.8;
 }
@@ -167,9 +167,9 @@ img {
 
 /* FEATURED CARDS */
 .featured__cards {
-    display: grid;
+    display: grid; /* Dùng lưới để chia cột thẻ xe */
     grid-template-columns: 1fr;
-    gap: 35px;
+    gap: 35px; /* Tạo khoảng cách giữa các card */
     align-items: stretch;
 }
 
@@ -187,41 +187,41 @@ img {
 }
 
 .featured-card {
-    position: relative;
-    display: flex;
-    flex-direction: column;
+    position: relative; /* Mốc tọa độ cho nhãn badge */
+    display: flex; /* Bật Flexbox quản lý chiều cao */
+    flex-direction: column; /* Sắp xếp nội dung theo cột đứng */
     height: 100%;
     background: #fff;
     border: 1px solid #ececec;
-    overflow: hidden;
-    transition: .35s;
+    overflow: hidden; /* Ẩn phần hình ảnh tràn ra ngoài */
+    transition: .35s; /* Tạo hiệu ứng mượt khi hover card */
 }
 
 .featured-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 15px 35px rgba(0,0,0,.12);
+    transform: translateY(-8px); /* Nâng nhẹ card lên trên 8px */
+    box-shadow: 0 15px 35px rgba(0,0,0,.12); /* Tăng bóng đổ tạo chiều sâu nổi */
 }
 
 .featured-card img {
     width: 100%;
-    aspect-ratio: 16 / 9;
-    object-fit: cover;
-    transition: .4s;
+    aspect-ratio: 16 / 9; /* Ép hình ảnh theo tỉ lệ 16:9 */
+    object-fit: cover; /* Cắt ảnh vừa vặn không biến dạng */
+    transition: .4s; /* Chuyển động mượt khi hover ảnh */
 }
 
 .featured-card:hover img {
-    transform: scale(1.08);
+    transform: scale(1.08); /* Phóng toàn bộ ảnh nhẹ khi hover */
 }
 
 .badge-left,
 .badge-right {
-    position: absolute;
+    position: absolute; /* Ghim nhãn cố định góc trên card */
     top: 15px;
     color: #fff;
     font-size: 11px;
     font-weight: 700;
     padding: 6px 12px;
-    z-index: 2;
+    z-index: 2; /* Nổi lên trên tấm ảnh card */
 }
 
 .badge-left {
@@ -235,9 +235,9 @@ img {
 }
 
 .card-body {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
+    flex: 1; /* Tự giãn lấp đầy khoảng trống */
+    display: flex; /* Bật Flexbox cho phần thân card */
+    flex-direction: column; /* Sắp xếp các dòng theo hàng dọc */
     padding: 20px;
 }
 
@@ -269,32 +269,32 @@ img {
 }
 
 .card-body p {
-    flex: 1;
+    flex: 1; /* Đẩy khối thông số xuống sát đáy */
     margin-bottom: 22px;
     color: #666;
     line-height: 1.8;
 }
 
 .specs {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 12px;
+    display: grid; /* Chia thông số xe thành các cột */
+    grid-template-columns: repeat(2, 1fr); /* Tạo 2 cột độ rộng bằng nhau */
+    gap: 12px; /* Khoảng cách giữa các mục thông số */
     padding-top: 18px;
     border-top: 1px solid #eee;
-    margin-top: auto;
+    margin-top: auto; /* Đẩy khối này xuống sát đáy card */
 }
 
 .specs span {
-    display: flex;
+    display: flex; /* Căn chỉnh icon và chữ ngang hàng */
     align-items: center;
-    gap: 6px;
+    gap: 6px; /* Khoảng cách giữa icon và chữ */
     color: #555;
     font-size: 14px;
 }
 
 
 /* RESPONSIVE */
-@media (min-width: 768px) {
+@media (min-width: 768px) { /* Áp dụng cho màn hình máy tính bảng */
 
     .hero {
         aspect-ratio: 16 / 9;
@@ -354,7 +354,7 @@ img {
     }
 }
 
-@media (min-width: 1028px) {
+@media (min-width: 1028px) { /* Áp dụng cho màn hình máy tính lớn */
 
     .hero {
         aspect-ratio: 21 / 9;

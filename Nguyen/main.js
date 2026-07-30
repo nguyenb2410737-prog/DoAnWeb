@@ -1,12 +1,33 @@
+//Thao tác cho thanh hamburger menu
+const menuToggle = document.getElementById("menuToggle");
+const headerMenu = document.getElementById("headerMenu");
+
+menuToggle.addEventListener("click", (e) => {
+    e.stopPropagation();
+    headerMenu.classList.toggle("active");
+     console.log("clicked");
+});
+
+document.addEventListener("click", (e)=> {
+    if(!menuToggle.contains(e.target) && !headerMenu.contains(e.target)) {
+        headerMenu.classList.remove("active");
+    }
+});
+
+
+
+
+
+
+
+// Thao tác cho việc chọn các hình ảnh ở phần thông tin nổi bật
 const mainImage = document.getElementById("mainImage");
 const thumbnails = document.querySelectorAll(".thumbnail");
 thumbnails.forEach(thumbnail => {
     thumbnail.addEventListener("click", () => {
         // Lấy ảnh trong thumbnail nhỏ dưới
         const img = thumbnail.querySelector("img");
-        // Đổi lên ảnh lớn
         mainImage.src = img.src;
-        // Xóa cái cũ 
         thumbnails.forEach(item => {
             item.classList.remove("active");
         });
@@ -16,6 +37,15 @@ thumbnails.forEach(thumbnail => {
     });
 
 });
+
+
+
+
+
+
+
+
+
 /* Cập nhật số lượng trong giỏ hàng*/
 const CART_KEY="cartItems";
 
@@ -55,8 +85,13 @@ function updateCartCount(){
 function setupMain(){
     updateCartCount();
 }
-
 window.addEventListener("load", setupMain, false);
+
+
+
+
+
+
 
 /*Phần chuyển đổi nút button khi đăng nhập*/
 const loginLink = document.getElementById('loginLink');
@@ -96,18 +131,3 @@ if (userSelect) {
 }   
 
 
-
-const menuToggle = document.getElementById("menuToggle");
-const headerMenu = document.getElementById("headerMenu");
-
-menuToggle.addEventListener("click", (e) => {
-    e.stopPropagation();
-    headerMenu.classList.toggle("active");
-     console.log("clicked");
-});
-
-document.addEventListener("click", (e)=> {
-    if(!menuToggle.contains(e.target) && !headerMenu.contains(e.target)) {
-        headerMenu.classList.remove("active");
-    }
-});
